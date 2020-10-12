@@ -1,3 +1,24 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+#connexion route
+connexion:
+      path: /connexion
+      controller: App\Controller\ConnexionController::connexion
+
+#administration route
+administration:
+      path: /administration
+      controller: App\Controller\AdministrationController::administration
+
+#courrier route
+courrier:
+      path: /courrier
+      controller: App\Controller\CourrierController::courrier
+
+#service route
+service:
+      path: /service
+      controller: App\Controller\ServiceController::service
+
+#information route
+information:
+      path: /information
+      controller: App\Controller\InformationController::information
