@@ -1,0 +1,163 @@
+// Import default values
+@import 'default-values';
+
+// Links
+.link-white {
+    color: $white;
+}
+
+// Buttons
+.btn-blue {
+    cursor: pointer;
+    background-color: $blue;
+    color: $white;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.625rem 2.25rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-blue:hover {
+    background-color: $darkblue;
+}
+
+.btn-add {
+    cursor: pointer;
+    color: white;
+    border: none;
+    padding: 1.5rem 2rem;
+    background-color: $blue;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-add:hover {
+    background-color: $darkblue;
+}
+
+// Labels
+.inp-label {
+    display: block;
+    margin-top: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+// Inputs
+.inp-text {
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 3px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease-in-out;
+}
+
+// Sidebar
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 0.125rem solid $grey;
+    background-color: $lightgrey;
+}
+
+.sidebar-container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+// Menu
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    white-space: nowrap;
+    color: $darkgrey;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.menu-item:hover {
+    color: $black;
+    background-color: $mediumgrey;
+}
+
+.menu-item svg {
+    margin-right: 1rem;
+}
+
+.menu-title {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.active {
+    color: $blue !important;
+    background-color: $lightblue !important;
+}
+
+.active .menu-icon {
+    fill: $blue;
+}
+
+// Navbar
+.navbar {
+    border-bottom: 0.125rem solid $grey;
+    padding: 1rem 2rem;
+}
+
+// Main
+.main {
+    width: 100vw;
+    height: 100vh;
+}
+
+// Content
+.content {
+    padding: 1rem 2rem;
+}
+
+// Custom checkbox
+.cust-checkbox {
+    padding-right: 0.5rem;
+    transition: filter 0.2s ease-in-out;
+}
+
+.checkbox-container:hover .cust-checkbox {
+    filter: brightness(70%);
+}
+
+.checkbox-container {
+    cursor: pointer;
+}
+
+
+// Regular classes
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.w-100 {
+    width: 100%;
+}

@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("/fonts/OpenSans-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Light Italic";
+  src: url("/fonts/OpenSans-LightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Italic";
+  src: url("/fonts/OpenSans-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Semi Bold";
+  src: url("/fonts/OpenSans-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Semi Bold Italic";
+  src: url("/fonts/OpenSans-SemiBoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("/fonts/OpenSans-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Bold Italic";
+  src: url("/fonts/OpenSans-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Extra Bold";
+  src: url("/fonts/OpenSans-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Extra Bold Italic";
+  src: url("/fonts/OpenSans-ExtraBoldItalic.ttf") format("truetype");
+}
+html, body {
+  margin: 0;
+  font-size: 16px;
+}
+
+main {
+  overflow: auto;
+}
+
+* {
+  font-family: "Open Sans Regular";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans Bold";
+}
+
+i {
+  font-family: "Open Sans Regular Italic";
+}
+
+button {
+  font-size: 1em;
+}
+
+.link-white {
+  color: #ffffff;
+}
+
+.btn-blue {
+  cursor: pointer;
+  background-color: #0066FF;
+  color: #ffffff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.625rem 2.25rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-blue:hover {
+  background-color: #004DC1;
+}
+
+.btn-add {
+  cursor: pointer;
+  color: white;
+  border: none;
+  padding: 1.5rem 2rem;
+  background-color: #0066FF;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-add:hover {
+  background-color: #004DC1;
+}
+
+.inp-label {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.inp-text {
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 3px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 0.125rem solid #E9E9E9;
+  background-color: #FBFBFB;
+}
+
+.sidebar-container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  color: #444444;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.menu-item:hover {
+  color: #212121;
+  background-color: #F5F5F5;
+}
+
+.menu-item svg {
+  margin-right: 1rem;
+}
+
+.menu-title {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.active {
+  color: #0066FF !important;
+  background-color: #EEF5FF !important;
+}
+
+.active .menu-icon {
+  fill: #0066FF;
+}
+
+.navbar {
+  border-bottom: 0.125rem solid #E9E9E9;
+  padding: 1rem 2rem;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.content {
+  padding: 1rem 2rem;
+}
+
+.cust-checkbox {
+  padding-right: 0.5rem;
+  transition: filter 0.2s ease-in-out;
+}
+
+.checkbox-container:hover .cust-checkbox {
+  filter: brightness(70%);
+}
+
+.checkbox-container {
+  cursor: pointer;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/*# sourceMappingURL=chrono.css.map */

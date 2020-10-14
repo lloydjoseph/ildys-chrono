@@ -1,7 +1,43 @@
 {% extends "base.html.twig" %}
 
-{% block title %}Connexion - Chrono{% endblock %}
+{% block title %}Chrono - Connexion{% endblock %}
+
+{% block stylesheets %} <link rel="stylesheet" href="styles/connexion.css"> {% endblock %}
 
 {% block body %}
+    
+    <main class="d-flex align-items-center justify-content-center">
+
+        <form id="connexion-form" method="post" class="d-flex align-items-center justify-content-center flex-direction-column" action="courrier">
+            <div class="text-center">
+                <h1>Connexion à l'outil Chrono</h1>
+                <p>Entrez vos informations de connexion afin d'accéder à l'outil Ildys Chrono</p>
+            </div>
+
+            <div class="w-100">
+                <label for="user" class="inp-label">Utilisateur</label>
+                <input type="text" name="user" id="user" class="inp-text w-100">
+                <label for="password" class="inp-label">Mot de passe</label>
+                <input type="password" name="password" id="password" class="inp-text w-100">
+            </div>
+
+            <div class="w-100">
+                <label for="password-visible" id="password-visible-container" class="d-flex align-items-center checkbox-container" tabindex="0">
+                <input type="checkbox" name="password-visible" id="password-visible" class="checkbox">
+                Voir le mot de passe</label>
+            </div>
+
+            <div>
+                <button id="connexion" class="btn-blue">Connexion</button>
+            </div>
+
+            <div>
+                <a href="#" class="link-white">Mot de passe oublié</a>  
+            </div>
+        </form>
+
+    </main>
+
+    <!-- {% block javascripts %} <script src="scripts/chrono.js"></script> {% endblock %} -->
 
 {% endblock %}
