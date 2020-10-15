@@ -1,5 +1,48 @@
-<nav class="navbar">
+<nav class="navbar d-flex align-items-center justify-content-between">
 
-    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure nesciunt laborum modi facilis minima id itaque iste nemo cum. Hic neque nisi soluta provident quia ullam placeat ad minima ea!</span>
+    <section>
+
+        <div class="d-inline-block">
+            <label for="day" class="inp-label">Jour</label>
+            <select name="day" id="day" class="inp-text">
+                {% for day in 1..31 %}
+                    <option {% if day == 'now' | date('d') %} selected {% endif %} value="{{ day }}">{{ day }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="d-inline-block">
+            <label for="month" class="inp-label">Mois</label>
+            <select name="month" id="month" class="inp-text">
+                {% for month in 1..12 %}
+                    <option {% if month == 'now' | date('m') %} selected {% endif %} value="{{ month }}">{{ month }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="d-inline-block">
+            <label for="year" class="inp-label">Année</label>
+            <select name="year" id="year" class="inp-text">
+                {% for year in 2002..'now' | date('Y') %}
+                    <option {% if year == 'now' | date('Y') %} selected {% endif %} value="{{ year }}">{{ year }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="d-inline-block">
+            <label for="subject" class="inp-label">Objet</label>
+            <input type="text" name="subject" id="subject" class="inp-text">
+        </div>
+        
+        <div class="d-inline-block">
+            <label for="recipient" class="inp-label">Destinataire</label>
+            <input type="text" name="recipient" id="recipient" class="inp-text">
+        </div>
+
+    </section>
+
+    <div class="d-inline-block">
+        <button class="btn-grey">Filtrer</button>
+    </div>
 
 </nav>
