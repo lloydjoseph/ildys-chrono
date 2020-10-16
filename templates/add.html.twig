@@ -1,17 +1,26 @@
+{% set user = 864523 %}
 <div id="add">
     <form id="add-form">
         <h2 class="text-center">Nouvelle note</h2>
         <p class="text-center">Entrez les informations afin de créer une nouvelle note dans la catégorie : <code>{{ page }}</code></p>
+        {% if page in ['courrier', 'information', 'service'] %}
+                <label for="form-subject" class="inp-label">Objet</label>
+                <textarea name="form-subject" id="form-subject" class="inp-text resize-vertical w-100"></textarea>
+        {% endif %}
+
         {% if page == 'courrier' %}
-            <div>
                 <label for="form-recipient" class="inp-label">Destinataire</label>
                 <input type="text" name="form-recipient" id="form-recipient" class="inp-text w-100" autocomplete="name">
-            </div>
         {% endif %}
+
+        <div>
+            <input type="text" name="form-user" id="form-user" value="{{ user }}" aria-hidden="true" hidden>
+            <input type="text" name="form-page" id="form-page" value="{{ page }}" aria-hidden="true" hidden>
+        </div>
 
         <div class="d-flex justify-content-center w-100 mt-2">
             <button id="cancel" class="btn-trans" type="button" onclick="cancelAdd()">Annuler</button>
-            <button id="next" class="btn-blue" type="button">Continuer</button>
+            <button id="save" class="btn-blue" type="button">Enregistrer</button>
         </div>
     </form>
 </div>

@@ -81,4 +81,8 @@ function add(page) {
 function cancelAdd() {
     document.getElementById('add').style.display = 'none';
     document.getElementById('add-form').reset();
+    for (let index = 0; index < document.querySelectorAll('#add-form textarea').length; index++) {
+        document.querySelectorAll('#add-form textarea')[index].style.height = 'auto';
+        
+    }
 }

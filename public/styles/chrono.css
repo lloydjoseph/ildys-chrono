@@ -247,15 +247,15 @@ code {
   align-items: center;
   cursor: pointer;
   padding: 1rem 2rem;
-  border-radius: 3px;
   white-space: nowrap;
   color: #444444;
-  transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
 .menu-item:hover {
   color: #212121;
   background-color: #F5F5F5;
+  box-shadow: inset 4px 0px 0px 0px;
 }
 
 .menu-item svg {
@@ -272,6 +272,7 @@ code {
 .active {
   color: #0066FF !important;
   background-color: #EEF5FF !important;
+  box-shadow: inset 4px 0px 0px 0px;
 }
 
 .active .menu-icon {
@@ -341,6 +342,10 @@ code {
 
 .text-center {
   text-align: center;
+}
+
+.resize-vertical {
+  resize: vertical;
 }
 
 .w-100 {

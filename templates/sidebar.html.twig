@@ -29,6 +29,21 @@
 
     </div>
 
-    <button class="btn-add" onclick="add('{{ app.request.pathinfo|replace({'/': ''}) }}')">Ajouter</button>
+    <button class="btn-add" onclick="add('{{ app.request.pathinfo|replace({'/': ''}) }}')">
+    {% if app.request.pathinfo == '/courrier' %}
+        Ajouter un courrier
+    {% endif %}
+    {% if app.request.pathinfo == '/information' %}
+        Ajouter une note
+    {% endif %}
+    {% if app.request.pathinfo == '/service' %}
+        Ajouter une note
+    {% endif %}
+    {% if app.request.pathinfo == '/administration' %}
+        Ajouter un utilisateur
+    {% endif %}
+    
+    
+    </button>
 
 </aside>

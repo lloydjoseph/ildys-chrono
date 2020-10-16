@@ -1,6 +1,6 @@
 <nav class="navbar d-flex align-items-center justify-content-between">
 
-    <section class="w-100 mr-2">
+    <section class="w-100">
 
         {% if app.request.pathinfo in ['/courrier', '/information', '/service'] %}
             <div class="d-inline-block">
@@ -37,43 +37,39 @@
 
         {% if app.request.pathinfo in ['/courrier', '/information', '/service'] %}
             <div class="d-inline-block">
+                <label for="number" class="inp-label">Numéro</label>
+                <input type="text" name="number" id="number" class="inp-text" size="5">
+            </div>
+        {% endif %}
+
+        {% if app.request.pathinfo in ['/courrier', '/information', '/service'] %}
+            <div class="d-inline-block">
                 <label for="subject" class="inp-label">Objet</label>
-                <input type="text" name="subject" id="subject" class="inp-text" size="50">
+                <input type="text" name="subject" id="subject" class="inp-text" size="30">
             </div>
         {% endif %}
         
         {% if app.request.pathinfo in ['/courrier'] %}
             <div class="d-inline-block">
                 <label for="recipient" class="inp-label">Destinataire</label>
-                <input type="text" name="recipient" id="recipient" class="inp-text" size="50">
+                <input type="text" name="recipient" id="recipient" class="inp-text" size="30">
             </div>
         {% endif %}
         
         {% if app.request.pathinfo in ['/information', '/service']  %}
             <div class="d-inline-block">
                 <label for="service" class="inp-label">Service</label>
-                <input type="text" name="service" id="service" class="inp-text" size="50">
+                <input type="text" name="service" id="service" class="inp-text" size="30">
             </div>
         {% endif %}
         
         {% if app.request.pathinfo in ['/administration']  %}
             <div class="d-inline-block w-100">
-                <input type="text" name="service" id="service" class="inp-text w-100" placeholder="Tapez le nom d'un utilisateur...">
+                <label for="search-user" class="inp-label">Rechercher un utilisateur</label>
+                <input type="text" name="search-user" id="search-user" class="inp-text w-100">
             </div>
         {% endif %}
 
     </section>
-
-    {% if app.request.pathinfo in ['/courrier', '/information', '/service'] %}
-        <div class="d-inline-block">
-            <button class="btn-grey">Filtrer</button>
-        </div>
-    {% endif %}
-
-    {% if app.request.pathinfo in ['/administration'] %}
-        <div class="d-inline-block">
-            <button class="btn-blue">Ajouter utilisateur</button>
-        </div>
-    {% endif %}
 
 </nav>
