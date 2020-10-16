@@ -12,7 +12,11 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        <div id="loading">
+            <div id="loading-screen"><p>Veuillez patienter</p><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
+        </div>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+        <script src="scripts/chrono.js"></script>
     </body>
 </html>

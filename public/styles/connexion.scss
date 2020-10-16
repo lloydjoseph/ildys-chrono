@@ -16,6 +16,10 @@ body {
     border: none;
 }
 
+.inp-text:hover {
+    border: none;
+}
+
 .inp-text:focus {
     background-color: $deepgrey;
 }

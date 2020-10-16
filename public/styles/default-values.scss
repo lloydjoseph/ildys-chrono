@@ -62,6 +62,7 @@ $green: #1E8449;
 $lightgreen: #E6FFF1;
 
 $red: #F64343;
+$lightred: #ffd5d5;
 $darkred: #CE2323;
 
 $black: #212121;
@@ -70,8 +71,11 @@ $white: #ffffff;
 $lightgrey: #FBFBFB;
 $mediumgrey: #F5F5F5;
 $grey: #E9E9E9;
+$dimgrey: #C9C9C9;
 $darkgrey: #444444;
 $deepgrey: #333333;
+
+$transblack: #00000061;
 
 // Default styling
 html, body {
@@ -97,4 +101,13 @@ i {
 
 button {
     font-size: 1em;
+}
+
+code {
+    font-family: monospace;
+    padding: 0.125rem 0.5rem;
+    background: $lightgreen;
+    color: $green;
+    border-radius: 20rem;
+    font-weight: 900;
 }

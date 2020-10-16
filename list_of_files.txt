@@ -1,0 +1,28 @@
+ Le volume dans le lecteur C s'appelle OS
+ Le num‚ro de s‚rie du volume est 4835-0964
+
+ R‚pertoire de C:\Users\JLL7946\Documents\ildys-chrono
+
+15/10/2020  11:21    <DIR>          .
+15/10/2020  11:21    <DIR>          ..
+12/10/2020  16:46             1ÿ671 .env
+08/10/2020  10:03               162 .env.test
+08/10/2020  10:03               298 .gitignore
+08/10/2020  10:03    <DIR>          bin
+13/10/2020  09:44             3ÿ018 composer.json
+13/10/2020  09:11           288ÿ373 composer.lock
+08/10/2020  10:03    <DIR>          config
+15/10/2020  11:27                 0 list_of_files.txt
+08/10/2020  10:03    <DIR>          migrations
+08/10/2020  10:03             1ÿ065 phpunit.xml.dist
+13/10/2020  16:28    <DIR>          public
+08/10/2020  10:34                55 README.md
+08/10/2020  10:03    <DIR>          src
+08/10/2020  10:32            13ÿ332 symfony.lock
+14/10/2020  15:03    <DIR>          templates
+08/10/2020  10:03    <DIR>          tests
+08/10/2020  10:03    <DIR>          translations
+08/10/2020  10:03    <DIR>          var
+13/10/2020  09:11    <DIR>          vendor
+               9 fichier(s)          307ÿ974 octets
+              12 R‚p(s)  152ÿ991ÿ281ÿ152 octets libres

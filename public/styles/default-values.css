@@ -63,4 +63,13 @@ button {
   font-size: 1em;
 }
 
+code {
+  font-family: monospace;
+  padding: 0.125rem 0.5rem;
+  background: #E6FFF1;
+  color: #1E8449;
+  border-radius: 20rem;
+  font-weight: 900;
+}
+
 /*# sourceMappingURL=default-values.css.map */

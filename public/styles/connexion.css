@@ -63,6 +63,15 @@ button {
   font-size: 1em;
 }
 
+code {
+  font-family: monospace;
+  padding: 0.125rem 0.5rem;
+  background: #E6FFF1;
+  color: #1E8449;
+  border-radius: 20rem;
+  font-weight: 900;
+}
+
 main {
   background-color: #212121;
   height: 100vh;
@@ -76,6 +85,11 @@ body {
 .inp-text {
   background-color: #444444;
   color: #ffffff;
+  border: none;
+}
+
+.inp-text:hover {
+  border: none;
 }
 
 .inp-text:focus {

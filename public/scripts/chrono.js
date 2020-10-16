@@ -1,5 +1,7 @@
 console.log('Loaded chrono.js')
 
+document.getElementById('loading').style.display = 'none';
+
 let checkboxes = Array.prototype.slice.call(document.getElementsByClassName('checkbox'));
 
 checkboxes.forEach(element => {
@@ -54,14 +56,29 @@ checkboxContainers.forEach(element => {
 let passwordVisible = document.getElementById('password-visible');
 let passwordField = document.getElementById('password');
 
-passwordVisible.addEventListener('change', () => {
-    if(passwordField.type === 'password') {
-        passwordField.type = 'text';
-    } else {
-        passwordField.type = 'password';
-    }
-})
+if(document.getElementById('passwordVisible')) {
+    passwordVisible.addEventListener('change', () => {
+        if(passwordField.type === 'password') {
+            passwordField.type = 'text';
+        } else {
+            passwordField.type = 'password';
+        }
+    })
+}
 
 function link(page) {
     location.href = page;
+}
+
+function loadingPage() {
+    document.getElementById('loading').style.display = 'flex';
+}
+
+function add(page) {
+    document.getElementById('add').style.display = 'flex';
+}
+
+function cancelAdd() {
+    document.getElementById('add').style.display = 'none';
+    document.getElementById('add-form').reset();
 }

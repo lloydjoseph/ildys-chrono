@@ -16,9 +16,9 @@
 
             <div class="w-100">
                 <label for="user" class="inp-label">Utilisateur</label>
-                <input type="text" name="user" id="user" class="inp-text w-100">
+                <input type="text" name="user" id="user" class="inp-text w-100" autocomplete="username">
                 <label for="password" class="inp-label">Mot de passe</label>
-                <input type="password" name="password" id="password" class="inp-text w-100">
+                <input type="password" name="password" id="password" class="inp-text w-100" autocomplete="current-password">
             </div>
 
             <div class="w-100">
@@ -28,7 +28,7 @@
             </div>
 
             <div>
-                <button id="connexion" class="btn-blue">Connexion</button>
+                <button id="connexion" class="btn-blue" onclick="loadingPage()">Connexion</button>
             </div>
 
             <div>
@@ -37,7 +37,5 @@
         </form>
 
     </main>
-
-    <!-- {% block javascripts %} <script src="scripts/chrono.js"></script> {% endblock %} -->
 
 {% endblock %}

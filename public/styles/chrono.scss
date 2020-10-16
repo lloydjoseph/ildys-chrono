@@ -1,6 +1,28 @@
 // Import default values
 @import 'default-values';
 
+// Loading screen
+#loading {
+    display: none;
+}
+
+#loading-screen {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: $transblack;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+#loading-screen p {
+    font-family: 'Open Sans Bold';
+}
+
 // Links
 .link-white {
     color: $white;
@@ -9,6 +31,7 @@
 // Buttons
 .btn-blue {
     cursor: pointer;
+    white-space: nowrap;
     background-color: $blue;
     color: $white;
     border: none;
@@ -23,6 +46,7 @@
 
 .btn-grey {
     cursor: pointer;
+    white-space: nowrap;
     background-color: $mediumgrey;
     color: $black;
     border: none;
@@ -33,6 +57,20 @@
 
 .btn-grey:hover {
     background-color: $grey;
+}
+
+.btn-trans {
+    cursor: pointer;
+    border: none;
+    color: $dimgrey;
+    border-radius: 2rem;
+    padding: 0.625rem 2.25rem;
+    background-color: transparent;
+    transition: color 0.2s ease-in-out;
+}
+
+.btn-trans:hover {
+    color: $white;
 }
 
 .btn-add {
@@ -71,6 +109,55 @@
 
 .inp-text:hover {
     border-color: $darkgrey;
+}
+
+// Tables 
+.table {
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+}
+
+.table th, .table td {
+    padding: 1rem;
+    border: 1px solid $grey;
+}
+
+.table th {
+    font-family: 'Open Sans Bold';
+    background-color: $black;
+    color: $white;
+    position: sticky;
+    top: 0;
+}
+
+.table tr:nth-child(odd) {
+    background-color: $lightgrey;
+}
+
+.table-min {
+    width: 1px;
+    white-space: nowrap;
+}
+
+// Form
+#add {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    background: #000000e0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $white;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-form {
+    max-width: 28rem;
 }
 
 // Sidebar
@@ -127,6 +214,17 @@
 
 .active .menu-icon {
     fill: $blue;
+}
+
+// Pagination
+.pagination-item {
+    cursor: pointer;
+    color: $black;
+    transition: color 0.2s ease-in-out;
+}
+
+.pagination-item:hover {
+    color: $blue;
 }
 
 // Navbar
@@ -192,4 +290,127 @@
 
 .w-100 {
     width: 100%;
+}
+
+.mr-2 {
+    margin-right: 2rem;
+}
+
+.ml-2 {
+    margin-left: 2rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.lightblue {
+    background-color: $lightblue;
+    cursor: pointer;
+}
+
+.c-blue {
+    color: $blue;
+}
+
+.f-blue {
+    fill: $blue;
+    transition: fill 0.2s ease-in-out;
+}
+
+.lightblue:hover .f-blue {
+    fill: $darkblue;
+}
+
+.lightred {
+    background-color: $lightred;
+    cursor: pointer;
+}
+
+.c-red {
+    color: $red;
+}
+
+.f-red {
+    fill: $red;
+    transition: fill 0.2s ease-in-out;
+}
+
+.lightred:hover .f-red {
+    fill: $darkred;
+}
+
+// Loader
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 40px;
+  }
+
+  .lds-ellipsis div {
+    position: absolute;
+    top: 16.5px;
+    width: 6.5px;
+    height: 6.5px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+
+@media (max-width: 1600px) {
+    html, body {
+        font-size: 14px;
+    }
 }
