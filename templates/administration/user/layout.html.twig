@@ -14,51 +14,6 @@
 
             <section class="content">
 
-                <h4>Dernières modifications des utilisateurs</h4>
-
-                <div class="content-table">
-                    <table class="table">
-
-                        <thead>
-                            <tr>
-                                <th class="b-none">Date</th>
-                                <th class="b-none">N°</th>
-                                <th class="b-none">Utilisateur</th>
-                                <th class="b-none">Service</th>
-                                <th class="b-none">Type de modification</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            {% set user_text = 'Mme MARTIN' %}
-                            {% set service_text = 'DIR' %}
-                            {% set recipient_text = 'DIR' %}
-                            {% set mod_type_text = 'Ajout' %}
-                            {% for row in 1..5 %}
-                                <tr>
-                                    <td>15/10/2020</td>
-                                    <td>{{ row }}</td>
-                                    <td>{{ user_text}}</td>
-                                    <td>{{ service_text }}</td>
-                                    <td>{{ mod_type_text }}</td>
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-
-                    </table>
-                </div>
-
-                <h4 class="mt-2">Statistiques</h4>
-
-                <div class="admin-card">
-                    <h2 class="text-center">57</h2>
-                    <p class="admin-card-text text-center">Nombre d'utilisateurs</p>
-                </div>
-
-                <div class="admin-card mt-2">
-                    <h2 class="text-center">2300</h2>
-                    <p class="admin-card-text text-center">Nombre de courriers</p>
-                </div>
 
             </section>
 

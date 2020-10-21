@@ -72,7 +72,26 @@
     color: var(--white);
 }
 
-.btn-add {
+.btn-info {
+    cursor: pointer;
+    border: none;
+    padding: 0px;
+    color: inherit;
+    background-color: transparent;
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-info:hover {
+    background-color: var(--transgreen);
+}
+
+#btn-add {
     cursor: pointer;
     color: var(--white);
     border: none;
@@ -81,7 +100,7 @@
     transition: background-color 0.2s ease-in-out;
 }
 
-.btn-add:hover {
+#btn-add:hover {
     background-color: var(--darkblue);
 }
 
@@ -153,7 +172,7 @@
    width: 100vw;
    height: 100vh;
    z-index: 5;
-   background: #000000e0;
+   background: var(--transblack);
    position: absolute;
    top: 0;
    left: 0;
@@ -185,10 +204,10 @@
 /*-----------------------------------------------------------------*/
 /* Menu */
 
-   .menu {
-       list-style-type: none;
-       padding: 0;
-   }
+.menu {
+   list-style-type: none;
+   padding: 0;
+}
 
 .menu-item {
     display: flex;
@@ -197,10 +216,11 @@
     padding: 1rem 2rem;
     white-space: nowrap;
     color: var(--darkgrey);
+    text-decoration: none;
     transition: background-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
-.menu-item:hover {
+.menu-item:hover, .menu-item:focus {
     color: var(--black);
     background-color: var(--mediumgrey);
     box-shadow: inset 4px 0 0 0;
