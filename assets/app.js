@@ -1,4 +1,25 @@
-console.log('Loaded chrono.js')
+/*
+ * Welcome to your app's main JavaScript file!
+ *
+ * We recommend including the built version of this JavaScript file
+ * (and its CSS file) in your base layout (base.html.twig).
+ */
+
+// any CSS you import will output into a single css file (app.css in this case)
+import './styles/app.css';
+import './styles/global.css';
+
+
+// Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
+// import $ from 'jquery';
+
+const autosize = require('./autosize.min.js');
+
+autosize(document.querySelectorAll('textarea'));
+
+console.log('Loaded app.js')
+
+if (/*@cc_on!@*/!!document.documentMode) alert('L\'utilisation du navigateur Google Chrome est recommandé pour l\'utilisation de cet outil.')
 
 document.getElementById('loading').style.display = 'none';
 
@@ -10,7 +31,7 @@ checkboxes.forEach(element => {
     let custCheckbox = document.createElement('img');
 
     let attr = document.createAttribute('src');
-    attr.value = 'icons/circle-24px.svg';
+    attr.value = 'build/images/circle-24px.svg';
 
     let attr2 = document.createAttribute('class');
     attr2.value = 'cust-checkbox';
@@ -18,21 +39,11 @@ checkboxes.forEach(element => {
     custCheckbox.setAttributeNode(attr);
     custCheckbox.setAttributeNode(attr2);
 
-    // custCheckbox.addEventListener('click', () => {
-    //     if(element.checked) {
-    //         element.click();
-    //         custCheckbox.src = 'icons/circle-24px.svg';
-    //     } else {
-    //         element.click();
-    //         custCheckbox.src = 'icons/check_circle-24px.svg';
-    //     }
-    // });
-
     element.addEventListener('change', () => {
         if(element.checked) {
-            custCheckbox.src = 'icons/check_circle-24px.svg';
+            custCheckbox.src = 'build/images/check_circle-24px.svg';
         } else {
-            custCheckbox.src = 'icons/circle-24px.svg';
+            custCheckbox.src = 'build/images/circle-24px.svg';
         }
     });
 
@@ -47,16 +58,12 @@ checkboxContainers.forEach(element => {
             console.log(element.firstChild.nextSibling.click());
         }
     });
-    // element.addEventListener('click', () => {
-    //     element.firstChild.nextSibling.click();
-    // })
 })
-
 
 let passwordVisible = document.getElementById('password-visible');
 let passwordField = document.getElementById('password');
 
-if(document.getElementById('passwordVisible')) {
+if(document.getElementById('password-visible')) {
     passwordVisible.addEventListener('change', () => {
         if(passwordField.type === 'password') {
             passwordField.type = 'text';
@@ -83,6 +90,17 @@ function cancelAdd() {
     document.getElementById('add-form').reset();
     for (let index = 0; index < document.querySelectorAll('#add-form textarea').length; index++) {
         document.querySelectorAll('#add-form textarea')[index].style.height = 'auto';
-        
+
     }
 }
+
+function showInfo(text) {
+    document.getElementById('info').style.display = 'flex';
+    document.getElementById('info-text').textContent = text;
+}
+
+function hideInfo() {
+    document.getElementById('info').style.display = 'none';
+}
+
+// tezs
