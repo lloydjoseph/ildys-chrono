@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
-/* List of colors */
+/*-----------------------------------------------------------------*/
+/* Variables */
 
 :root {
     --blue: #0066FF;
@@ -24,4 +26,186 @@
     --deepgrey: #333333;
 
     --transblack: #00000061;
+}
+
+/*-----------------------------------------------------------------*/
+/* Initial element styling */
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    font-size: 16px;
+}
+
+main {
+    overflow: auto;
+}
+
+button {
+    font-size: 1em;
+}
+
+code {
+    font-family: monospace;
+    padding: 0.125rem 0.5rem;
+    background: var(--lightgreen);
+    color: var(--green);
+    border-radius: 20rem;
+    font-weight: 900;
+}
+
+hr {
+    border: none;
+    border-bottom: 0.125rem solid var(--grey);
+}
+
+/*-----------------------------------------------------------------*/
+/* Flexbox */
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+/*-----------------------------------------------------------------*/
+/* Display */
+
+.d-inline-block {
+    display: inline-block;
+}
+
+/*-----------------------------------------------------------------*/
+/* Text */
+
+.text-center {
+    text-align: center;
+}
+
+/*-----------------------------------------------------------------*/
+/* Resize */
+
+.resize-vertical {
+    resize: vertical;
+}
+
+/*-----------------------------------------------------------------*/
+/* Cursor */
+
+.c-pointer {
+    cursor: pointer;
+}
+
+/*-----------------------------------------------------------------*/
+/* Border */
+
+.b-none {
+    border: none !important;
+}
+
+/*-----------------------------------------------------------------*/
+/* Height & width */
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.full {
+    width: 100vw;
+    height: 100vh;
+}
+
+/*-----------------------------------------------------------------*/
+/* Margin */
+
+.mr-2 {
+    margin-right: 2rem;
+}
+
+.ml-2 {
+    margin-left: 2rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+/*-----------------------------------------------------------------*/
+/* Color */
+
+.c-white {
+    color: var(--white);
+}
+
+.c-blue {
+    color: var(--blue);
+}
+
+.c-red {
+    color: var(--red);
+}
+
+/*-----------------------------------------------------------------*/
+/* Background */
+
+.black {
+    background-color: var(--black);
+}
+
+.darkgrey {
+    background-color: var(--darkgrey);
+}
+
+.lightblue {
+    background-color: var(--lightblue);
+}
+
+.lightred {
+    background-color: var(--lightred);
+}
+
+/*-----------------------------------------------------------------*/
+/* Fill */
+
+.f-blue {
+    fill: var(--blue);
+    transition: fill 0.2s ease-in-out;
+}
+
+.lightblue:hover .f-blue {
+    fill: var(--darkblue);
+}
+
+.f-red {
+    fill: var(--red);
+    transition: fill 0.2s ease-in-out;
+}
+
+.lightred:hover .f-red {
+    fill: var(--darkred);
 }

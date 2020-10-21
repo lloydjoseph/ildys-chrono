@@ -20,57 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/JLL7946.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ildys-chrono.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/administration/user/layout.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/loading.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/OpenSans-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/OpenSans-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/OpenSans-ExtraBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/OpenSans-ExtraBoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/OpenSans-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/OpenSans-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/OpenSans-LightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/OpenSans-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/OpenSans-SemiBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/OpenSans-SemiBoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/check_circle-24px.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/check_circle-24px.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/circle-24px.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/circle-24px.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/create-24px.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/create-24px.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/delete-24px.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/delete-24px.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/image.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scripts/chrono.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles/chrono.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles/chrono.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles/chrono.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles/connexion.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles/connexion.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles/connexion.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles/default-values.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles/default-values.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles/default-values.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/add.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/administration/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administration/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/connexion/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/connexion/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/courrier/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/information/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/information/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/layout.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,8 +189,30 @@
       <workItem from="1603184258466" duration="254000" />
       <workItem from="1603184543270" duration="15143000" />
       <workItem from="1603263655496" duration="718000" />
-      <workItem from="1603265033179" duration="7608000" />
+      <workItem from="1603265033179" duration="9400000" />
     </task>
+    <task id="LOCAL-00001" summary="add webpack">
+      <created>1603273422746</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603273422746</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add webpack">
+      <created>1603273516783</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603273516783</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add webpack">
+      <created>1603273541166</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603273541166</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
