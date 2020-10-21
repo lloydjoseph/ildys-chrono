@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+/* Default styling */
+
+   html, body {
+       margin: 0;
+       font-size: 16px;
+   }
+
+main {
+    overflow: auto;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    font-size: 1em;
+}
+
+code {
+    font-family: monospace;
+    padding: 0.125rem 0.5rem;
+    background: var(--lightgreen);
+    color: var(--green);
+    border-radius: 20rem;
+    font-weight: 900;
+}
+
+hr {
+    border: none;
+    border-bottom: 0.125rem solid var(--grey);
+}
+
+/* Loading screen */
+   #loading {
+       display: none;
+   }
+
+#loading-screen {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: var(--transblack);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+/* Links */
+.link-white {
+   color: var(--white);
+}
+
+/* Buttons */
+.btn-blue {
+    cursor: pointer;
+   white-space: nowrap;
+   background-color: var(--blue);
+   color: var(--white);
+   border: none;
+   border-radius: 2rem;
+   padding: 0.625rem 2.25rem;
+   transition: background-color 0.2s ease-in-out;
+}
+
+.btn-blue:hover {
+    background-color: var(--darkblue);
+}
+
+.btn-grey {
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: var(--mediumgrey);
+    color: var(--black);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.625rem 2.25rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-grey:hover {
+    background-color: var(--grey);
+}
+
+.btn-trans {
+    cursor: pointer;
+    border: none;
+    color: var(--dimgrey);
+    border-radius: 2rem;
+    padding: 0.625rem 2.25rem;
+    background-color: transparent;
+    transition: color 0.2s ease-in-out;
+}
+
+.btn-trans:hover {
+    color: var(--white);
+}
+
+.btn-add {
+    cursor: pointer;
+    color: var(--white);
+    border: none;
+    padding: 1.5rem 2rem;
+    background-color: var(--blue);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-add:hover {
+    background-color: var(--darkblue);
+}
+
+/* Labels */
+.inp-label {
+   display: block;
+   margin-bottom: 0.25rem;
+}
+
+.inp-label:not(:first-child) {
+    margin-top: 1.25rem;
+}
+
+/* Inputs */
+.inp-text {
+   padding: 0.5rem;
+   border-radius: 3px;
+   border: 1px solid var(--grey);
+   font-size: 1rem;
+   box-sizing: border-box;
+   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.inp-text:hover {
+    border-color: var(--darkgrey);
+}
+
+/* Tables */
+.table {
+   text-align: left;
+   width: 100%;
+   border-collapse: collapse;
+   position: relative;
+}
+
+.table th, .table td {
+    padding: 1rem;
+    border: 1px solid var(--grey);
+}
+
+.table th {
+    font-family: 'Open Sans Bold', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+}
+
+.table tr:nth-child(odd) {
+    background-color: var(--lightgrey);
+}
+
+.table-min {
+    width: 1px;
+    white-space: nowrap;
+}
+
+/* Form */
+#add {
+   display: none;
+   width: 100vw;
+   height: 100vh;
+   z-index: 5;
+   background: #000000e0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   color: var(--white);
+   justify-content: center;
+   align-items: center;
+}
+
+#add-form {
+    max-width: 28rem;
+}
+
+/* Sidebar */
+.sidebar {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   border-right: 0.125rem solid var(--grey);
+   background-color: var(--lightgrey);
+}
+
+.sidebar-container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+/* Menu */
+   .menu {
+       list-style-type: none;
+       padding: 0;
+   }
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    white-space: nowrap;
+    color: var(--darkgrey);
+    transition: background-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.menu-item:hover {
+    color: var(--black);
+    background-color: var(--mediumgrey);
+    box-shadow: inset 4px 0 0 0;
+}
+
+.menu-item svg {
+    margin-right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.menu-title {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.active {
+    color: var(--blue) !important;
+    background-color: var(--lightblue) !important;
+    box-shadow: inset 4px 0 0 0;
+}
+
+.active .menu-icon {
+    fill: var(--blue);
+}
+
+/* Pagination */
+.pagination-item {
+   cursor: pointer;
+   color: var(--black);
+   transition: color 0.2s ease-in-out;
+}
+
+.pagination-item:hover {
+    color: var(--blue);
+}
+
+/* Navbar */
+.navbar {
+   border-bottom: 0.125rem solid var(--grey);
+   padding: 1rem 2rem;
+   flex-grow: 0;
+}
+
+/* Main */
+.main {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+
+/* Content */
+.content {
+   padding: 1rem 2rem;
+   height: calc(100vh - 9.125rem);
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+
+/* Content table */
+.content-table {
+   overflow-y: auto;
+   overflow-x: hidden;
+}
+
+/* Info box */
+.info {
+   display: none;
+   background-color: var(--lightgreen);
+   color: var(--green);
+   margin-bottom: 1rem;
+   padding: 1rem;
+   border: 1px solid var(--green);
+   border-radius: 3px;
+}
+
+/* Admin card */
+.admin-card {
+   background-color: var(--lightgrey);
+   border: 2px solid var(--grey);
+}
+
+.admin-card-text {
+    color: var(--darkgrey);
+}
+
+/* Custom checkbox */
+.cust-checkbox {
+   padding-right: 0.5rem;
+   transition: filter 0.2s ease-in-out;
+}
+
+.checkbox-container:hover .cust-checkbox {
+    filter: brightness(70%);
+}
+
+.checkbox-container {
+    cursor: pointer;
+}
+
+
+/* Regular classes */
+.d-flex {
+   display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.resize-vertical {
+    resize: vertical;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.b-none {
+    border: none !important;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.mr-2 {
+    margin-right: 2rem;
+}
+
+.ml-2 {
+    margin-left: 2rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.full {
+    width: 100vw;
+    height: 100vh;
+}
+
+.black {
+    background-color: var(--black);
+}
+
+.c-white {
+    color: var(--white);
+}
+
+.darkgrey {
+    background-color: var(--darkgrey);
+}
+
+.lightblue {
+    background-color: var(--lightblue);
+    cursor: pointer;
+}
+
+.c-blue {
+    color: var(--blue);
+}
+
+.f-blue {
+    fill: var(--blue);
+    transition: fill 0.2s ease-in-out;
+}
+
+.lightblue:hover .f-blue {
+    fill: var(--darkblue);
+}
+
+.lightred {
+    background-color: var(--lightred);
+    cursor: pointer;
+}
+
+.c-red {
+    color: var(--red);
+}
+
+.f-red {
+    fill: var(--red);
+    transition: fill 0.2s ease-in-out;
+}
+
+.lightred:hover .f-red {
+    fill: var(--darkred);
+}
+
+
+
+/* Loader */
+.lds-ellipsis {
+   display: inline-block;
+   position: relative;
+   width: 80px;
+   height: 40px;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 16.5px;
+    width: 6.5px;
+    height: 6.5px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+@media (max-width: 1600px) {
+    html, body {
+        font-size: 14px;
+    }
+}
