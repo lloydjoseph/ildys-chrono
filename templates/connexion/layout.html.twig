@@ -2,11 +2,9 @@
 
 {% block title %}Chrono - Connexion{% endblock %}
 
-{% block stylesheets %} <link rel="stylesheet" href="styles/connexion.css"> {% endblock %}
-
 {% block body %}
     
-    <main class="d-flex align-items-center justify-content-center">
+    <main class="d-flex align-items-center justify-content-center black c-white full">
 
         <form id="connexion-form" method="post" class="d-flex align-items-center justify-content-center flex-direction-column" action="courrier">
             <div class="text-center">
@@ -27,7 +25,7 @@
                 Voir le mot de passe</label>
             </div>
 
-            <div>
+            <div class="mt-2 mb-2">
                 <button id="connexion" class="btn-blue" onclick="loadingPage()">Connexion</button>
             </div>
 

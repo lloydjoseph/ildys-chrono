@@ -5,12 +5,12 @@
         <p class="text-center">Entrez les informations afin de créer une nouvelle note dans la catégorie : <code>{{ page }}</code></p>
         {% if page in ['courrier', 'information', 'service'] %}
                 <label for="form-subject" class="inp-label">Objet</label>
-                <textarea name="form-subject" id="form-subject" class="inp-text resize-vertical w-100"></textarea>
+                <textarea name="form-subject" id="form-subject" class="inp-text resize-vertical w-100" rows="1"></textarea>
         {% endif %}
 
         {% if page == 'courrier' %}
                 <label for="form-recipient" class="inp-label">Destinataire</label>
-                <input type="text" name="form-recipient" id="form-recipient" class="inp-text w-100" autocomplete="name">
+                <textarea name="form-recipient" id="form-recipient" class="inp-text resize-vertical w-100" rows="1"></textarea>
         {% endif %}
 
         <div>

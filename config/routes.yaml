@@ -8,6 +8,11 @@ administration:
       path: /administration
       controller: App\Controller\AdministrationController::administration
 
+#administration user route
+administration user:
+      path: /administration/user
+      controller: App\Controller\AdministrationUserController::user
+
 #courrier route
 courrier:
       path: /courrier

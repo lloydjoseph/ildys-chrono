@@ -5,18 +5,18 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <meta name=viewport content="width=device-width, initial-scale=1">
-        <link rel="icon" href="logo/favicon.ico">
+        <link rel="icon" href="{{ asset('build/images/favicon.ico') }}">
         <meta description="Outil Chrono | Ildys">
         <title>{% block title %}Accueil | Chrono{% endblock %}</title>
-        <link rel="stylesheet" href="styles/chrono.css">
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
     </head>
     <body>
-        <div id="loading">
-            <div id="loading-screen"><p>Veuillez patienter</p><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
-        </div>
+        {% include 'loading.html.twig' %}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-        <script src="scripts/chrono.js"></script>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
     </body>
 </html>
