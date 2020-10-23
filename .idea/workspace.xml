@@ -20,16 +20,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/navigate_before-24px.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/navigate_next-24px.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserCommonController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserDeleteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserPermissionsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/administration/user/create/layout.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/administration/user/delete/layout.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/administration/user/navbar-user.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/administration/user/permissions/layout.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/image.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/administration/user/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administration/user/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/info.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/info.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/administration/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administration/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/administration/user/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administration/user/common/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/connexion/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/connexion/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courrier/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/information/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/information/layout.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/layout.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/sidebar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,17 +182,21 @@
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/administration/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\templates\administration\user" />
+      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\assets\images" />
       <recent name="C:\Users\JLL7946\Documents\ildys-chrono\src\Controller" />
+      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\templates\administration\user\permissions" />
+      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\templates\administration\user\delete" />
+      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\templates\administration\user" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\templates\administration\user\common" />
       <recent name="C:\Users\JLL7946\Documents\ildys-chrono\assets\images" />
       <recent name="C:\Users\JLL7946\Documents\ildys-chrono\assets" />
     </key>
@@ -197,7 +215,9 @@
       <workItem from="1603184543270" duration="15143000" />
       <workItem from="1603263655496" duration="718000" />
       <workItem from="1603265033179" duration="22096000" />
-      <workItem from="1603291640451" duration="758000" />
+      <workItem from="1603291640451" duration="911000" />
+      <workItem from="1603350209472" duration="17538000" />
+      <workItem from="1603436434255" duration="14310000" />
     </task>
     <task id="LOCAL-00001" summary="add webpack">
       <created>1603273422746</created>
@@ -227,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603275273594</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add user page">
+      <created>1603292512788</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603292512788</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +276,8 @@
     <MESSAGE value="add info message" />
     <MESSAGE value="add webpack" />
     <MESSAGE value="synchronize tables across pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="synchronize tables across pages" />
+    <MESSAGE value="add user page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add user page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="404" width="927" height="242" key="#Composer" timestamp="1603180863250">
@@ -268,6 +296,14 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2468" y="337" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603181257963" />
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603354538961">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1603354538960" />
+    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1603356294771">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1603356294771" />
     <state x="2394" y="173" width="663" height="679" key="EditFileWatcherDialog" timestamp="1603185629655">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -285,13 +321,18 @@
     </state>
     <state x="381" y="167" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1603180626262" />
     <state x="2486" y="227" width="998" height="718" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603270938803" />
+    <state x="75" y="91" width="1736" height="866" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1603356294771">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="75" y="91" width="1736" height="866" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1603356294771" />
     <state x="2302" y="98" width="965" height="801" key="find.popup" timestamp="1603199120048">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2302" y="98" width="965" height="801" key="find.popup/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603199120048" />
-    <state x="2536" y="250" key="run.anything.popup" timestamp="1603183587477">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1603358366697">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1603358366697" />
     <state x="2536" y="250" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603183587477" />
     <state x="2527" y="398" key="scopes" timestamp="1603183881970">
       <screen x="1920" y="0" width="1920" height="1080" />

@@ -31,7 +31,7 @@ checkboxes.forEach(element => {
     let custCheckbox = document.createElement('img');
 
     let attr = document.createAttribute('src');
-    attr.value = 'build/images/circle-24px.svg';
+    attr.value = '/build/images/circle-24px.svg';
 
     let attr2 = document.createAttribute('class');
     attr2.value = 'cust-checkbox';
@@ -41,9 +41,9 @@ checkboxes.forEach(element => {
 
     element.addEventListener('change', () => {
         if(element.checked) {
-            custCheckbox.src = 'build/images/check_circle-24px.svg';
+            custCheckbox.src = '/build/images/check_circle-24px.svg';
         } else {
-            custCheckbox.src = 'build/images/circle-24px.svg';
+            custCheckbox.src = '/build/images/circle-24px.svg';
         }
     });
 
@@ -89,8 +89,6 @@ window.onbeforeunload = () => {
 /*-----------------------------------------------------------------*/
 /* Add 'active' class to menu item */
 
-
-
 let menuItems = document.querySelectorAll('.menu-item');
 
 menuItems.forEach((element) => {
@@ -98,6 +96,17 @@ menuItems.forEach((element) => {
 
     if(window.location.href.match(re)) {
         element.classList.add('active');
+    }
+})
+
+/*-----------------------------------------------------------------*/
+/* Add 'user-active' class to admin user menu item */
+
+let userMenuItems = document.querySelectorAll('.user-menu-item');
+
+userMenuItems.forEach((element) => {
+    if(location.href.replace(location.search, '') === element.href) {
+        element.classList.add('user-active');
     }
 })
 
@@ -111,6 +120,24 @@ btnAdd.addEventListener('click', () => {
     add.style.display = 'flex';
     backgroundBlur();
 })
+
+/*-----------------------------------------------------------------*/
+/* Toggle menu responsive */
+
+let toggleMenu = document.querySelector('#toggleMenu');
+let menu = document.querySelector('#menu');
+
+toggleMenu.addEventListener('click', () => {
+    if(menu.style.display === 'none') {
+        menu.style.display = 'block';
+        btnAdd.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+        btnAdd.style.display = 'none';
+    }
+})
+
+
 
 /*-----------------------------------------------------------------*/
 /* Blur background of add page and loading page */

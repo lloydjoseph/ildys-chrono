@@ -6,14 +6,17 @@
 :root {
     --blue: #0066FF;
     --lightblue: #EEF5FF;
+    --mediumblue: #1e77ff;
     --darkblue: #004DC1;
 
-    --green: #1E8449;
+    --green: #1e8449;
     --lightgreen: #E6FFF1;
+    --darkgreen: #106d38;
 
     --red: #F64343;
     --lightred: #ffd5d5;
-    --darkred: #CE2323;
+    --mediumred: #ffabab;
+    --darkred: #ce2323;
 
     --black: #212121;
     --white: #ffffff;
@@ -27,13 +30,15 @@
 
     --transgreen: #1e844926;
     --transblack: #000000CC;
+
+    --font: 'Open Sans', sans-serif;
 }
 
 /*-----------------------------------------------------------------*/
 /* Initial element styling */
 
 * {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font)
 }
 
 html, body {
@@ -43,6 +48,12 @@ html, body {
 
 main {
     overflow: auto;
+}
+
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+    }
 }
 
 button {
@@ -63,11 +74,27 @@ hr {
     border-bottom: 0.125rem solid var(--grey);
 }
 
+a {
+    color: var(--blue);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
 /*-----------------------------------------------------------------*/
 /* Flexbox */
 
 .d-flex {
     display: flex;
+}
+
+.d-inline-flex {
+    display: inline-flex;
 }
 
 .align-items-center {
@@ -80,6 +107,10 @@ hr {
 
 .justify-content-between {
     justify-content: space-between;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
 }
 
 .flex-direction-column {
@@ -105,6 +136,13 @@ hr {
 
 .resize-vertical {
     resize: vertical;
+}
+
+/*-----------------------------------------------------------------*/
+/* Poisition */
+
+.position-relative {
+    position: relative;
 }
 
 /*-----------------------------------------------------------------*/
@@ -139,6 +177,22 @@ hr {
 
 /*-----------------------------------------------------------------*/
 /* Margin */
+
+.mr-1 {
+    margin-right: 1rem;
+}
+
+.ml-1 {
+    margin-left: 1rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
 
 .mr-2 {
     margin-right: 2rem;

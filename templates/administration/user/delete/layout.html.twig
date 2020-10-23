@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Administration - Chrono{% endblock %}
+
+{% block body %}
+
+    <main class="d-flex">
+
+        {% include "sidebar.html.twig" %}
+
+        <section class="main">
+
+            {% include "navbar.html.twig" %}
+
+            <section class="content">
+
+                {% include "administration/user/navbar-user.html.twig" %}
+
+                <h4 class="mt-2">Supprimer le compte</h4>
+
+                <form id="common-user-form" action="">
+                    <p>En cliquant sur le bouton ci-dessous, vous supprimez
+                        le compte et les données qui lui sont liées définitivement.
+                        <br><br>
+                        Attention, cette action est irréversible !</p>
+
+                    <button class="btn-red mt-2">Supprimer</button>
+                </form>
+
+            </section>
+
+        </section>
+
+    </main>
+
+{% endblock %}

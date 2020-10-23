@@ -1,4 +1,28 @@
 /*-----------------------------------------------------------------*/
+/* Custom scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #242424;
+}
+
+/*-----------------------------------------------------------------*/
 /* Loading screen */
 
 #loading {
@@ -39,8 +63,23 @@
    transition: background-color 0.2s ease-in-out;
 }
 
-.btn-blue:hover {
+.btn-blue:hover, .btn-blue:focus {
     background-color: var(--darkblue);
+}
+
+.btn-red {
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.625rem 2.25rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-red:hover, .btn-red:focus {
+    background-color: var(--darkred);
 }
 
 .btn-grey {
@@ -54,7 +93,7 @@
     transition: background-color 0.2s ease-in-out;
 }
 
-.btn-grey:hover {
+.btn-grey:hover, .btn-grey:focus {
     background-color: var(--grey);
 }
 
@@ -68,7 +107,7 @@
     transition: color 0.2s ease-in-out;
 }
 
-.btn-trans:hover {
+.btn-trans:hover, .btn-trans:focus {
     color: var(--white);
 }
 
@@ -87,7 +126,7 @@
     transition: background-color 0.2s ease-in-out;
 }
 
-.btn-info:hover {
+.btn-info:hover, .btn-info:focus {
     background-color: var(--transgreen);
 }
 
@@ -100,7 +139,7 @@
     transition: background-color 0.2s ease-in-out;
 }
 
-#btn-add:hover {
+#btn-add:hover, #btn-add:focus {
     background-color: var(--darkblue);
 }
 
@@ -132,6 +171,12 @@
     border-color: var(--darkgrey);
 }
 
+.inp-dark {
+    color: var(--white);
+    background-color: var(--darkgrey);
+    border: none;
+}
+
 /*-----------------------------------------------------------------*/
 /* Tables */
 
@@ -143,25 +188,54 @@
 }
 
 .table th, .table td {
-    padding: 1rem;
-    border: 1px solid var(--grey);
+    padding: 0.5rem 1rem;
 }
 
 .table th {
     font-family: 'Open Sans Bold', sans-serif;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: #ffffff;
+    color: #000000;
     position: sticky;
     top: 0;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 100;
+    letter-spacing: 1px;
 }
 
 .table tr:nth-child(odd) {
     background-color: var(--lightgrey);
 }
 
-.table-min {
-    width: 1px;
+.table tbody tr {
+    border-bottom: 1px solid var(--grey);
+}
+
+.table-modify-item {
+    display: table-cell;
     white-space: nowrap;
+}
+
+.table-modify-link {
+    text-decoration: none !important;
+    display: inline-flex;
+}
+
+.table-modify-link svg {
+    border-radius: 50%;
+    padding: 0.5rem;
+    fill: var(--darkgrey);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.table-modify-link.edit svg:hover {
+    background-color: var(--grey);
+    fill: var(--black);
+}
+
+.table-modify-link.delete svg:hover {
+    background-color: var(--lightred);
+    fill: var(--red);
 }
 
 /*-----------------------------------------------------------------*/
@@ -185,6 +259,10 @@
     max-width: 28rem;
 }
 
+#common-user-form {
+    width: 28rem;
+}
+
 /*-----------------------------------------------------------------*/
 /* Sidebar */
 
@@ -204,7 +282,7 @@
 /*-----------------------------------------------------------------*/
 /* Menu */
 
-.menu {
+#menu {
    list-style-type: none;
    padding: 0;
 }
@@ -233,6 +311,8 @@
 }
 
 .menu-title {
+    display: flex;
+    justify-content: space-between;
     padding-left: 2rem;
     padding-right: 2rem;
 }
@@ -245,6 +325,28 @@
 
 .active .menu-icon {
     fill: var(--blue);
+}
+
+/*-----------------------------------------------------------------*/
+/* User menu */
+
+.user-menu-item {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--darkgrey);
+    border-radius: 3px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.user-menu-item:hover, .user-menu-item:focus {
+    color: var(--black);
+    background-color: var(--mediumgrey);
+}
+
+.user-active {
+    color: var(--blue) !important;
+    background-color: var(--lightblue) !important;
 }
 
 /*-----------------------------------------------------------------*/
@@ -284,7 +386,6 @@
 
 .content {
    padding: 1rem 2rem;
-   height: calc(100vh - 9.125rem);
    overflow: hidden;
    display: flex;
    flex-direction: column;
@@ -294,8 +395,7 @@
 /* Content table */
 
 .content-table {
-   overflow-y: auto;
-   overflow-x: hidden;
+   overflow: auto;
 }
 
 /*-----------------------------------------------------------------*/
@@ -316,7 +416,12 @@
 
 .admin-card {
    background-color: var(--lightgrey);
-   border: 2px solid var(--grey);
+   border: 1px solid var(--grey);
+    flex-grow: 1;
+}
+
+.admin-card:nth-child(even) {
+    margin-left: 2rem;
 }
 
 .admin-card-text {
@@ -324,19 +429,68 @@
 }
 
 /*-----------------------------------------------------------------*/
+/* User search results */
+
+#search-user-results-container {
+    display: block;
+    position: absolute;
+    background: var(--white);
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--grey);
+    border-radius: 0px 0px 3px 3px;
+    z-index: 1;
+}
+
+.search-user-result {
+    display: block;
+    text-decoration: none;
+    padding: 0.5rem;
+    width: 100%;
+    color: var(--darkgrey);
+    box-sizing: border-box;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.search-user-result:not(:last-child) {
+    border-bottom: 1px solid var(--mediumgrey);
+}
+
+.search-user-result:hover, .search-user-result:focus {
+    background-color: var(--lightblue);
+    color: var(--black);
+}
+
+
+/*-----------------------------------------------------------------*/
 /* Custom checkbox */
 
 .cust-checkbox {
    padding-right: 0.5rem;
-   transition: filter 0.2s ease-in-out;
-}
-
-.checkbox-container:hover .cust-checkbox {
-    filter: brightness(70%);
 }
 
 .checkbox-container {
     cursor: pointer;
+}
+
+/*-----------------------------------------------------------------*/
+/* Category */
+
+.category {
+    border-bottom: 1px solid var(--dimgrey);
+}
+
+/*-----------------------------------------------------------------*/
+/* Show menu button responsive */
+
+#toggleMenu {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    #toggleMenu {
+        display: block;
+    }
 }
 
 /*-----------------------------------------------------------------*/
@@ -408,6 +562,10 @@
 
 @media (max-width: 1600px) {
     html, body {
-        font-size: 14px;
+        font-size: 14px !important;
+    }
+
+    .table {
+        white-space: nowrap;
     }
 }

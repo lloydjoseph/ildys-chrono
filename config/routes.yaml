@@ -3,16 +3,6 @@ connexion:
       path: /connexion
       controller: App\Controller\ConnexionController::connexion
 
-#administration route
-administration:
-      path: /administration
-      controller: App\Controller\AdministrationController::administration
-
-#administration user route
-administration user:
-      path: /administration/user
-      controller: App\Controller\AdministrationUserController::user
-
 #courrier route
 courrier:
       path: /courrier
@@ -27,3 +17,34 @@ service:
 information:
       path: /information
       controller: App\Controller\InformationController::information
+
+
+#administration route
+administration:
+      path: /administration
+      controller: App\Controller\AdministrationController::administration
+
+#administration user route
+administration user:
+      path: /administration/user
+      controller: App\Controller\UserController::user
+
+#administration user common route
+administration user common:
+      path: /administration/user/common
+      controller: App\Controller\AdministrationUserCommonController::common
+
+#administration user permissions route
+administration user permissions:
+      path: /administration/user/permissions
+      controller: App\Controller\AdministrationUserPermissionsController::permissions
+
+#administration user delete route
+administration user delete:
+      path: /administration/user/delete
+      controller: App\Controller\AdministrationUserDeleteController::delete
+
+#administration user create route
+administration user create:
+      path: /administration/user/create
+      controller: App\Controller\AdministrationUserCreateController::create

@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Administration - Chrono{% endblock %}
+
+{% block body %}
+
+    <main class="d-flex">
+
+        {% include "sidebar.html.twig" %}
+
+        <section class="main">
+
+            {% include "navbar.html.twig" %}
+
+            <section class="content">
+
+                {% include "administration/user/navbar-user.html.twig" %}
+
+                <h4 class="mt-2">Modification des informations utilisateur</h4>
+
+                <form id="common-user-form" action="">
+                    <label for="firstname" class="inp-label">Prénom</label>
+                    <input type="text" name="firstname" id="firstname" class="inp-text w-100">
+                    <label for="lastname" class="inp-label">Nom</label>
+                    <input type="text" name="lastname" id="lastname" class="inp-text w-100">
+                    <label for="service" class="inp-label">Service</label>
+                    <input type="text" name="service" id="service" class="inp-text w-100">
+                    <label for="code" class="inp-label">Code</label>
+                    <input type="text" name="code" id="code" class="inp-text w-100">
+
+                    <button class="btn-blue mt-2">Enregistrer</button>
+                </form>
+
+            </section>
+
+        </section>
+
+    </main>
+
+{% endblock %}
