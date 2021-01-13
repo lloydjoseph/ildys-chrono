@@ -1,11 +1,12 @@
+{% set idParam = '?id=' ~ app.request.query.get('id') %}
 <div class="d-flex">
     <div class="mr-2">
-        <a href="{{ path('administration user common') }}" class="user-menu-item">Données générales</a>
+        <a href="{{ path('administration user common') ~ idParam }}" class="user-menu-item">Données générales</a>
     </div>
     <div class="mr-2">
-        <a href="{{ path('administration user permissions') }}" class="user-menu-item">Droits</a>
+        <a href="{{ path('administration user permissions') ~ idParam }}" class="user-menu-item">Droits</a>
     </div>
     <div>
-        <a href="{{ path('administration user delete') }}" class="user-menu-item">Suppression</a>
+        <a href="{{ path('administration user delete') ~ idParam }}" class="user-menu-item">Suppression</a>
     </div>
 </div>

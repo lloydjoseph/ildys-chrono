@@ -2,13 +2,28 @@
 
 namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\RedirectResponse;
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class UserController extends AbstractController
 {
-    public function user(): RedirectResponse
+    /**
+     * @Route("/user", name="user")
+     */
+    public function index(): Response
     {
-        return $this->redirectToRoute('administration user common', [], 301);
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $user = new User();
+        $user->setFirstname('Joseph');
+        $user->setLastname('Lloyd');
+
+        $entityManager->persist($user);
+
+        $entityManager->flush();
+
+        return new Response('Saved ! Info :' . $user->getId());
     }
 }

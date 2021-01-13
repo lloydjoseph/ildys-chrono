@@ -120,6 +120,10 @@ a:hover {
 /*-----------------------------------------------------------------*/
 /* Display */
 
+.d-none {
+    display: none;
+}
+
 .d-inline-block {
     display: inline-block;
 }
@@ -263,4 +267,11 @@ a:hover {
 
 .lightred:hover .f-red {
     fill: var(--darkred);
+}
+
+/*-----------------------------------------------------------------*/
+/* White space */
+
+.no-wrap {
+    white-space: nowrap;
 }

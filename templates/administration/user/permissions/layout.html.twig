@@ -18,49 +18,22 @@
 
                 <h4 class="mt-2">Modification des droits utilisateur</h4>
 
-                <form id="permissions-user-form" action="">
-                    <p class="category">Courrier</p>
-                    <label for="add-courrier" id="add-courrier-container" class="d-flex align-items-center checkbox-container" tabindex="0">
-                        <input type="checkbox" name="add-courrier" id="add-courrier" class="checkbox">
-                        L'utilisateur peut ajouter un courrier
-                    </label>
-                    <label for="modify-courrier" id="modify-courrier-container" class="d-flex align-items-center checkbox-container mt-1" tabindex="0">
-                        <input type="checkbox" name="modify-courrier" id="modify-courrier" class="checkbox">
-                        L'utilisateur peut modifier un courrier
-                    </label>
-                    <label for="delete-courrier" id="delete-courrier-container" class="d-flex align-items-center checkbox-container mt-1" tabindex="0">
-                        <input type="checkbox" name="delete-courrier" id="delete-courrier" class="checkbox">
-                        L'utilisateur peut supprimer un courrier
-                    </label>
-                    <p class="category">Information</p>
-                    <label for="add-information" id="add-information-container" class="d-flex align-items-center checkbox-container" tabindex="0">
-                        <input type="checkbox" name="add-information" id="add-information" class="checkbox">
-                        L'utilisateur peut ajouter une note d'information
-                    </label>
-                    <label for="modify-information" id="modify-information-container" class="d-flex align-items-center checkbox-container mt-1" tabindex="0">
-                        <input type="checkbox" name="modify-information" id="modify-information" class="checkbox">
-                        L'utilisateur peut modifier une note d'information
-                    </label>
-                    <label for="delete-information" id="delete-information-container" class="d-flex align-items-center checkbox-container mt-1" tabindex="0">
-                        <input type="checkbox" name="delete-information" id="delete-information" class="checkbox">
-                        L'utilisateur peut supprimer une note d'information
-                    </label>
-                    <p class="category">Service</p>
-                    <label for="add-service" id="add-service-container" class="d-flex align-items-center checkbox-container" tabindex="0">
-                        <input type="checkbox" name="add-service" id="add-service" class="checkbox">
-                        L'utilisateur peut ajouter une note de service
-                    </label>
-                    <label for="modify-service" id="modify-service-container" class="d-flex align-items-center checkbox-container mt-1" tabindex="0">
-                        <input type="checkbox" name="modify-service" id="modify-service" class="checkbox">
-                        L'utilisateur peut modifier une note de service
-                    </label>
-                    <label for="delete-service" id="delete-service-container" class="d-flex align-items-center checkbox-container mt-1" tabindex="0">
-                        <input type="checkbox" name="delete-service" id="delete-service" class="checkbox">
-                        L'utilisateur peut supprimer une note de service
-                    </label>
+                {% include "info.html.twig" with {'txt': 'L\'utilisateur a bien été enregistré !'} %}
 
-                    <button class="btn-blue mt-2">Enregistrer</button>
-                </form>
+                {{ form_start(form) }}
+                <div class="category mb-1">Courrier</div>
+                <div>{{ form_widget(form.courrierAdd) }}{{ form_label(form.courrierAdd) }}</div>
+                <div>{{ form_widget(form.courrierMod) }}{{ form_label(form.courrierMod) }}</div>
+                <div>{{ form_widget(form.courrierDel) }}{{ form_label(form.courrierDel) }}</div>
+                <div class="category mt-2 mb-1">Information</div>
+                <div>{{ form_widget(form.informationAdd) }}{{ form_label(form.informationAdd) }}</div>
+                <div>{{ form_widget(form.informationMod) }}{{ form_label(form.informationMod) }}</div>
+                <div>{{ form_widget(form.informationDel) }}{{ form_label(form.informationDel) }}</div>
+                <div class="category mt-2 mb-1">Service</div>
+                <div>{{ form_widget(form.serviceAdd) }}{{ form_label(form.serviceAdd) }}</div>
+                <div>{{ form_widget(form.serviceMod) }}{{ form_label(form.serviceMod) }}</div>
+                <div>{{ form_widget(form.serviceDel) }}{{ form_label(form.serviceDel) }}</div>
+                {{ form_end(form) }}
 
             </section>
 

@@ -6,34 +6,51 @@
     
     <main class="d-flex align-items-center justify-content-center black c-white full">
 
-        <form id="connexion-form" method="post" class="d-flex align-items-center justify-content-center flex-direction-column" action="courrier">
+{#        <form id="connexion-form" method="post" class="d-flex align-items-center justify-content-center flex-direction-column" action="courrier">#}
+{#            <div class="text-center">#}
+{#                <h1>Connexion à l'outil Chrono</h1>#}
+{#                <p>Entrez vos informations de connexion afin d'accéder à l'outil Ildys Chrono</p>#}
+{#            </div>#}
+
+{#            <div class="w-100">#}
+{#                <label for="user" class="inp-label">Utilisateur</label>#}
+{#                <input type="text" name="user" id="user" class="inp-text inp-dark w-100" autocomplete="username">#}
+{#                <label for="password" class="inp-label">Mot de passe</label>#}
+{#                <input type="password" name="password" id="password" class="inp-text inp-dark w-100" autocomplete="current-password">#}
+{#            </div>#}
+
+{#            <div class="w-100">#}
+{#                <label for="password-visible" id="password-visible-container" class="d-flex align-items-center checkbox-container mt-1" tabindex="0">#}
+{#                    <input type="checkbox" name="password-visible" id="password-visible" class="checkbox">#}
+{#                    Voir le mot de passe#}
+{#                </label>#}
+{#            </div>#}
+
+{#            <div class="mt-2 mb-2">#}
+{#                <button id="connexion" class="btn-blue" onclick="loadingPage()">Connexion</button>#}
+{#            </div>#}
+
+{#            <div>#}
+{#                <a href="#" class="link-white">Mot de passe oublié</a>#}
+{#            </div>#}
+{#        </form>#}
+        <div style="width: 20rem">
             <div class="text-center">
                 <h1>Connexion à l'outil Chrono</h1>
                 <p>Entrez vos informations de connexion afin d'accéder à l'outil Ildys Chrono</p>
             </div>
 
-            <div class="w-100">
-                <label for="user" class="inp-label">Utilisateur</label>
-                <input type="text" name="user" id="user" class="inp-text inp-dark w-100" autocomplete="username">
-                <label for="password" class="inp-label">Mot de passe</label>
-                <input type="password" name="password" id="password" class="inp-text inp-dark w-100" autocomplete="current-password">
-            </div>
+            {{ form_start(form) }}
 
-            <div class="w-100">
-                <label for="password-visible" id="password-visible-container" class="d-flex align-items-center checkbox-container mt-1" tabindex="0">
-                    <input type="checkbox" name="password-visible" id="password-visible" class="checkbox">
-                    Voir le mot de passe
-                </label>
-            </div>
+                {{ form_row(form.code, {'label': 'Utilisateur'}) }}
+                {{ form_row(form.password, {'label': 'Mot de passe'}) }}
 
-            <div class="mt-2 mb-2">
-                <button id="connexion" class="btn-blue" onclick="loadingPage()">Connexion</button>
-            </div>
+                <div class="d-flex justify-content-center">
+                    {{ form_row(form.Connexion) }}
+                </div>
 
-            <div>
-                <a href="#" class="link-white">Mot de passe oublié</a>
-            </div>
-        </form>
+            {{ form_end(form) }}
+        </div>
 
     </main>
 

@@ -39,7 +39,7 @@ checkboxes.forEach(element => {
     custCheckbox.setAttributeNode(attr);
     custCheckbox.setAttributeNode(attr2);
 
-    element.addEventListener('change', () => {
+    element && element.addEventListener('change', () => {
         if(element.checked) {
             custCheckbox.src = '/build/images/check_circle-24px.svg';
         } else {
@@ -53,7 +53,7 @@ checkboxes.forEach(element => {
 let checkboxContainers = Array.prototype.slice.call(document.getElementsByClassName('checkbox-container'));
 
 checkboxContainers.forEach(element => {
-    element.addEventListener('keyup', (event) => {
+    element && element.addEventListener('keyup', (event) => {
         if(event.keyCode === 13) {
             console.log(element.firstChild.nextSibling.click());
         }
@@ -67,7 +67,7 @@ let passwordVisible = document.getElementById('password-visible');
 let passwordField = document.getElementById('password');
 
 if(document.getElementById('password-visible')) {
-    passwordVisible.addEventListener('change', () => {
+    passwordVisible && passwordVisible.addEventListener('change', () => {
         if(passwordField.type === 'password') {
             passwordField.type = 'text';
         } else {
@@ -87,25 +87,12 @@ window.onbeforeunload = () => {
 };
 
 /*-----------------------------------------------------------------*/
-/* Add 'active' class to menu item */
-
-let menuItems = document.querySelectorAll('.menu-item');
-
-menuItems.forEach((element) => {
-    let re = new RegExp(element.href + '.*', 'g');
-
-    if(window.location.href.match(re)) {
-        element.classList.add('active');
-    }
-})
-
-/*-----------------------------------------------------------------*/
 /* Add 'user-active' class to admin user menu item */
 
 let userMenuItems = document.querySelectorAll('.user-menu-item');
 
 userMenuItems.forEach((element) => {
-    if(location.href.replace(location.search, '') === element.href) {
+    if(location.pathname === element.pathname) {
         element.classList.add('user-active');
     }
 })
@@ -116,7 +103,7 @@ userMenuItems.forEach((element) => {
 let btnAdd = document.querySelector('#btn-add');
 let add = document.querySelector('#add');
 
-btnAdd.addEventListener('click', () => {
+btnAdd && btnAdd.addEventListener('click', () => {
     add.style.display = 'flex';
     backgroundBlur();
 })
@@ -127,7 +114,7 @@ btnAdd.addEventListener('click', () => {
 let toggleMenu = document.querySelector('#toggleMenu');
 let menu = document.querySelector('#menu');
 
-toggleMenu.addEventListener('click', () => {
+toggleMenu && toggleMenu.addEventListener('click', () => {
     if(menu.style.display === 'none') {
         menu.style.display = 'block';
         btnAdd.style.display = 'block';
@@ -136,8 +123,6 @@ toggleMenu.addEventListener('click', () => {
         btnAdd.style.display = 'none';
     }
 })
-
-
 
 /*-----------------------------------------------------------------*/
 /* Blur background of add page and loading page */
@@ -149,19 +134,12 @@ function backgroundBlur() {
     })
 }
 
-function backgroundUnBlur() {
-    let allElements = document.querySelectorAll('body > *:not(#add):not(#loading)');
-    allElements.forEach((element) => {
-        element.style.filter = 'blur(0px)';
-    })
-}
-
 /*-----------------------------------------------------------------*/
 /* Cancel button in add page */
 
 let cancel = document.querySelector('#cancel');
 
-cancel.addEventListener('click', () => {
+cancel && cancel.addEventListener('click', () => {
     location.reload();
 })
 
@@ -171,24 +149,6 @@ cancel.addEventListener('click', () => {
 let closeInfo = document.querySelector('#closeInfo');
 let info = document.querySelector('#info');
 
-closeInfo.addEventListener('click', () => {
+closeInfo && closeInfo.addEventListener('click', () => {
     info.style.display = 'none';
 })
-
-
-function cancelAdd() {
-    document.getElementById('add').style.display = 'none';
-    document.getElementById('add-form').reset();
-    for (let index = 0; index < document.querySelectorAll('#add-form textarea').length; index++) {
-        document.querySelectorAll('#add-form textarea')[index].style.height = 'auto';
-    }
-}
-
-function showInfo(text) {
-    document.getElementById('info').style.display = 'flex';
-    document.getElementById('info-text').textContent = text;
-}
-
-function hideInfo() {
-    document.getElementById('info').style.display = 'none';
-}

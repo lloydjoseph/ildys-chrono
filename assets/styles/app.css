@@ -49,6 +49,10 @@
    color: var(--white);
 }
 
+.link-black {
+   color: var(--black);
+}
+
 /*-----------------------------------------------------------------*/
 /* Buttons */
 
@@ -114,7 +118,7 @@
 .btn-info {
     cursor: pointer;
     border: none;
-    padding: 0px;
+    padding: 0;
     color: inherit;
     background-color: transparent;
     display: flex;
@@ -130,17 +134,19 @@
     background-color: var(--transgreen);
 }
 
-#btn-add {
+.btn-add {
     cursor: pointer;
     color: var(--white);
     border: none;
     padding: 1.5rem 2rem;
+    text-align: center;
     background-color: var(--blue);
     transition: background-color 0.2s ease-in-out;
 }
 
-#btn-add:hover, #btn-add:focus {
+.btn-add:hover, .btn-add:focus {
     background-color: var(--darkblue);
+    text-decoration: none;
 }
 
 /*-----------------------------------------------------------------*/
@@ -253,6 +259,10 @@
    color: var(--white);
    justify-content: center;
    align-items: center;
+}
+
+#add form {
+    width: 20rem;
 }
 
 #add-form {
@@ -406,7 +416,7 @@
    background-color: var(--lightgreen);
    color: var(--green);
    margin-bottom: 1rem;
-   padding: 1rem;
+   padding: 0.5rem 1rem;
    border: 1px solid var(--green);
    border-radius: 3px;
 }
@@ -432,13 +442,13 @@
 /* User search results */
 
 #search-user-results-container {
-    display: block;
+    display: none;
     position: absolute;
     background: var(--white);
     width: 100%;
     box-sizing: border-box;
     border: 1px solid var(--grey);
-    border-radius: 0px 0px 3px 3px;
+    border-radius: 0 0 3px 3px;
     z-index: 1;
 }
 

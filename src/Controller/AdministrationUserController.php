@@ -9,6 +9,6 @@ class AdministrationUserController extends AbstractController
 {
     public function user(): Response
     {
-        return $this->render('administration/user/layout.html.twig', []);
+        return $this->redirectToRoute('administration user common', [], 301);
     }
 }

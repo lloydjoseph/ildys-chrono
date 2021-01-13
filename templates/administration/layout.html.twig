@@ -10,56 +10,67 @@
 
         <section class="main">
 
-            {% include "navbar.html.twig" %}
+            <nav class="navbar d-flex align-items-center justify-content-between">
+
+                <section class="w-100">
+
+                    <form action="" method="get">
+
+                        <div class="d-inline-block">
+                            <label for="user" class="inp-label">Utilisateur</label>
+                            <input type="text" name="user" id="user" class="inp-text w-100" size="50" placeholder="Prénom ou nom" value="{{ app.request.get('user') }}">
+                        </div>
+
+                        <button class="btn-blue ml-2 mr-2">Filtrer</button>
+
+                        <a href="{{ path('administration') }}" class="link-black">Réinitialiser</a>
+
+                    </form>
+
+                </section>
+
+            </nav>
 
             <section class="content">
 
-                <h4>Dernières modifications des utilisateurs</h4>
+                <h4>Liste des utilisateurs</h4>
 
                 <div class="content-table">
                     <table class="table">
 
                         <thead>
                         <tr>
-                            <th class="b-none">Date</th>
-                            <th class="b-none">N°</th>
-                            <th class="b-none">Utilisateur</th>
-                            <th class="b-none">Service</th>
-                            <th class="b-none">Type de modification</th>
+                            <th class="b-none no-wrap">ID</th>
+                            <th class="b-none no-wrap">Service</th>
+                            <th class="b-none no-wrap">Code</th>
+                            <th class="b-none no-wrap">Mot de passe</th>
+                            <th class="b-none no-wrap">Prénom</th>
+                            <th class="b-none no-wrap w-100">Nom</th>
+                            <th class="b-none no-wrap">Date de modification</th>
+                            <th class="b-none"></th>
                         </tr>
                         </thead>
 
                         <tbody>
-                        {% set user_text = 'Mme MARTIN' %}
-                        {% set service_text = 'DIR' %}
-                        {% set recipient_text = 'DIR' %}
-                        {% set mod_type_text = 'Ajout' %}
-                        {% for row in 1..5 %}
+                        {% for item in users %}
                             <tr>
-                                <td>15/10/2020</td>
-                                <td>{{ row }}</td>
-                                <td>{{ user_text}}</td>
-                                <td>{{ service_text }}</td>
-                                <td>{{ mod_type_text }}</td>
+                                <td class="no-wrap">{{ item.id }}</td>
+                                <td>{{ item.service }}</td>
+                                <td>{{ item.code }}</td>
+                                <td>{{ item.password }}</td>
+                                <td>{{ item.firstname }}</td>
+                                <td>{{ item.lastname }}</td>
+                                <td>{{ item.modificationDate|date('d-m-Y') }}</td>
+                                <td class="table-modify-item">
+                                    <a href="{{ path('administration user common') }}?id={{ item.id }}" class="table-modify-link edit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM5.92 19H5v-.92l9.06-9.06.92.92L5.92 19zM20.71 5.63l-2.34-2.34c-.2-.2-.45-.29-.71-.29s-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41z"/></svg>
+                                    </a>
+                                </td>
                             </tr>
                         {% endfor %}
                         </tbody>
 
                     </table>
-                </div>
-
-                <h4 class="mt-2">Statistiques</h4>
-
-                <div class="d-flex">
-                    <div class="admin-card">
-                        <h2 class="text-center">57</h2>
-                        <p class="admin-card-text text-center">Nombre d'utilisateurs</p>
-                    </div>
-
-                    <div class="admin-card">
-                        <h2 class="text-center">2300</h2>
-                        <p class="admin-card-text text-center">Nombre de courriers</p>
-                    </div>
                 </div>
 
             </section>

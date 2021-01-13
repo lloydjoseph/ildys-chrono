@@ -27,7 +27,7 @@ administration:
 #administration user route
 administration user:
       path: /administration/user
-      controller: App\Controller\UserController::user
+      controller: App\Controller\AdministrationUserController::user
 
 #administration user common route
 administration user common:
