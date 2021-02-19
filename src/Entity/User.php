@@ -23,14 +23,9 @@ class User
     private $service;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="string", nullable=true)
      */
     private $code;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $password;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -46,6 +41,11 @@ class User
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $modification_date;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $is_admin;
 
     public function getId(): ?int
     {
@@ -64,26 +64,14 @@ class User
         return $this;
     }
 
-    public function getCode(): ?int
+    public function getCode(): ?string
     {
         return $this->code;
     }
 
-    public function setCode(?int $code): self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
-
-        return $this;
-    }
-
-    public function getPassword(): ?string
-    {
-        return $this->password;
-    }
-
-    public function setPassword(?string $password): self
-    {
-        $this->password = $password;
 
         return $this;
     }
@@ -120,6 +108,18 @@ class User
     public function setModificationDate(?\DateTimeInterface $modification_date): self
     {
         $this->modification_date = $modification_date;
+
+        return $this;
+    }
+
+    public function getIsAdmin(): ?bool
+    {
+        return $this->is_admin;
+    }
+
+    public function setIsAdmin(?bool $is_admin): self
+    {
+        $this->is_admin = $is_admin;
 
         return $this;
     }

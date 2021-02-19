@@ -22,10 +22,19 @@ class NoteServiceRepository extends ServiceEntityRepository
     public function getAllRows() {
         $entityManager = $this->getEntityManager();
 
+        $sql = '';
+
+        if(isset($_GET['month']) && !empty($_GET['month'])) $sql .= ' AND MONTH(c.creation_date) LIKE \'%' . $_GET['month'] . '%\'';
+        if(isset($_GET['number']) && !empty($_GET['number'])) $sql .= ' AND c.number LIKE \'%' . $_GET['number'] . '%\'';
+        if(isset($_GET['subject']) && !empty($_GET['subject'])) $sql .= ' AND c.subject LIKE \'%' . $_GET['subject'] . '%\'';
+        if(isset($_GET['service']) && !empty($_GET['service'])) $sql .= ' AND c.service LIKE \'%' . $_GET['service'] . '%\'';
+
         $query = $entityManager->createQuery(
-            'SELECT n
-            FROM App\Entity\NoteService n
-            ORDER BY n.creation_date ASC'
+            'SELECT c
+            FROM App\Entity\NoteService c
+            WHERE 1 = 1
+            ' . $sql . ' 
+            ORDER BY c.creation_date ASC'
         );
 
         // returns an array of NoteService objects

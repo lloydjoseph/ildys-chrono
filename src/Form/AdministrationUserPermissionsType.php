@@ -3,11 +3,11 @@
 namespace App\Form;
 
 use App\Entity\Permission;
-//use Doctrine\DBAL\Types\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\CallbackTransformer;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -18,6 +18,9 @@ class AdministrationUserPermissionsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('idUser', HiddenType::class, [
+                'required' => false
+            ])
             ->add('courrierAdd', CheckboxType::class, [
                 'label' => 'L\'utilisateur peut ajouter un courrier',
                 'required' => false
@@ -31,27 +34,27 @@ class AdministrationUserPermissionsType extends AbstractType
                 'required' => false
             ])
             ->add('informationAdd', CheckboxType::class, [
-                'label' => 'L\'utilisateur peut ajouter un courrier',
+                'label' => 'L\'utilisateur peut ajouter une note d\'information',
                 'required' => false
             ])
             ->add('informationDel', CheckboxType::class, [
-                'label' => 'L\'utilisateur peut supprimer un courrier',
+                'label' => 'L\'utilisateur peut supprimer une note d\'information',
                 'required' => false
             ])
             ->add('informationMod', CheckboxType::class, [
-                'label' => 'L\'utilisateur peut modifier un courrier',
+                'label' => 'L\'utilisateur peut modifier une note d\'information',
                 'required' => false
             ])
             ->add('serviceAdd', CheckboxType::class, [
-                'label' => 'L\'utilisateur peut ajouter un courrier',
+                'label' => 'L\'utilisateur peut ajouter une note de service',
                 'required' => false
             ])
             ->add('serviceDel', CheckboxType::class, [
-                'label' => 'L\'utilisateur peut supprimer un courrier',
+                'label' => 'L\'utilisateur peut supprimer une note de service',
                 'required' => false
             ])
             ->add('serviceMod', CheckboxType::class, [
-                'label' => 'L\'utilisateur peut modifier un courrier',
+                'label' => 'L\'utilisateur peut modifier une note de service',
                 'required' => false
             ])
             ->add('Sauvegarder', SubmitType::class, [

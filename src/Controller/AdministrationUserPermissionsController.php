@@ -17,7 +17,7 @@ class AdministrationUserPermissionsController extends AbstractController
         // Get user info from user ID
         $permission = $this->getDoctrine()
             ->getRepository(Permission::class)
-            ->find($id);
+            ->findOneBy(['id_user' => $id]);
 
         // Throw error if no ID
         if (!$id) {
@@ -34,6 +34,8 @@ class AdministrationUserPermissionsController extends AbstractController
 
         // Check is form is submitted and valid
         if ($form->isSubmitted() && $form->isValid()) {
+
+//            $form->get('id_user')->setData($id);
 
             // Get the data from the form
             $user = $form->getData();

@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Asset\Package;
 use Symfony\Component\Asset\VersionStrategy\EmptyVersionStrategy;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class ConnexionController extends AbstractController
@@ -23,6 +24,8 @@ class ConnexionController extends AbstractController
 
     public function connexion(Request $request): Response
     {
+        $error = '';
+
         $user = new User();
 
         // Create the form from the user info
@@ -41,24 +44,55 @@ class ConnexionController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
 
             $code = $form->get('code')->getData();
-//            $this->session->set('code2', $code2);
+////            $this->session->set('code2', $code2);
+//
+////            $code = 7946;
+//
+//            $password = $this->getDoctrine()
+//                ->getRepository(User::class)
+//                ->getUserPasswordByCode($code);
+//
+//            $this->session->set('code', $password);
 
-//            $code = 7946;
 
-            $password = $this->getDoctrine()
+
+
+
+
+
+
+
+
+
+
+            $isValidUser = false;
+
+            // We check if user exists in database
+            $retrievedUser = $this->getDoctrine()
                 ->getRepository(User::class)
-                ->getUserPasswordByCode($code);
+                ->findOneBy(['code' => $code]);
 
-            $this->session->set('code', $password);
+            // If exists, send form data to LDAP
 
-            if(true) {
+            // Log in the user and start session
+
+            if($retrievedUser != "") {
+
+                $this->session->set('user', $retrievedUser);
+                $this->session->set('isAdmin', $retrievedUser->getIsAdmin());
+
+                $retrievedUserPermissions = $this->getDoctrine()
+                    ->getRepository(User::class)
+                    ->findOneBy(['id_user' => $retrievedUser->getId()]);
+
                 return $this->redirectToRoute('courrier', []);
             }
-
+            $error = 'L\'utilisteur ' . $code .  ' n\'existe pas dans la base';
         }
 
         return $this->render('connexion/layout.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'error' => $error
         ]);
     }
 }

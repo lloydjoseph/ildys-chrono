@@ -48,3 +48,8 @@ administration user delete:
 administration user create:
       path: /administration/user/create
       controller: App\Controller\AdministrationUserCreateController::create
+
+#connexion:
+#      path: /connexion
+#      controller: App\Controller\SecurityController::connexion
+#      methods: GET|POST

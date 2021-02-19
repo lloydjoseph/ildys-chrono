@@ -4281,16 +4281,16 @@
         },
         {
             "name": "symfony/ldap",
-            "version": "v5.1.10",
+            "version": "v5.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/ldap.git",
-                "reference": "ebcf7b7d955e27df5a6f12bad7d9152af0b95eb6"
+                "reference": "d57d6d991b6044d47c3832c88962e4cfd07184c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/ldap/zipball/ebcf7b7d955e27df5a6f12bad7d9152af0b95eb6",
-                "reference": "ebcf7b7d955e27df5a6f12bad7d9152af0b95eb6",
+                "url": "https://api.github.com/repos/symfony/ldap/zipball/d57d6d991b6044d47c3832c88962e4cfd07184c6",
+                "reference": "d57d6d991b6044d47c3832c88962e4cfd07184c6",
                 "shasum": ""
             },
             "require": {
@@ -4329,12 +4329,15 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "An abstraction in front of PHP's LDAP functions, compatible with PHP 5.3.9 onwards.",
+            "description": "Provides a LDAP client for PHP on top of PHP's ldap extension",
             "homepage": "https://symfony.com",
             "keywords": [
                 "active directory",
                 "ldap"
             ],
+            "support": {
+                "source": "https://github.com/symfony/ldap/tree/v5.1.11"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4349,7 +4352,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-18T07:32:24+00:00"
+            "time": "2021-01-27T11:17:55+00:00"
         },
         {
             "name": "symfony/mailer",
@@ -5695,16 +5698,16 @@
         },
         {
             "name": "symfony/security-bundle",
-            "version": "v5.1.7",
+            "version": "v5.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-bundle.git",
-                "reference": "c9cbe7d78d734062365e2af6d8d475d8888a7bcc"
+                "reference": "b280a0130b48ce1afa2bd261d1fb15ada7e538ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/c9cbe7d78d734062365e2af6d8d475d8888a7bcc",
-                "reference": "c9cbe7d78d734062365e2af6d8d475d8888a7bcc",
+                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/b280a0130b48ce1afa2bd261d1fb15ada7e538ab",
+                "reference": "b280a0130b48ce1afa2bd261d1fb15ada7e538ab",
                 "shasum": ""
             },
             "require": {
@@ -5712,6 +5715,7 @@
                 "php": ">=7.2.5",
                 "symfony/config": "^4.4|^5.0",
                 "symfony/dependency-injection": "^5.1",
+                "symfony/deprecation-contracts": "^2.1",
                 "symfony/event-dispatcher": "^5.1",
                 "symfony/http-kernel": "^5.0",
                 "symfony/polyfill-php80": "^1.15",
@@ -5747,11 +5751,6 @@
                 "twig/twig": "^2.10|^3.0"
             },
             "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.1-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Bundle\\SecurityBundle\\": ""
@@ -5776,6 +5775,9 @@
             ],
             "description": "Symfony SecurityBundle",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/security-bundle/tree/v5.1.10"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -5790,7 +5792,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-20T07:33:50+00:00"
+            "time": "2020-12-18T07:32:24+00:00"
         },
         {
             "name": "symfony/security-core",
@@ -7576,127 +7578,6 @@
     ],
     "packages-dev": [
         {
-            "name": "msgphp/domain",
-            "version": "v0.15.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/msgphp/domain.git",
-                "reference": "d247ef7786b55479863ad35915562fe6fd9661b1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/msgphp/domain/zipball/d247ef7786b55479863ad35915562fe6fd9661b1",
-                "reference": "d247ef7786b55479863ad35915562fe6fd9661b1",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2"
-            },
-            "require-dev": {
-                "doctrine/orm": "^2.6",
-                "ramsey/uuid": "^3.7",
-                "symfony/messenger": "^4.4 || ^5.0",
-                "symfony/var-exporter": "^4.4 || ^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.15-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "MsgPhp\\Domain\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roland Franssen",
-                    "email": "franssen.roland@gmail.com"
-                }
-            ],
-            "description": "A dependency-free package to help building a business domain layer",
-            "keywords": [
-                "command query responsibility segregation",
-                "cqrs",
-                "ddd",
-                "domain model",
-                "domain-driven-design",
-                "entity",
-                "es",
-                "event sourcing",
-                "orm",
-                "repository",
-                "rich domain model"
-            ],
-            "time": "2020-03-08T14:38:20+00:00"
-        },
-        {
-            "name": "msgphp/user",
-            "version": "v0.15.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/msgphp/user.git",
-                "reference": "f551d098907d089d81e7c8c6d94aba90f04aca6a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/msgphp/user/zipball/f551d098907d089d81e7c8c6d94aba90f04aca6a",
-                "reference": "f551d098907d089d81e7c8c6d94aba90f04aca6a",
-                "shasum": ""
-            },
-            "require": {
-                "msgphp/domain": "^0.15"
-            },
-            "require-dev": {
-                "doctrine/orm": "^2.6",
-                "symfony/form": "^3.4.24 || ^4.4 || ^5.0",
-                "symfony/messenger": "^4.4 || ^5.0",
-                "symfony/security-core": "^3.4 || ^4.4 || ^5.0",
-                "symfony/validator": "^3.4 || ^4.4 || ^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.15-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "MsgPhp\\User\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roland Franssen",
-                    "email": "franssen.roland@gmail.com"
-                }
-            ],
-            "description": "A domain layer providing basic user management",
-            "keywords": [
-                "ddd",
-                "domain-driven-design",
-                "rich domain model",
-                "security",
-                "user"
-            ],
-            "time": "2020-03-08T14:41:47+00:00"
-        },
-        {
             "name": "nikic/php-parser",
             "version": "v4.10.2",
             "source": {
@@ -8301,5 +8182,5 @@
         "ext-json": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

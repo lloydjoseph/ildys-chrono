@@ -47,6 +47,19 @@ class UserRepository extends ServiceEntityRepository
         return $query->getResult();
     }
 
+    public function getIfUserExists($value)
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT u.password
+            FROM App\Entity\User u
+            WHERE u.code = :code'
+        )->setParameter('code', $value);
+
+        return $query->getResult();
+    }
+
     public function getAllRows() {
 
         $entityManager = $this->getEntityManager();

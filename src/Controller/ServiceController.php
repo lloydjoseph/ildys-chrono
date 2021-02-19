@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\NoteService;
+use App\Form\NoteServiceFilterType;
 use App\Form\NoteServiceType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,18 +20,24 @@ class ServiceController extends AbstractController
         $noteService = new NoteService();
 
         // Create the form from the user info
-        $form = $this->createForm(NoteServiceType::class, $noteService);
+        $form1 = $this->createForm(NoteServiceType::class, $noteService);
 
-        $form->get('creationDate')->setData(new \DateTime());
+        // Create the form from the user info
+        $form2 = $this->createForm(NoteServiceFilterType::class, $noteService);
+
+        $form1->get('creationDate')->setData(new \DateTime());
 
         // Handle the form submission
-        $form->handleRequest($request);
+        $form1->handleRequest($request);
+
+        // Handle the form submission
+        $form2->handleRequest($request);
 
         // Check is form is submitted and valid
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ($form1->isSubmitted() && $form1->isValid()) {
 
             // Get the data from the form
-            $noteService = $form->getData();
+            $noteService = $form1->getData();
 
             // Instantiate Doctrine Manager
             $entityManager = $this->getDoctrine()->getManager();
@@ -46,9 +53,26 @@ class ServiceController extends AbstractController
             ]);
         }
 
+        // Check is form is submitted and valid
+        if ($form2->isSubmitted()) {
+
+            // Get the data from the form
+            $filter = $form2->getData();
+//
+//            $val = $form2->get('number')->getData();
+//
+//            $courriers = $this->getDoctrine()
+//                ->getRepository(Courrier::class)
+//                ->getAllRows($val);
+
+            return $this->redirectToRoute('service', [
+
+            ]);
+        }
+
         return $this->render('service/layout.html.twig', [
             'notesService' => $notesService,
-            'form' => $form->createView()
+            'form' => $form1->createView()
         ]);
     }
 }

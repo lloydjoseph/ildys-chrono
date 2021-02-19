@@ -2,6 +2,17 @@ security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         users_in_memory: { memory: null }
+#        my_ldap:
+#            ldap:
+#                service: Symfony\Component\Ldap\Ldap
+#                base_dn: ou=UTILISATEURS,ou=ldapconnect,dc=ildys,dc=int
+##                search_dn: null
+##                search_password: null
+#                default_roles: ROLE_USER
+#                uid_key: uid
+#                extra_fields: [ 'email' ]
+#                search_dn: "cn=read-only-admin,dc=ildys,dc=int"
+#                search_password: password
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -9,6 +20,16 @@ security:
         main:
             anonymous: true
             lazy: true
+#            form_login:
+#                login_path: connexion
+#                check_path: connexion
+#                default_target_path: courrier
+#            form_login_ldap:
+#                login_path: connexion
+#                check_path: connexion
+#                service: Symfony\Component\Ldap\Ldap
+#                dn_string: 'uid={username},dc=ildys,dc=int'
+#                default_target_path: courrier
             provider: users_in_memory
 
             # activate different ways to authenticate
