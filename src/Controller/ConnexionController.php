@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\ConnexionType;
+use Symfony\Component\Ldap\Ldap;
 use phpDocumentor\Reflection\Types\String_;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -54,14 +55,7 @@ class ConnexionController extends AbstractController
 //
 //            $this->session->set('code', $password);
 
-
-
-
-
-
-
-
-
+            
 
 
 
@@ -73,21 +67,39 @@ class ConnexionController extends AbstractController
                 ->findOneBy(['code' => $code]);
 
             // If exists, send form data to LDAP
+            $correctLDAP = false;
+            $dn = 'ldapuser';
+            $password = 'selsabile';
 
-            // Log in the user and start session
+            $ldap = Ldap::create('ext_ldap', [
+                'host' => '172.16.0.3'
+            ]);
 
-            if($retrievedUser != "") {
+            $ldap->bind($dn, $password);
 
-                $this->session->set('user', $retrievedUser);
-                $this->session->set('isAdmin', $retrievedUser->getIsAdmin());
+            $query = $ldap->query('dc=ildys,dc=int', '(&(objectclass=person) (sAMAccountname=' . $code . '))');
+            $results = $query->execute()->toArray();
+            $this->session->set('results', $results);
 
-                $retrievedUserPermissions = $this->getDoctrine()
-                    ->getRepository(User::class)
-                    ->findOneBy(['id_user' => $retrievedUser->getId()]);
+            if(!empty($results)) {
+                // Log in the user and start session
 
-                return $this->redirectToRoute('courrier', []);
+                if($retrievedUser != "") {
+
+                    $this->session->set('user', $retrievedUser);
+                    $this->session->set('isAdmin', $retrievedUser->getIsAdmin());
+
+//                $retrievedUserPermissions = $this->getDoctrine()
+//                    ->getRepository(User::class)
+//                    ->findOneBy(['id_user' => $retrievedUser->getId()]);
+
+                    return $this->redirectToRoute('courrier', []);
+                }
+                $error = '⚠️ L\'utilisteur ' . $code .  ' n\'existe pas dans la base';
             }
-            $error = 'L\'utilisteur ' . $code .  ' n\'existe pas dans la base';
+
+            $error = '⚠️ Identifiant incorrect';
+
         }
 
         return $this->render('connexion/layout.html.twig', [
