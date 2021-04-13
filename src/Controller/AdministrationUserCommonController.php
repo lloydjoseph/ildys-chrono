@@ -7,10 +7,18 @@ use App\Form\AdministrationUserCommonType;
 use Doctrine\DBAL\Types\DateTimeType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Validator\Constraints\DateTime;
 
 class AdministrationUserCommonController extends AbstractController
 {
+    private $session;
+
+    public function __construct(SessionInterface $session)
+    {
+        $this->session = $session;
+    }
+
     public function common(Request $request)
     {
         // Throw error if no ID given
@@ -64,9 +72,14 @@ class AdministrationUserCommonController extends AbstractController
             ]);
         }
 
-        // Render the controller
-        return $this->render('administration/user/common/layout.html.twig', [
-            'form' => $form->createView()
-        ]);
+
+        if($this->session->get('loggedIn') && $this->session->get('isAdmin')) {
+            // Render the controller
+            return $this->render('administration/user/common/layout.html.twig', [
+                'form' => $form->createView()
+            ]);
+        } else {
+            return $this->redirectToRoute('connexion');
+        }
     }
 }

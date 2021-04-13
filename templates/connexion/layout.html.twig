@@ -44,14 +44,15 @@
 
             {{ form_start(form) }}
 
-                {{ form_row(form.code, {'label': 'Utilisateur'}) }}
+                {{ form_row(form.user, {'label': 'Utilisateur'}) }}
+                {{ form_row(form.password, {'label': 'Mot de passe'}) }}
 
 
                 <div class="d-flex justify-content-center">
-                    {{ form_row(form.Connexion) }}
+                    {{ form_row(form.login) }}
                 </div>
 
-            {{ form_end(form) }}
+            {{ form_end(form, {'label': 'Se connecter'}) }}
 
 {#            {% if error %}#}
 {#                <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>#}

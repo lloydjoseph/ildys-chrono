@@ -8,9 +8,17 @@ use App\Form\NoteInformationType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class InformationController extends AbstractController
 {
+    private $session;
+
+    public function __construct(SessionInterface $session)
+    {
+        $this->session = $session;
+    }
+
     public function information(Request $request): Response
     {
         $notesInformation = $this->getDoctrine()
@@ -70,9 +78,14 @@ class InformationController extends AbstractController
             ]);
         }
 
-        return $this->render('information/layout.html.twig', [
-            'notesInformation' => $notesInformation,
-            'form' => $form1->createView()
-        ]);
+
+        if($this->session->get('loggedIn')) {
+            return $this->render('information/layout.html.twig', [
+                'notesInformation' => $notesInformation,
+                'form' => $form1->createView()
+            ]);
+        } else {
+            return $this->redirectToRoute('connexion');
+        }
     }
 }

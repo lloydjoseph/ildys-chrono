@@ -7,9 +7,17 @@ use App\Form\AdministrationUserCreateType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class AdministrationUserCreateController extends AbstractController
 {
+    private $session;
+
+    public function __construct(SessionInterface $session)
+    {
+        $this->session = $session;
+    }
+
     public function create(Request $request): Response
     {
         $user = new User();
@@ -39,8 +47,13 @@ class AdministrationUserCreateController extends AbstractController
             ]);
         }
 
-        return $this->render('administration/user/create/layout.html.twig', [
-            'form' => $form1->createView()
-        ]);
+        if($this->session->get('loggedIn') && $this->session->get('isAdmin')) {
+            // Render the controller
+            return $this->render('administration/user/create/layout.html.twig', [
+                'form' => $form1->createView()
+            ]);
+        } else {
+            return $this->redirectToRoute('connexion');
+        }
     }
 }

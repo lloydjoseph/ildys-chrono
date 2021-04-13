@@ -15,12 +15,7 @@ class User
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $service;
+    private $i_id_user;
 
     /**
      * @ORM\Column(type="string", nullable=true)
@@ -38,30 +33,18 @@ class User
     private $lastname;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
-     */
-    private $modification_date;
-
-    /**
      * @ORM\Column(type="boolean", nullable=true)
      */
     private $is_admin;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $b_actif;
+
     public function getId(): ?int
     {
-        return $this->id;
-    }
-
-    public function getService(): ?string
-    {
-        return $this->service;
-    }
-
-    public function setService(?string $service): self
-    {
-        $this->service = $service;
-
-        return $this;
+        return $this->i_id_user;
     }
 
     public function getCode(): ?string
@@ -100,18 +83,6 @@ class User
         return $this;
     }
 
-    public function getModificationDate(): ?\DateTimeInterface
-    {
-        return $this->modification_date;
-    }
-
-    public function setModificationDate(?\DateTimeInterface $modification_date): self
-    {
-        $this->modification_date = $modification_date;
-
-        return $this;
-    }
-
     public function getIsAdmin(): ?bool
     {
         return $this->is_admin;
@@ -120,6 +91,18 @@ class User
     public function setIsAdmin(?bool $is_admin): self
     {
         $this->is_admin = $is_admin;
+
+        return $this;
+    }
+
+    public function getBActif(): ?bool
+    {
+        return $this->b_actif;
+    }
+
+    public function setBActif(?bool $b_actif): self
+    {
+        $this->b_actif = $b_actif;
 
         return $this;
     }

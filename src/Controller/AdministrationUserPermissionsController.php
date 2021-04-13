@@ -6,9 +6,17 @@ use App\Entity\Permission;
 use App\Form\AdministrationUserPermissionsType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class AdministrationUserPermissionsController extends AbstractController
 {
+    private $session;
+
+    public function __construct(SessionInterface $session)
+    {
+        $this->session = $session;
+    }
+
     public function permissions(Request $request)
     {
         // Get the user ID
@@ -55,8 +63,14 @@ class AdministrationUserPermissionsController extends AbstractController
             ]);
         }
 
-        return $this->render('administration/user/permissions/layout.html.twig', [
-            'form' => $form->createView()
-        ]);
+
+        if($this->session->get('loggedIn') && $this->session->get('isAdmin')) {
+            // Render the controller
+            return $this->render('administration/user/permissions/layout.html.twig', [
+                'form' => $form->createView()
+            ]);
+        } else {
+            return $this->redirectToRoute('connexion');
+        }
     }
 }

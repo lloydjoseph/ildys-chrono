@@ -8,9 +8,17 @@ use App\Form\NoteServiceType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class ServiceController extends AbstractController
 {
+    private $session;
+
+    public function __construct(SessionInterface $session)
+    {
+        $this->session = $session;
+    }
+
     public function service(Request $request): Response
     {
         $notesService = $this->getDoctrine()
@@ -70,9 +78,14 @@ class ServiceController extends AbstractController
             ]);
         }
 
-        return $this->render('service/layout.html.twig', [
-            'notesService' => $notesService,
-            'form' => $form1->createView()
-        ]);
+
+        if($this->session->get('loggedIn')) {
+            return $this->render('service/layout.html.twig', [
+                'notesService' => $notesService,
+                'form' => $form1->createView()
+            ]);
+        } else {
+            return $this->redirectToRoute('connexion');
+        }
     }
 }

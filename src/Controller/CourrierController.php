@@ -8,9 +8,17 @@ use App\Form\CourrierType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class CourrierController extends AbstractController
 {
+    private $session;
+
+    public function __construct(SessionInterface $session)
+    {
+        $this->session = $session;
+    }
+
     public function courrier(Request $request): Response
     {
         $courriers = $this->getDoctrine()
@@ -70,10 +78,14 @@ class CourrierController extends AbstractController
             ]);
         }
 
-        return $this->render('courrier/layout.html.twig', [
-            'courriers' => $courriers,
-            'filters' => $form2->createView(),
-            'form1' => $form1->createView()
-        ]);
+        if($this->session->get('loggedIn')) {
+            return $this->render('courrier/layout.html.twig', [
+                'courriers' => $courriers,
+                'filters' => $form2->createView(),
+                'form1' => $form1->createView()
+            ]);
+        } else {
+            return $this->redirectToRoute('connexion');
+        }
     }
 }

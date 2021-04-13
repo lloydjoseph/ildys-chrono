@@ -20,9 +20,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="user session">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210317130258.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210317142425.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210317142747.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/User/Courrier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/User/DoctrineMigrationVersions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/User/Log.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/User/NoteInformation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/User/NoteService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/User/Permission.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/User/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserCommonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserCommonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserDeleteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserDeleteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserPermissionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserPermissionsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ConnexionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ConnexionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CourrierController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CourrierController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/InformationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InformationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ServiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ConnexionType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ConnexionType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CourrierRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CourrierRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/administration/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administration/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/connexion/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/connexion/layout.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/courrier/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sidebar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +274,13 @@
       <workItem from="1613759435950" duration="566000" />
       <workItem from="1614609190659" duration="10918000" />
       <workItem from="1615208224781" duration="1847000" />
-      <workItem from="1615213558957" duration="295000" />
+      <workItem from="1615213558957" duration="2487000" />
+      <workItem from="1615379267331" duration="699000" />
+      <workItem from="1615974232218" duration="6311000" />
+      <workItem from="1615989081053" duration="2614000" />
+      <workItem from="1618215346207" duration="10605000" />
+      <workItem from="1618297514248" duration="1642000" />
+      <workItem from="1618300352440" duration="9485000" />
     </task>
     <task id="LOCAL-00001" summary="add webpack">
       <created>1603273422746</created>
@@ -300,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613759533778</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="user session">
+      <created>1615213913606</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1615213913606</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +356,34 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -327,35 +399,5 @@
     <MESSAGE value="add table design" />
     <MESSAGE value="user session" />
     <option name="LAST_COMMIT_MESSAGE" value="user session" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1615211282398">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1615211282398" />
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613671862558">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613671862558" />
-    <state x="397" y="320" key="FileChooserDialogImpl" timestamp="1606727621110">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="397" y="320" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606727621110" />
-    <state x="795" y="443" key="NewPhpFileDialog" timestamp="1610725909559">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="795" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610725909559" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1612260694755">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1612260694755" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1613759991245">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1613759991245" />
-    <state x="528" y="136" width="965" height="772" key="find.popup" timestamp="1613743368184">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="528" y="136" width="965" height="772" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1613743368184" />
   </component>
 </project>
