@@ -17,25 +17,25 @@ class NoteServiceFilterType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('creationDate', DateTimeType::class, [
+            ->add('dDateCreation', DateTimeType::class, [
                 'attr' => [
                     'class' => 'd-inline-block'
                 ],
                 'required' => false
             ])
-            ->add('number', NumberType::class, [
+            ->add('iNumero', NumberType::class, [
                 'attr' => [
                     'class' => 'd-inline-block'
                 ],
                 'required' => false
             ])
-            ->add('subject', TextType::class, [
+            ->add('vLibelle', TextType::class, [
                 'attr' => [
                     'class' => 'd-inline-block'
                 ],
                 'required' => false
             ])
-            ->add('service', TextType::class, [
+            ->add('vService', TextType::class, [
                 'attr' => [
                     'class' => 'd-inline-block'
                 ],

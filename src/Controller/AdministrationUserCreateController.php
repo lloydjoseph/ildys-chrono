@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
-use App\Form\AdministrationUserCreateType;
+use App\Entity\Utilisateur;
+use App\Form\NoteInformationDeleteType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -20,11 +20,9 @@ class AdministrationUserCreateController extends AbstractController
 
     public function create(Request $request): Response
     {
-        $user = new User();
+        $user = new Utilisateur();
 
-        $form1 = $this->createForm(AdministrationUserCreateType::class, $user);
-
-        $form1->get('modificationDate')->setData(new \DateTime());
+        $form1 = $this->createForm(NoteInformationDeleteType::class, $user);
 
         $form1->handleRequest($request);
 

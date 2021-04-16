@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  */
-class User
+class Utilisateur
 {
     /**
      * @ORM\Id
@@ -20,77 +20,77 @@ class User
     /**
      * @ORM\Column(type="string", nullable=true)
      */
-    private $code;
+    private $v_identifiant;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $firstname;
+    private $v_prenom_user;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $lastname;
+    private $v_nom_user;
 
     /**
      * @ORM\Column(type="boolean", nullable=true)
      */
-    private $is_admin;
+    private $b_admin;
 
     /**
      * @ORM\Column(type="boolean", nullable=true)
      */
     private $b_actif;
 
-    public function getId(): ?int
+    public function getIIdUser(): ?int
     {
         return $this->i_id_user;
     }
 
-    public function getCode(): ?string
+    public function getVIdentifiant(): ?string
     {
-        return $this->code;
+        return $this->v_identifiant;
     }
 
-    public function setCode(?string $code): self
+    public function setVIdentifiant(?string $v_identifiant): self
     {
-        $this->code = $code;
+        $this->v_identifiant = $v_identifiant;
 
         return $this;
     }
 
-    public function getFirstname(): ?string
+    public function getVPrenomUser(): ?string
     {
-        return $this->firstname;
+        return $this->v_prenom_user;
     }
 
-    public function setFirstname(?string $firstname): self
+    public function setVPrenomUser(?string $v_prenom_user): self
     {
-        $this->firstname = $firstname;
+        $this->v_prenom_user = $v_prenom_user;
 
         return $this;
     }
 
-    public function getLastname(): ?string
+    public function getVNomUser(): ?string
     {
-        return $this->lastname;
+        return $this->v_nom_user;
     }
 
-    public function setLastname(?string $lastname): self
+    public function setVNomUser(?string $v_nom_user): self
     {
-        $this->lastname = $lastname;
+        $this->v_nom_user = $v_nom_user;
 
         return $this;
     }
 
-    public function getIsAdmin(): ?bool
+    public function getBAdmin(): ?bool
     {
-        return $this->is_admin;
+        return $this->b_admin;
     }
 
-    public function setIsAdmin(?bool $is_admin): self
+    public function setBAdmin(?bool $b_admin): self
     {
-        $this->is_admin = $is_admin;
+        $this->b_admin = $b_admin;
 
         return $this;
     }

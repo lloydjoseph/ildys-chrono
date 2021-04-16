@@ -15,179 +15,179 @@ class Permission
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private $i_id_perm;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $id_user;
+    private $i_id_user;
 
     /**
      * @ORM\Column(type="boolean", options={"default":"0"}, nullable=true)
      */
-    private $courrier_add;
+    private $b_ajout_courrier;
 
     /**
      * @ORM\Column(type="boolean", options={"default":"0"}, nullable=true)
      */
-    private $courrier_mod;
+    private $b_modif_courrier;
 
     /**
      * @ORM\Column(type="boolean", options={"default":"0"}, nullable=true)
      */
-    private $courrier_del;
+    private $b_suppr_courrier;
 
     /**
      * @ORM\Column(type="boolean", options={"default":"0"}, nullable=true)
      */
-    private $information_add;
+    private $b_ajout_note_info;
 
     /**
      * @ORM\Column(type="boolean", options={"default":"0"}, nullable=true)
      */
-    private $information_mod;
+    private $b_modif_note_info;
 
     /**
      * @ORM\Column(type="boolean", options={"default":"0"}, nullable=true)
      */
-    private $information_del;
+    private $b_suppr_note_info;
 
     /**
      * @ORM\Column(type="boolean", options={"default":"0"}, nullable=true)
      */
-    private $service_add;
+    private $b_ajout_note_serv;
 
     /**
      * @ORM\Column(type="boolean", options={"default":"0"}, nullable=true)
      */
-    private $service_mod;
+    private $b_modif_note_serv;
 
     /**
      * @ORM\Column(type="boolean", options={"default":"0"}, nullable=true)
      */
-    private $service_del;
+    private $b_suppr_note_serv;
 
-    public function getId(): ?int
+    public function getIIdPerm(): ?int
     {
-        return $this->id;
+        return $this->i_id_perm;
     }
 
-    public function getIdUser(): ?int
+    public function getIIdUser(): ?int
     {
-        return $this->id_user;
+        return $this->i_id_user;
     }
 
-    public function setIdUser(int $id_user): self
+    public function setIIdUser(int $i_id_user): self
     {
-        $this->id_user = $id_user;
+        $this->i_id_user = $i_id_user;
 
         return $this;
     }
 
-    public function getCourrierAdd(): ?int
+    public function getBAjoutCourrier(): ?bool
     {
-        return $this->courrier_add;
+        return $this->b_ajout_courrier;
     }
 
-    public function setCourrierAdd(?int $courrier_add): self
+    public function setBAjoutCourrier(?bool $b_ajout_courrier): self
     {
-        $this->courrier_add = $courrier_add;
+        $this->b_ajout_courrier = $b_ajout_courrier;
 
         return $this;
     }
 
-    public function getCourrierMod(): ?int
+    public function getBModifCourrier(): ?bool
     {
-        return $this->courrier_mod;
+        return $this->b_modif_courrier;
     }
 
-    public function setCourrierMod(?int $courrier_mod): self
+    public function setBModifCourrier(?bool $b_modif_courrier): self
     {
-        $this->courrier_mod = $courrier_mod;
+        $this->b_modif_courrier = $b_modif_courrier;
 
         return $this;
     }
 
-    public function getCourrierDel(): ?int
+    public function getBSupprCourrier(): ?bool
     {
-        return $this->courrier_del;
+        return $this->b_suppr_courrier;
     }
 
-    public function setCourrierDel(?int $courrier_del): self
+    public function setBSupprCourrier(?bool $b_suppr_courrier): self
     {
-        $this->courrier_del = $courrier_del;
+        $this->b_suppr_courrier = $b_suppr_courrier;
 
         return $this;
     }
 
-    public function getInformationAdd(): ?int
+    public function getBAjoutNoteInfo(): ?bool
     {
-        return $this->information_add;
+        return $this->b_ajout_note_info;
     }
 
-    public function setInformationAdd(?int $information_add): self
+    public function setBAjoutNoteInfo(?bool $b_ajout_note_info): self
     {
-        $this->information_add = $information_add;
+        $this->b_ajout_note_info = $b_ajout_note_info;
 
         return $this;
     }
 
-    public function getInformationMod(): ?int
+    public function getBModifNoteInfo(): ?bool
     {
-        return $this->information_mod;
+        return $this->b_modif_note_info;
     }
 
-    public function setInformationMod(?int $information_mod): self
+    public function setBModifNoteInfo(?bool $b_modif_note_info): self
     {
-        $this->information_mod = $information_mod;
+        $this->b_modif_note_info = $b_modif_note_info;
 
         return $this;
     }
 
-    public function getInformationDel(): ?int
+    public function getBSupprNoteInfo(): ?bool
     {
-        return $this->information_del;
+        return $this->b_suppr_note_info;
     }
 
-    public function setInformationDel(?int $information_del): self
+    public function setBSupprNoteInfo(?bool $b_suppr_note_info): self
     {
-        $this->information_del = $information_del;
+        $this->b_suppr_note_info = $b_suppr_note_info;
 
         return $this;
     }
 
-    public function getServiceAdd(): ?int
+    public function getBAjoutNoteServ(): ?bool
     {
-        return $this->service_add;
+        return $this->b_ajout_note_serv;
     }
 
-    public function setServiceAdd(?int $service_add): self
+    public function setBAjoutNoteServ(?bool $b_ajout_note_serv): self
     {
-        $this->service_add = $service_add;
+        $this->b_ajout_note_serv = $b_ajout_note_serv;
 
         return $this;
     }
 
-    public function getServiceMod(): ?int
+    public function getBModifNoteServ(): ?bool
     {
-        return $this->service_mod;
+        return $this->b_modif_note_serv;
     }
 
-    public function setServiceMod(?int $service_mod): self
+    public function setBModifNoteServ(?bool $b_modif_note_serv): self
     {
-        $this->service_mod = $service_mod;
+        $this->b_modif_note_serv = $b_modif_note_serv;
 
         return $this;
     }
 
-    public function getServiceDel(): ?int
+    public function getBSupprNoteServ(): ?bool
     {
-        return $this->service_del;
+        return $this->b_suppr_note_serv;
     }
 
-    public function setServiceDel(?int $service_del): self
+    public function setBSupprNoteServ(?bool $b_suppr_note_serv): self
     {
-        $this->service_del = $service_del;
+        $this->b_suppr_note_serv = $b_suppr_note_serv;
 
         return $this;
     }

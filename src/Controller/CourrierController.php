@@ -28,50 +28,16 @@ class CourrierController extends AbstractController
         $courrier = new Courrier();
 
         // Create the form from the user info
-        $form1 = $this->createForm(CourrierType::class, $courrier);
-
-        // Create the form from the user info
-        $form2 = $this->createForm(CourrierFilterType::class, $courrier);
-
-        $form1->get('creationDate')->setData(new \DateTime());
+        $form = $this->createForm(CourrierFilterType::class, $courrier);
 
         // Handle the form submission
-        $form1->handleRequest($request);
-
-        // Handle the form submission
-        $form2->handleRequest($request);
+        $form->handleRequest($request);
 
         // Check is form is submitted and valid
-        if ($form1->isSubmitted() && $form1->isValid()) {
+        if ($form->isSubmitted()) {
 
             // Get the data from the form
-            $courrier = $form1->getData();
-
-            // Instantiate Doctrine Manager
-            $entityManager = $this->getDoctrine()->getManager();
-
-            // Persist retrieved data
-            $entityManager->persist($courrier);
-
-            // Flush data (clear or reload various internal caches)
-            $entityManager->flush();
-
-            return $this->redirectToRoute('courrier', [
-                'result' => 200
-            ]);
-        }
-
-        // Check is form is submitted and valid
-        if ($form2->isSubmitted()) {
-
-            // Get the data from the form
-            $filter = $form2->getData();
-//
-//            $val = $form2->get('number')->getData();
-//
-//            $courriers = $this->getDoctrine()
-//                ->getRepository(Courrier::class)
-//                ->getAllRows($val);
+            $filter = $form->getData();
 
             return $this->redirectToRoute('courrier', [
 
@@ -81,8 +47,7 @@ class CourrierController extends AbstractController
         if($this->session->get('loggedIn')) {
             return $this->render('courrier/layout.html.twig', [
                 'courriers' => $courriers,
-                'filters' => $form2->createView(),
-                'form1' => $form1->createView()
+                'filters' => $form->createView()
             ]);
         } else {
             return $this->redirectToRoute('connexion');

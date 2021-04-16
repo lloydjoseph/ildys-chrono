@@ -25,7 +25,7 @@ class AdministrationUserPermissionsController extends AbstractController
         // Get user info from user ID
         $permission = $this->getDoctrine()
             ->getRepository(Permission::class)
-            ->findOneBy(['id_user' => $id]);
+            ->findOneBy(['i_id_user' => $id]);
 
         // Throw error if no ID
         if (!$id) {
@@ -62,7 +62,6 @@ class AdministrationUserPermissionsController extends AbstractController
                 'result' => 200
             ]);
         }
-
 
         if($this->session->get('loggedIn') && $this->session->get('isAdmin')) {
             // Render the controller

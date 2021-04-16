@@ -17,27 +17,24 @@ class CourrierType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('number', NumberType::class, [
+            ->add('iNumero', NumberType::class, [
                 'attr' => [
                     'class' => 'inp-text w-100 mb-1'
                 ]
             ])
-            ->add('subject', TextareaType::class, [
+            ->add('vLibelle', TextareaType::class, [
                 'attr' => [
                     'class' => 'inp-text w-100 mb-1 resize-vertical',
                     'rows' => '1'
                 ]
             ])
-            ->add('recipient', TextareaType::class, [
+            ->add('vDestinataire', TextareaType::class, [
                 'attr' => [
                     'class' => 'inp-text w-100 mb-1 resize-vertical',
                     'rows' => '1'
                 ]
             ])
-//            ->add('service', TextType::class, [
-//                'attr' => ['class' => 'inp-text w-100 mb-1']
-//            ])
-            ->add('creationDate', DateTimeType::class)
+            ->add('dDateCreation', DateTimeType::class)
             ->add('Ajouter', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn-blue'

@@ -8,16 +8,60 @@ courrier:
       path: /courrier
       controller: App\Controller\CourrierController::courrier
 
+#courrier create route
+courrier create:
+      path: /courrier/create
+      controller: App\Controller\CourrierCreateController::create
+
+#courrier modify route
+courrier modify:
+      path: /courrier/modify
+      controller: App\Controller\CourrierModifyController::modify
+
+#courrier modify route
+courrier delete:
+      path: /courrier/delete
+      controller: App\Controller\CourrierDeleteController::delete
+
 #service route
 service:
       path: /service
       controller: App\Controller\ServiceController::service
+
+#service create route
+service create:
+      path: /service/create
+      controller: App\Controller\ServiceCreateController::create
+
+#service modify route
+service modify:
+      path: /service/modify
+      controller: App\Controller\ServiceModifyController::modify
+
+#service delete route
+service delete:
+      path: /service/delete
+      controller: App\Controller\ServiceDeleteController::delete
 
 #information route
 information:
       path: /information
       controller: App\Controller\InformationController::information
 
+#information create route
+information create:
+      path: /information/create
+      controller: App\Controller\InformationCreateController::create
+
+#information modify route
+information modify:
+      path: /information/modify
+      controller: App\Controller\InformationModifyController::modify
+
+#information delete route
+information delete:
+      path: /information/delete
+      controller: App\Controller\InformationDeleteController::delete
 
 #administration route
 administration:

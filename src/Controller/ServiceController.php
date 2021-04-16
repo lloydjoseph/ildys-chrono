@@ -33,7 +33,7 @@ class ServiceController extends AbstractController
         // Create the form from the user info
         $form2 = $this->createForm(NoteServiceFilterType::class, $noteService);
 
-        $form1->get('creationDate')->setData(new \DateTime());
+        $form1->get('dDateCreation')->setData(new \DateTime());
 
         // Handle the form submission
         $form1->handleRequest($request);

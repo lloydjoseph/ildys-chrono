@@ -62,18 +62,6 @@
                 <input type="text" name="service" id="service" class="inp-text" size="30">
             </div>
         {% endif %}
-        
-        {% if app.request.pathinfo in ['/administration', '/administration/user/common', '/administration/user/permissions', '/administration/user/delete', '/administration/user/create']  %}
-            <div class="d-inline-block position-relative w-100">
-                <label for="search-user" class="inp-label">Rechercher un utilisateur</label>
-                <input type="text" name="search-user" id="search-user" class="inp-text w-100">
-                <div id="search-user-results-container">
-                    {% for row in 1..5 %}
-                    <a href="{{ path('administration user common') }}?id=2645" class="search-user-result">Jean-Luc MARTIN</a>
-                    {% endfor %}
-                </div>
-            </div>
-        {% endif %}
 
     </section>
 

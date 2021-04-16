@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Suppression Courrier - Chrono{% endblock %}
+
+{% block body %}
+
+    <main class="d-flex">
+
+        {% include "sidebar.html.twig" %}
+
+        <section class="main">
+
+            <section class="content">
+
+                <h4>Supprimer un courrier</h4>
+
+                <p>Êtes-vous sûr de vouloir supprimer ce courrier ?</p>
+
+                {{ form(form) }}
+
+            </section>
+
+        </section>
+
+    </main>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Suppression Note de Service - Chrono{% endblock %}
+
+{% block body %}
+
+    <main class="d-flex">
+
+        {% include "sidebar.html.twig" %}
+
+        <section class="main">
+
+            <section class="content">
+
+                <h4>Supprimer une note de service</h4>
+
+                <p>Êtes-vous sûr de vouloir supprimer cette note de service ?</p>
+
+                {{ form(form) }}
+
+            </section>
+
+        </section>
+
+    </main>
+
+{% endblock %}

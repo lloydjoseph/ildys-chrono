@@ -24,49 +24,33 @@ class NoteServiceRepository extends ServiceEntityRepository
 
         $sql = '';
 
-        if(isset($_GET['month']) && !empty($_GET['month'])) $sql .= ' AND MONTH(c.creation_date) LIKE \'%' . $_GET['month'] . '%\'';
-        if(isset($_GET['number']) && !empty($_GET['number'])) $sql .= ' AND c.number LIKE \'%' . $_GET['number'] . '%\'';
-        if(isset($_GET['subject']) && !empty($_GET['subject'])) $sql .= ' AND c.subject LIKE \'%' . $_GET['subject'] . '%\'';
-        if(isset($_GET['service']) && !empty($_GET['service'])) $sql .= ' AND c.service LIKE \'%' . $_GET['service'] . '%\'';
+        if(isset($_GET['month']) && !empty($_GET['month'])) $sql .= ' AND MONTH(c.d_date_creation) LIKE \'%' . $_GET['month'] . '%\'';
+        if(isset($_GET['number']) && !empty($_GET['number'])) $sql .= ' AND c.i_numero LIKE \'%' . $_GET['number'] . '%\'';
+        if(isset($_GET['subject']) && !empty($_GET['subject'])) $sql .= ' AND c.v_libelle LIKE \'%' . $_GET['subject'] . '%\'';
+        if(isset($_GET['service']) && !empty($_GET['service'])) $sql .= ' AND c.v_service LIKE \'%' . $_GET['service'] . '%\'';
 
         $query = $entityManager->createQuery(
             'SELECT c
             FROM App\Entity\NoteService c
             WHERE 1 = 1
             ' . $sql . ' 
-            ORDER BY c.creation_date ASC'
+            ORDER BY c.d_date_creation ASC'
         );
 
         // returns an array of NoteService objects
         return $query->getResult();
     }
 
-    // /**
-    //  * @return NoteService[] Returns an array of NoteService objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('n')
-            ->andWhere('n.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('n.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+    public function getNoteServiceCount() {
+        $entityManager = $this->getEntityManager();
 
-    /*
-    public function findOneBySomeField($value): ?NoteService
-    {
-        return $this->createQueryBuilder('n')
-            ->andWhere('n.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        $query = $entityManager->createQuery(
+            'SELECT COUNT(n.i_numero)
+            FROM App\Entity\NoteService n
+            WHERE YEAR(n.d_date_creation) = YEAR(CURRENT_TIMESTAMP())'
+        );
+
+        // returns an array of Courrier objects
+        return $query->getResult();
     }
-    */
 }

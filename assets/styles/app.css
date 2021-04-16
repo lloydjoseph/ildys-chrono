@@ -194,7 +194,7 @@
 }
 
 .table th, .table td {
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
 }
 
 .table th {
@@ -214,6 +214,7 @@
 }
 
 .table tbody tr {
+    height: 4rem;
     border-bottom: 1px solid var(--grey);
 }
 
@@ -267,10 +268,6 @@
 
 #add-form {
     max-width: 28rem;
-}
-
-#common-user-form {
-    width: 28rem;
 }
 
 /*-----------------------------------------------------------------*/

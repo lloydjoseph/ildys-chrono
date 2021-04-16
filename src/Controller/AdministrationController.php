@@ -2,9 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
+use App\Entity\Utilisateur;
 use App\Form\AdministrationFilterType;
-use App\Form\AdministrationType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,7 +21,7 @@ class AdministrationController extends AbstractController
     public function administration(Request $request): Response
     {
         $users = $this->getDoctrine()
-            ->getRepository(User::class)
+            ->getRepository(Utilisateur::class)
             ->getAllRows();
 
         // Create the form from the user info

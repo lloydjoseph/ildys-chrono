@@ -16,16 +16,18 @@
 
                 {% include "administration/user/navbar-user.html.twig" %}
 
-                <h4 class="mt-2">Supprimer le compte</h4>
+                <h4 class="mt-2">Désactiver le compte</h4>
 
-                <form id="common-user-form" action="">
-                    <p>En cliquant sur le bouton ci-dessous, vous supprimez
-                        le compte et les données qui lui sont liées définitivement.
-                        <br><br>
-                        Attention, cette action est irréversible !</p>
+                {% include "info.html.twig" %}
 
-                    <button class="btn-red mt-2">Supprimer</button>
-                </form>
+                <p>En cliquant sur le bouton ci-dessous, vous désactivez
+                    le compte de <b>{{ userFirstLastName }} </b>. <br>L'utilisateur ne pourra plus accéder à l'application.
+                    <br><br>
+                    Les données de l'utisateur restent inchangées.</p>
+
+                {{ form_start(form) }}
+                    {{ form_row(form.Desactiver, {'label': 'Désactiver'}) }}
+                {{ form_end(form) }}
 
             </section>
 

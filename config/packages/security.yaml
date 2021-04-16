@@ -12,6 +12,7 @@ security:
             provider: users_in_memory
             logout:
                 path: app_logout
+                target: connexion
 
 
             # activate different ways to authenticate

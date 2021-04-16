@@ -15,94 +15,94 @@ class Courrier
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private $i_id_courrier;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private $number;
+    private $i_numero;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $creation_date;
+    private $d_date_creation;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private $user;
+    private $i_id_user;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $subject;
+    private $v_libelle;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $recipient;
+    private $v_destinataire;
 
-    public function getId(): ?int
+    public function getIIdCourrier(): ?int
     {
-        return $this->id;
+        return $this->i_id_courrier;
     }
 
-    public function getNumber(): ?int
+    public function getINumero(): ?int
     {
-        return $this->number;
+        return $this->i_numero;
     }
 
-    public function setNumber(?int $number): self
+    public function setINumero(?int $i_numero): self
     {
-        $this->number = $number;
+        $this->i_numero = $i_numero;
 
         return $this;
     }
 
-    public function getCreationDate(): ?\DateTimeInterface
+    public function getDDateCreation(): ?\DateTimeInterface
     {
-        return $this->creation_date;
+        return $this->d_date_creation;
     }
 
-    public function setCreationDate(?\DateTimeInterface $creation_date): self
+    public function setDDateCreation(?\DateTimeInterface $d_date_creation): self
     {
-        $this->creation_date = $creation_date;
+        $this->d_date_creation = $d_date_creation;
 
         return $this;
     }
 
-    public function getUser(): ?int
+    public function getIIdUser(): ?int
     {
-        return $this->user;
+        return $this->i_id_user;
     }
 
-    public function setUser(?int $user): self
+    public function setIIdUser(?int $i_id_user): self
     {
-        $this->user = $user;
+        $this->i_id_user = $i_id_user;
 
         return $this;
     }
 
-    public function getSubject(): ?string
+    public function getVLibelle(): ?string
     {
-        return $this->subject;
+        return $this->v_libelle;
     }
 
-    public function setSubject(?string $subject): self
+    public function setVLibelle(?string $v_libelle): self
     {
-        $this->subject = $subject;
+        $this->v_libelle = $v_libelle;
 
         return $this;
     }
 
-    public function getRecipient(): ?string
+    public function getVDestinataire(): ?string
     {
-        return $this->recipient;
+        return $this->v_destinataire;
     }
 
-    public function setRecipient(?string $recipient): self
+    public function setVDestinataire(?string $v_destinataire): self
     {
-        $this->recipient = $recipient;
+        $this->v_destinataire = $v_destinataire;
 
         return $this;
     }

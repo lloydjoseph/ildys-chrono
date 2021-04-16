@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
-use App\Form\ConnexionType;
+use App\Entity\Permission;
+use App\Entity\Utilisateur;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -28,11 +28,18 @@ class ConnexionController extends AbstractController
 
     public function connexion(Request $request): Response
     {
+        // Variable initialization
         $error = '';
+        $results = "";
+        $userInActiveDirectory = false;
+        $userNotInDatabase = true;
+        $userIsActive = false;
+        $info = [];
+        $firstname = "";
+        $lastname = "";
 
-        // Create the form from the user info
-        $defaultData = ['message' => 'Type your message here'];
-        $form = $this->createFormBuilder($defaultData)
+        // Create the connection form with username, password and submit button
+        $form = $this->createFormBuilder()
             ->add('user', TextType::class, [
                 'attr' => [
                     'class' => 'inp-text w-100 mb-1'
@@ -49,47 +56,24 @@ class ConnexionController extends AbstractController
                 ]
             ])
             ->getForm();
+
         // Handle the form submission
         $form->handleRequest($request);
 
-        // Check is form is submitted and valid
+        // Check if form is submitted and valid
         if ($form->isSubmitted() && $form->isValid()) {
 
-            // Get the data from the form
-            $connexion = $form->getData();
+            // Get username and password from submitted data
+            $username = $form->get('user')->getData();
+            $password = $form->get('password')->getData();
 
-            // Instantiate Doctrine Manager
-            $entityManager = $this->getDoctrine()->getManager();
-
-//            $username = $form->get('user')->getData();
-//            $password = $form->get('password')->getData();
-            $username = "JLL7946";
-            $password = "yKg4SVVM";
-
-            $results = "";
-            $userFound = false;
-            $info = [];
-            $firstname = "";
-            $lastname = "";
-
-            $isValidUser = false;
-
-            // We check if user exists in database
-            $retrievedUser = $this->getDoctrine()
-                ->getRepository(User::class)
-                ->findOneBy(['code' => $username]);
-
+            // Try to connect to Active Directory using submitted data
             $adServer = "ldap://thevenec.ildys.int";
-
             $ldap = ldap_connect($adServer);
-
             $ldaprdn = 'ildys' . "\\" . $username;
-
             ldap_set_option($ldap, LDAP_OPT_PROTOCOL_VERSION, 3);
             ldap_set_option($ldap, LDAP_OPT_REFERRALS, 0);
-
             $bind = @ldap_bind($ldap, $ldaprdn, $password);
-
             if ($bind) {
                 $filter="(sAMAccountName=$username)";
                 $result = ldap_search($ldap,"dc=ildys,dc=int",$filter);
@@ -99,14 +83,45 @@ class ConnexionController extends AbstractController
                 {
                     if($info['count'] > 1)
                         break;
-                    $userFound = true;
+                    $userInActiveDirectory = true;
                     $firstname = $info[$i]["givenname"][0];
                     $lastname = $info[$i]["sn"][0];
-                    echo 'test3';
                 }
                 @ldap_close($ldap);
-
             }
+
+            // If no user is found, throw Exeption
+            if($userInActiveDirectory == false) {
+                throw $this->createNotFoundException("Échec de l'authentification au serveur Active Directory");
+            }
+
+            // Check if user exists in database
+            $retrievedUserFromDatabase = $this->getDoctrine()
+                ->getRepository(Utilisateur::class)
+                ->findOneBy(['v_identifiant' => $username]);
+
+            // Set variable to true or false, depending if data exists
+            $userNotInDatabase = empty($retrievedUserFromDatabase);
+
+            // If no user exists in the database, throw Exeption
+            if($userNotInDatabase) {
+                throw $this->createNotFoundException("L'utilisateur n'existe pas dans la base de données");
+            }
+
+            // Set variable to true or false, depending if user's account is active
+            $userIsActive = $retrievedUserFromDatabase->getBActif();
+
+            // If the user's account is disabled, throw Exeption
+            if(!$userIsActive) {
+                throw $this->createNotFoundException("Ce compte a été désactivé");
+            }
+
+            $userId = $retrievedUserFromDatabase->getIIdUser();
+
+            // Get permissions from user id
+            $permission = $this->getDoctrine()
+                ->getRepository(Permission::class)
+                ->findOneBy(['i_id_user' => $userId]);
 
             $this->session->set('results', $results);
             $this->session->set('info', $info);
@@ -117,28 +132,23 @@ class ConnexionController extends AbstractController
                 "username" => $username
             ]);
 
-            if($userFound) {
-                // Log in the user and start session
+            $this->session->set('bAjoutCourrier', $permission->getBAjoutCourrier());
+            $this->session->set('bModifCourrier', $permission->getBModifCourrier());
+            $this->session->set('bSupprCourrier', $permission->getBSupprCourrier());
+            $this->session->set('bAjoutNoteInfo', $permission->getBAjoutNoteInfo());
+            $this->session->set('bModifNoteInfo', $permission->getBModifNoteInfo());
+            $this->session->set('bSupprNoteInfo', $permission->getBSupprNoteInfo());
+            $this->session->set('bAjoutNoteServ', $permission->getBAjoutNoteServ());
+            $this->session->set('bModifNoteServ', $permission->getBModifNoteServ());
+            $this->session->set('bSupprNoteServ', $permission->getBSupprNoteServ());
 
-                if($retrievedUser != "") {
+            $this->session->set('iIdUser', $userId);
 
-                    $this->session->set('user', $retrievedUser);
-                    $this->session->set('loggedIn', true);
-                    $this->session->set('isAdmin', $retrievedUser->getIsAdmin());
+            $this->session->set('user', $retrievedUserFromDatabase);
+            $this->session->set('loggedIn', true);
+            $this->session->set('isAdmin', $retrievedUserFromDatabase->getBAdmin());
 
-
-
-//                $retrievedUserPermissions = $this->getDoctrine()
-//                    ->getRepository(User::class)
-//                    ->findOneBy(['id_user' => $retrievedUser->getId()]);
-
-                    return $this->redirectToRoute('courrier', []);
-                }
-                $error = '⚠️ L\'utilisteur ' . $username .  ' n\'existe pas dans la base';
-            }
-
-            $error = '⚠️ Identifiant ou mot de passe incorrect';
-
+            return $this->redirectToRoute('courrier', []);
         }
 
         return $this->render('connexion/layout.html.twig', [

@@ -18,15 +18,13 @@
 
                 <h4 class="mt-2">Modification des informations utilisateur</h4>
 
-                {% include "info.html.twig" with {'txt': 'L\'utilisateur a bien été enregistré !'} %}
+                {% include "info.html.twig" %}
 
                 {{ form_start(form) }}
                 <div>
-                    {{ form_row(form.firstname, {'label': 'Prénom'}) }}
-                    {{ form_row(form.lastname, {'label': 'Nom'}) }}
-                    {{ form_row(form.service, {'label': 'Service'}) }}
-                    {{ form_row(form.code, {'label': 'Code'}) }}
-                    <div class="d-none">{{ form_row(form.modificationDate) }}</div>
+                    {{ form_row(form.vPrenomUser, {'label': 'Prénom'}) }}
+                    {{ form_row(form.vNomUser, {'label': 'Nom'}) }}
+                    {{ form_row(form.vIdentifiant, {'label': 'Identifiant'}) }}
                 </div>
                 {{ form_end(form) }}
 

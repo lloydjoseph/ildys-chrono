@@ -33,7 +33,7 @@ class InformationController extends AbstractController
         // Create the form from the user info
         $form2 = $this->createForm(NoteInformationFilterType::class, $noteInformation);
 
-        $form1->get('creationDate')->setData(new \DateTime());
+        $form1->get('dDateCreation')->setData(new \DateTime());
 
         // Handle the form submission
         $form1->handleRequest($request);

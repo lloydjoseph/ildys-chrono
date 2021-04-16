@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Modifier Courrier - Chrono{% endblock %}
+
+{% block body %}
+
+    <main class="d-flex">
+
+        {% include "sidebar.html.twig" %}
+
+        <section class="main">
+
+            <section class="content">
+
+                <h4>Modifier le courrier</h4>
+
+                {{ form_start(form) }}
+                <div>
+                    {{ form_row(form.iNumero, {'label': 'Numéro'}) }}
+                    {{ form_row(form.vLibelle, {'label': 'Libellé'}) }}
+                    {{ form_row(form.vDestinataire, {'label': 'Destinataire'}) }}
+                    {{ form_row(form.iIdUser, {'label': 'Id User'}) }}
+                    {{ form_row(form.Modifier, {'label': 'Modifier '}) }}
+                </div>
+                {{ form_end(form) }}
+
+            </section>
+
+        </section>
+
+    </main>
+
+{% endblock %}

@@ -19,42 +19,86 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="user session">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210317130258.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210317142425.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210317142747.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/User/Courrier.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/User/DoctrineMigrationVersions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/User/Log.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/User/NoteInformation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/User/NoteService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/User/Permission.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/User/User.php" afterDir="false" />
+    <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210414143324.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210416102054.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/CourrierCreateController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/CourrierDeleteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/CourrierModifyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/InformationCreateController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/InformationDeleteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/InformationModifyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ServiceCreateController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ServiceDeleteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ServiceModifyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/AdministrationUserDeleteType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/CourrierCreateType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/CourrierDeleteType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/CourrierModifyType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/NoteInformationCreateType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/NoteInformationModifyType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/NoteServiceCreateType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/NoteServiceDeleteType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/NoteServiceModifyType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courrier/create/layout.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courrier/delete/layout.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courrier/modify/layout.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/information/create/layout.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/information/delete/layout.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/information/modify/layout.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service/create/layout.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service/delete/layout.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service/modify/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserCommonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserCommonController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserDeleteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserDeleteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserPermissionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserPermissionsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ConnexionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ConnexionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CourrierController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CourrierController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/InformationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InformationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ServiceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ConnexionType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ConnexionType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Courrier.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Courrier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Log.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/LogAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/NoteInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/NoteInformation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/NoteService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/NoteService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Permission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Utilisateur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AdministrationFilterType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AdministrationFilterType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AdministrationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AdministrationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AdministrationUserCommonType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AdministrationUserCommonType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AdministrationUserCreateType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AdministrationUserCreateType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AdministrationUserPermissionsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AdministrationUserPermissionsType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ConnexionType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/NoteInformationDeleteType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CourrierFilterType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CourrierFilterType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CourrierType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CourrierType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/NoteInformationFilterType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/NoteInformationFilterType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/NoteInformationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/NoteInformationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/NoteServiceFilterType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/NoteServiceFilterType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/NoteServiceType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/NoteServiceType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/CourrierRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CourrierRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/NoteInformationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/NoteInformationRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/NoteServiceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/NoteServiceRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PermissionRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PermissionRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Utilisateur.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/administration/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administration/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/connexion/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/connexion/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/administration/user/common/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administration/user/common/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/administration/user/create/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administration/user/create/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/administration/user/delete/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administration/user/delete/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/administration/user/navbar-user.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administration/user/navbar-user.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/administration/user/permissions/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administration/user/permissions/layout.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/courrier/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/info.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/info.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/information/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/information/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/layout.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/sidebar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +121,18 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Entity/Courrier.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file:////srv-data01/informatique/PROJETS/Chrono_Courrier/Scripts_Creation_Tables/Table COURRIER.sql" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration">
@@ -200,21 +256,24 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Form" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\src\Form" />
-      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\src\Repository" />
-      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\assets\images" />
       <recent name="C:\Users\JLL7946\Documents\ildys-chrono\src\Controller" />
-      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\templates\administration\user\permissions" />
+      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\src\Form" />
+      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\templates\service" />
+      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\templates\information" />
+      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\templates\courrier" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\src\Controller" />
+      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\src\Controller\Administration" />
       <recent name="C:\Users\JLL7946\Documents\ildys-chrono\templates\administration\user\common" />
       <recent name="C:\Users\JLL7946\Documents\ildys-chrono\assets\images" />
       <recent name="C:\Users\JLL7946\Documents\ildys-chrono\assets" />
@@ -280,7 +339,14 @@
       <workItem from="1615989081053" duration="2614000" />
       <workItem from="1618215346207" duration="10605000" />
       <workItem from="1618297514248" duration="1642000" />
-      <workItem from="1618300352440" duration="9485000" />
+      <workItem from="1618300352440" duration="12083000" />
+      <workItem from="1618317570986" duration="8041000" />
+      <workItem from="1618326474530" duration="169000" />
+      <workItem from="1618326729528" duration="282000" />
+      <workItem from="1618385109132" duration="9556000" />
+      <workItem from="1618399682234" duration="11904000" />
+      <workItem from="1618473624596" duration="21962000" />
+      <workItem from="1618558913974" duration="12674000" />
     </task>
     <task id="LOCAL-00001" summary="add webpack">
       <created>1603273422746</created>
@@ -345,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615213913606</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="user session">
+      <created>1618314400340</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1618314400340</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

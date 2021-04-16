@@ -2,13 +2,11 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
+use App\Entity\Utilisateur;
 use App\Form\AdministrationUserCommonType;
-use Doctrine\DBAL\Types\DateTimeType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Symfony\Component\Validator\Constraints\DateTime;
 
 class AdministrationUserCommonController extends AbstractController
 {
@@ -33,7 +31,7 @@ class AdministrationUserCommonController extends AbstractController
 
         // Get user info from user ID
         $user = $this->getDoctrine()
-            ->getRepository(User::class)
+            ->getRepository(Utilisateur::class)
             ->find($id);
 
         // Throw error if no user matches id
@@ -55,8 +53,6 @@ class AdministrationUserCommonController extends AbstractController
             // Get the data from the form
             $user = $form->getData();
 
-            $form->get('modificationDate')->setData(new \DateTime());
-
             // Instantiate Doctrine Manager
             $entityManager = $this->getDoctrine()->getManager();
 
@@ -71,7 +67,6 @@ class AdministrationUserCommonController extends AbstractController
                 'result' => 200
             ]);
         }
-
 
         if($this->session->get('loggedIn') && $this->session->get('isAdmin')) {
             // Render the controller

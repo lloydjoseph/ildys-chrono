@@ -17,40 +17,30 @@ class CourrierFilterType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('creationDate', DateTimeType::class, [
+            ->add('dDateCreation', DateTimeType::class, [
                 'attr' => [
                     'class' => 'd-inline-block'
                 ],
                 'required' => false
             ])
-            ->add('number', NumberType::class, [
+            ->add('iNumero', NumberType::class, [
                 'attr' => [
                     'class' => 'd-inline-block'
                 ],
                 'required' => false
             ])
-            ->add('subject', TextType::class, [
+            ->add('vLibelle', TextType::class, [
                 'attr' => [
                     'class' => 'd-inline-block'
                 ],
                 'required' => false
             ])
-            ->add('recipient', TextType::class, [
+            ->add('vDestinataire', TextType::class, [
                 'attr' => [
                     'class' => 'd-inline-block'
                 ],
                 'required' => false
             ])
-//            ->add('recipient', TextareaType::class, [
-//                'attr' => [
-//                    'class' => 'inp-text w-100 mb-1 resize-vertical',
-//                    'rows' => '1'
-//                ]
-//            ])
-////            ->add('service', TextType::class, [
-////                'attr' => ['class' => 'inp-text w-100 mb-1']
-////            ])
-//            ->add('creationDate', DateTimeType::class)
             ->add('Filtrer', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn-blue'

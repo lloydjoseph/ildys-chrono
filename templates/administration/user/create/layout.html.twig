@@ -12,30 +12,17 @@
 
             <section class="content">
 
-                {% include "info.html.twig" with {'txt': 'L\'utilisateur a bien été ajouté !'} %}
+                {% include "info.html.twig" %}
 
                 <h4>Créer un nouvel utilisateur</h4>
 
-{#                <form id="common-user-form" action="">#}
-{#                    <label for="firstname" class="inp-label">Prénom</label>#}
-{#                    <input type="text" name="firstname" id="firstname" class="inp-text w-100">#}
-{#                    <label for="lastname" class="inp-label">Nom</label>#}
-{#                    <input type="text" name="lastname" id="lastname" class="inp-text w-100">#}
-{#                    <label for="service" class="inp-label">Service</label>#}
-{#                    <input type="text" name="service" id="service" class="inp-text w-100">#}
-{#                    <label for="code" class="inp-label">Code</label>#}
-{#                    <input type="text" name="code" id="code" class="inp-text w-100">#}
-
-{#                    <button class="btn-blue mt-2">Créer</button>#}
-{#                </form>#}
-
                 {{ form_start(form) }}
                 <div>
-                    {{ form_row(form.firstname, {'label': 'Prénom'}) }}
-                    {{ form_row(form.lastname, {'label': 'Nom'}) }}
-                    {{ form_row(form.service, {'label': 'Service'}) }}
-                    {{ form_row(form.code, {'label': 'Code'}) }}
-                    <div class="d-none">{{ form_row(form.modificationDate) }}</div>
+                    {{ form_row(form.vPrenomUser, {'label': 'Prénom'}) }}
+                    {{ form_row(form.vNomUser, {'label': 'Nom'}) }}
+                    {{ form_row(form.vIdentifiant, {'label': 'Identifiant'}) }}
+                    {{ form_widget(form.bAdmin) }} {{ form_label(form.bAdmin, 'Administrateur') }}
+                    {{ form_row(form.Creer, {'label': 'Créer '}) }}
                 </div>
                 {{ form_end(form) }}
 

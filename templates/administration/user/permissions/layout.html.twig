@@ -18,22 +18,22 @@
 
                 <h4 class="mt-2">Modification des droits utilisateur</h4>
 
-                {% include "info.html.twig" with {'txt': 'L\'utilisateur a bien été enregistré !'} %}
+                {% include "info.html.twig" %}
 
                 {{ form_start(form) }}
                 <div class="category mb-1">Courrier</div>
-                <div>{{ form_widget(form.courrierAdd) }}{{ form_label(form.courrierAdd) }}</div>
-                <div>{{ form_widget(form.courrierMod) }}{{ form_label(form.courrierMod) }}</div>
-                <div>{{ form_widget(form.courrierDel) }}{{ form_label(form.courrierDel) }}</div>
+                <div>{{ form_widget(form.bAjoutCourrier) }}{{ form_label(form.bAjoutCourrier) }}</div>
+                <div>{{ form_widget(form.bModifCourrier) }}{{ form_label(form.bModifCourrier) }}</div>
+                <div>{{ form_widget(form.bSupprCourrier) }}{{ form_label(form.bSupprCourrier) }}</div>
                 <div class="category mt-2 mb-1">Information</div>
-                <div>{{ form_widget(form.informationAdd) }}{{ form_label(form.informationAdd) }}</div>
-                <div>{{ form_widget(form.informationMod) }}{{ form_label(form.informationMod) }}</div>
-                <div>{{ form_widget(form.informationDel) }}{{ form_label(form.informationDel) }}</div>
+                <div>{{ form_widget(form.bAjoutNoteInfo) }}{{ form_label(form.bAjoutNoteInfo) }}</div>
+                <div>{{ form_widget(form.bModifNoteInfo) }}{{ form_label(form.bModifNoteInfo) }}</div>
+                <div>{{ form_widget(form.bSupprNoteInfo) }}{{ form_label(form.bSupprNoteInfo) }}</div>
                 <div class="category mt-2 mb-1">Service</div>
-                <div>{{ form_widget(form.serviceAdd) }}{{ form_label(form.serviceAdd) }}</div>
-                <div>{{ form_widget(form.serviceMod) }}{{ form_label(form.serviceMod) }}</div>
-                <div>{{ form_widget(form.serviceDel) }}{{ form_label(form.serviceDel) }}</div>
-                <div>{{ form_widget(form.idUser) }}</div>
+                <div>{{ form_widget(form.bAjoutNoteServ) }}{{ form_label(form.bAjoutNoteServ) }}</div>
+                <div>{{ form_widget(form.bModifNoteServ) }}{{ form_label(form.bModifNoteServ) }}</div>
+                <div>{{ form_widget(form.bSupprNoteServ) }}{{ form_label(form.bSupprNoteServ) }}</div>
+                <div>{{ form_widget(form.iIdUser) }}</div>
                 {{ form_end(form) }}
 
             </section>
