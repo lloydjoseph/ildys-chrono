@@ -300,6 +300,23 @@
 }
 
 /*-----------------------------------------------------------------*/
+/* Connexion page */
+
+.connexion {
+
+}
+
+.connexion-inner {
+    width: 20rem;
+    border-left: 1px solid var(--grey);
+}
+
+.logo-ildys {
+    height: 100%;
+    width: 28rem;
+}
+
+/*-----------------------------------------------------------------*/
 /* Menu */
 
 #menu {

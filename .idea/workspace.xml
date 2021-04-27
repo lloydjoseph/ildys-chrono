@@ -20,15 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/logo-ildys.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/no-results.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/connexion/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/connexion/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/courrier/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/information/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/information/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/global.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +278,7 @@
       <workItem from="1619439579286" duration="7526000" />
       <workItem from="1619508411214" duration="2283000" />
       <workItem from="1619516990980" duration="101000" />
-      <workItem from="1619525852243" duration="325000" />
+      <workItem from="1619525852243" duration="2224000" />
     </task>
     <task id="LOCAL-00001" summary="add webpack">
       <created>1603273422746</created>
@@ -363,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618580097108</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="new connexion page">
+      <created>1619526281680</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1619526281680</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,6 +417,7 @@
     <MESSAGE value="add user page" />
     <MESSAGE value="add table design" />
     <MESSAGE value="user session" />
-    <option name="LAST_COMMIT_MESSAGE" value="user session" />
+    <MESSAGE value="new connexion page" />
+    <option name="LAST_COMMIT_MESSAGE" value="new connexion page" />
   </component>
 </project>
