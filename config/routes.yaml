@@ -1,3 +1,8 @@
+#default route
+default:
+      path: /
+      controller: App\Controller\DefaultController::default
+
 #connexion route
 connexion:
       path: /connexion
