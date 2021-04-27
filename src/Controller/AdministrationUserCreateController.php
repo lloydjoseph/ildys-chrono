@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Utilisateur;
-use App\Form\NoteInformationDeleteType;
+use App\Form\AdministrationUserCreateType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,14 +22,14 @@ class AdministrationUserCreateController extends AbstractController
     {
         $user = new Utilisateur();
 
-        $form1 = $this->createForm(NoteInformationDeleteType::class, $user);
+        $form = $this->createForm(AdministrationUserCreateType::class, $user);
 
-        $form1->handleRequest($request);
+        $form->handleRequest($request);
 
-        if ($form1->isSubmitted() && $form1->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
 
             // Get the data from the form
-            $user = $form1->getData();
+            $user = $form->getData();
 
             // Instantiate Doctrine Manager
             $entityManager = $this->getDoctrine()->getManager();
@@ -48,7 +48,7 @@ class AdministrationUserCreateController extends AbstractController
         if($this->session->get('loggedIn') && $this->session->get('isAdmin')) {
             // Render the controller
             return $this->render('administration/user/create/layout.html.twig', [
-                'form' => $form1->createView()
+                'form' => $form->createView()
             ]);
         } else {
             return $this->redirectToRoute('connexion');

@@ -20,7 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/logo-ildys.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/no-results.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/connexion/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/connexion/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courrier/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/information/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/information/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/layout.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +61,10 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/templates/connexion/layout.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/public/build/app.css" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Entity/Courrier.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file:////srv-data01/informatique/PROJETS/Chrono_Courrier/Scripts_Creation_Tables/Table COURRIER.sql" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration">
@@ -194,10 +204,10 @@
       <recent name="C:\Users\JLL7946\Documents\ildys-chrono\templates\courrier" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\assets\images" />
       <recent name="C:\Users\JLL7946\Documents\ildys-chrono\src\Controller" />
       <recent name="C:\Users\JLL7946\Documents\ildys-chrono\src\Controller\Administration" />
       <recent name="C:\Users\JLL7946\Documents\ildys-chrono\templates\administration\user\common" />
-      <recent name="C:\Users\JLL7946\Documents\ildys-chrono\assets\images" />
       <recent name="C:\Users\JLL7946\Documents\ildys-chrono\assets" />
     </key>
   </component>
@@ -270,6 +280,11 @@
       <workItem from="1618473624596" duration="21962000" />
       <workItem from="1618558913974" duration="12674000" />
       <workItem from="1618580073004" duration="1782000" />
+      <workItem from="1619421399607" duration="2670000" />
+      <workItem from="1619439579286" duration="7526000" />
+      <workItem from="1619508411214" duration="2283000" />
+      <workItem from="1619516990980" duration="101000" />
+      <workItem from="1619525852243" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="add webpack">
       <created>1603273422746</created>

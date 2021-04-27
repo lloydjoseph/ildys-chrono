@@ -271,6 +271,19 @@
 }
 
 /*-----------------------------------------------------------------*/
+/* No table results  */
+
+.no-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-results svg {
+    height: 4rem;
+}
+
+/*-----------------------------------------------------------------*/
 /* Sidebar */
 
 .sidebar {

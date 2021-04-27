@@ -64,9 +64,15 @@
 
                 {% include "info.html.twig" %}
 
-                <div class="content-table">
-                    <table class="table">
+                {% if notesService is empty %}
 
+                    {% include "no-results.html.twig" %}
+
+                {% else %}
+
+                <div class="content-table">
+
+                    <table class="table">
                         <thead>
                         <tr>
                             <th class="b-none">Date</th>
@@ -81,7 +87,6 @@
                             {% endif %}
                         </tr>
                         </thead>
-
                         <tbody>
                             {% for item in notesService %}
                                 <tr>
@@ -106,9 +111,11 @@
                                 </tr>
                             {% endfor %}
                         </tbody>
-
                     </table>
+
                 </div>
+
+                {% endif %}
 
             </section>
 
