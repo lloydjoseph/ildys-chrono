@@ -21,8 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/information/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/information/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CourrierRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CourrierRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/NoteInformationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/NoteInformationRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/NoteServiceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/NoteServiceRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +280,7 @@
       <workItem from="1619508411214" duration="2283000" />
       <workItem from="1619516990980" duration="101000" />
       <workItem from="1619525852243" duration="5701000" />
-      <workItem from="1619595559539" duration="3960000" />
+      <workItem from="1619595559539" duration="4709000" />
     </task>
     <task id="LOCAL-00001" summary="add webpack">
       <created>1603273422746</created>
@@ -386,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619611250500</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="libelle is wider">
+      <created>1619611571042</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1619611571042</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,6 +449,7 @@
     <MESSAGE value="user session" />
     <MESSAGE value="new connexion page" />
     <MESSAGE value="day and year filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="day and year filter" />
+    <MESSAGE value="libelle is wider" />
+    <option name="LAST_COMMIT_MESSAGE" value="libelle is wider" />
   </component>
 </project>

@@ -36,7 +36,7 @@ class NoteInformationRepository extends ServiceEntityRepository
             FROM App\Entity\NoteInformation c
             WHERE 1 = 1
             ' . $sql . ' 
-            ORDER BY c.d_date_creation ASC'
+            ORDER BY c.d_date_creation DESC'
         );
 
         // returns an array of NoteInformation objects
