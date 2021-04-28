@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/NoteInformationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/NoteInformationRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/NoteServiceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/NoteServiceRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/connexion/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/connexion/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courrier/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/layout.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +280,8 @@
       <workItem from="1619439579286" duration="7526000" />
       <workItem from="1619508411214" duration="2283000" />
       <workItem from="1619516990980" duration="101000" />
-      <workItem from="1619525852243" duration="5324000" />
+      <workItem from="1619525852243" duration="5701000" />
+      <workItem from="1619595559539" duration="3591000" />
     </task>
     <task id="LOCAL-00001" summary="add webpack">
       <created>1603273422746</created>
@@ -371,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619530242655</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="new connexion page">
+      <created>1619535926486</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1619535926486</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
