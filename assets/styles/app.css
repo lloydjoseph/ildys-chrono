@@ -245,6 +245,19 @@
     fill: var(--red);
 }
 
+.table-delete {
+    width: 28rem;
+    border-collapse: collapse;
+}
+
+.table-delete tr {
+    border: 0.125rem solid var(--grey);
+}
+
+.table-delete td {
+    padding: 0.5rem;
+}
+
 /*-----------------------------------------------------------------*/
 /* Form */
 

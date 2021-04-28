@@ -14,9 +14,19 @@
 
                 <h4>Supprimer une note de service</h4>
 
-                <p>Êtes-vous sûr de vouloir supprimer cette note de service ?</p>
+                <table class="table-delete">
+                    <tr><td>Date</td><td>{{ noteService.dDateCreation|date("d/m/Y") }}</td></tr>
+                    <tr><td>Numéro</td><td>{{ noteService.iNumero }}</td></tr>
+                    <tr><td>Libellé</td><td>{{ noteService.vLibelle }}</td></tr>
+                    <tr><td>Service</td><td>{{ noteService.vService }}</td></tr>
+                </table>
 
-                {{ form(form) }}
+                <p>⚠️ Attention, cette action est définitive !</p>
+
+                <div class="d-flex align-items-center">
+                    {{ form(form) }}
+                    <a href="{{ path('service') }}" class="link-black ml-2">Annuler</a>
+                </div>
 
             </section>
 

@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\LogAction;
 use App\Entity\NoteService;
 use App\Form\NoteServiceDeleteType;
+use DateTime;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -52,7 +53,7 @@ class ServiceDeleteController extends AbstractController
 
             // Log action
             $log = new LogAction();
-            $log->setDDateTransaction(new \DateTime());
+            $log->setDDateTransaction(new DateTime());
             $log->setIIdUser($this->session->get('iIdUser'));
             $log->setIIdRef($noteService->getIIdCourrier());
             $log->setITypeRef(3);
@@ -75,7 +76,8 @@ class ServiceDeleteController extends AbstractController
         if($this->session->get('loggedIn') && $this->session->get('bSupprNoteServ')) {
             // Render the controller
             return $this->render('service/delete/layout.html.twig', [
-                'form' => $form->createView()
+                'form' => $form->createView(),
+                'noteService' => $noteService
             ]);
         } else {
             return $this->redirectToRoute('connexion');

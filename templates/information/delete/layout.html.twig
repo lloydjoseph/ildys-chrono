@@ -14,9 +14,19 @@
 
                 <h4>Supprimer une note d'information</h4>
 
-                <p>Êtes-vous sûr de vouloir supprimer cette note d'information ?</p>
+                <table class="table-delete">
+                    <tr><td>Date</td><td>{{ noteInformation.dDateCreation|date("d/m/Y") }}</td></tr>
+                    <tr><td>Numéro</td><td>{{ noteInformation.iNumero }}</td></tr>
+                    <tr><td>Libellé</td><td>{{ noteInformation.vLibelle }}</td></tr>
+                    <tr><td>Service</td><td>{{ noteInformation.vService }}</td></tr>
+                </table>
 
-                {{ form(form) }}
+                <p>⚠️ Attention, cette action est définitive !</p>
+
+                <div class="d-flex align-items-center">
+                    {{ form(form) }}
+                    <a href="{{ path('information') }}" class="link-black ml-2">Annuler</a>
+                </div>
 
             </section>
 

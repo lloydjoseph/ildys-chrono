@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\LogAction;
 use App\Entity\NoteInformation;
 use App\Form\NoteInformationDeleteType;
+use DateTime;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -52,7 +53,7 @@ class InformationDeleteController extends AbstractController
 
             // Log action
             $log = new LogAction();
-            $log->setDDateTransaction(new \DateTime());
+            $log->setDDateTransaction(new DateTime());
             $log->setIIdUser($this->session->get('iIdUser'));
             $log->setIIdRef($noteInformation->getIIdCourrier());
             $log->setITypeRef(2);
@@ -75,7 +76,8 @@ class InformationDeleteController extends AbstractController
         if($this->session->get('loggedIn') && $this->session->get('bSupprNoteInfo')) {
             // Render the controller
             return $this->render('information/delete/layout.html.twig', [
-                'form' => $form->createView()
+                'form' => $form->createView(),
+                'noteInformation' => $noteInformation
             ]);
         } else {
             return $this->redirectToRoute('connexion');

@@ -14,9 +14,19 @@
 
                 <h4>Supprimer un courrier</h4>
 
-                <p>Êtes-vous sûr de vouloir supprimer ce courrier ?</p>
+                <table class="table-delete">
+                    <tr><td>Date</td><td>{{ courrier.dDateCreation|date("d/m/Y") }}</td></tr>
+                    <tr><td>Numéro</td><td>{{ courrier.iNumero }}</td></tr>
+                    <tr><td>Libellé</td><td>{{ courrier.vLibelle }}</td></tr>
+                    <tr><td>Destinataire</td><td>{{ courrier.vDestinataire }}</td></tr>
+                </table>
 
-                {{ form(form) }}
+                <p>⚠️ Attention, cette action est définitive !</p>
+
+                <div class="d-flex align-items-center">
+                    {{ form(form) }}
+                    <a href="{{ path('courrier') }}" class="link-black ml-2">Annuler</a>
+                </div>
 
             </section>
 

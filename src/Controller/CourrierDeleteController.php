@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Courrier;
 use App\Entity\LogAction;
 use App\Form\CourrierDeleteType;
+use DateTime;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -52,7 +53,7 @@ class CourrierDeleteController extends AbstractController
 
             // Log action
             $log = new LogAction();
-            $log->setDDateTransaction(new \DateTime());
+            $log->setDDateTransaction(new DateTime());
             $log->setIIdUser($this->session->get('iIdUser'));
             $log->setIIdRef($courrier->getIIdCourrier());
             $log->setITypeRef(1);
@@ -75,7 +76,8 @@ class CourrierDeleteController extends AbstractController
         if($this->session->get('loggedIn') && $this->session->get('bSupprCourrier')) {
             // Render the controller
             return $this->render('courrier/delete/layout.html.twig', [
-                'form' => $form->createView()
+                'form' => $form->createView(),
+                'courrier' => $courrier
             ]);
         } else {
             return $this->redirectToRoute('connexion');
