@@ -92,7 +92,7 @@
                                 <tr>
                                     <td class="no-wrap">{{ item.dDateCreation|date('d-m-Y') }}</td>
                                     <td>{{ item.iNumero }}</td>
-                                    <td>{{ item.vLibelle }}</td>
+                                    <td class="no-wrap">{{ item.vLibelle }}</td>
                                     <td>{{ item.vService }}</td>
                                     {% if app.session.get('bModifNoteInfo') %}
                                         <td style="text-align: center">

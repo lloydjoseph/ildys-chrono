@@ -77,7 +77,7 @@
                         <tr>
                             <th class="b-none">Date</th>
                             <th class="b-none">N°</th>
-                            <th class="b-none ">Objet</th>
+                            <th class="b-none no-wrap">Objet</th>
                             <th class="b-none w-100">Service</th>
                             {% if app.session.get('bModifNoteServ') %}
                                 <th class="b-none">Modifier</th>
@@ -92,7 +92,7 @@
                                 <tr>
                                     <td class="no-wrap">{{ item.dDateCreation|date('d-m-Y') }}</td>
                                     <td>{{ item.iNumero }}</td>
-                                    <td>{{ item.vLibelle }}</td>
+                                    <td class="no-wrap">{{ item.vLibelle }}</td>
                                     <td>{{ item.vService }}</td>
                                     {% if app.session.get('bModifNoteServ') %}
                                         <td style="text-align: center">
