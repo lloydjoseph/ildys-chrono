@@ -7,14 +7,9 @@ use App\Entity\Utilisateur;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Ldap\Ldap;
-use phpDocumentor\Reflection\Types\String_;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Asset\Package;
-use Symfony\Component\Asset\VersionStrategy\EmptyVersionStrategy;
-use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class ConnexionController extends AbstractController
@@ -32,8 +27,6 @@ class ConnexionController extends AbstractController
         $error = '';
         $results = "";
         $userInActiveDirectory = false;
-        $userNotInDatabase = true;
-        $userIsActive = false;
         $info = [];
         $firstname = "";
         $lastname = "";
@@ -122,6 +115,14 @@ class ConnexionController extends AbstractController
             $permission = $this->getDoctrine()
                 ->getRepository(Permission::class)
                 ->findOneBy(['i_id_user' => $userId]);
+
+            // Set variable to true or false, depending if data exists
+            $permissionsNotInDatabase = empty($permission);
+
+            // If no permissions exists in the database, throw Exeption
+            if($permissionsNotInDatabase) {
+                return $this->redirectToRoute('connexion', ['e' => 4]);
+            }
 
             $this->session->set('results', $results);
             $this->session->set('info', $info);

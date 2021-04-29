@@ -24,11 +24,13 @@
                 <b>Erreur :</b>
                 {% endif %}
                 {% if erreur == 1 %}
-                Identifiant ou Mot de passe incorrect(s)
+                L'identifiant et/ou le mot de passe sont incorrects
                 {% elseif erreur == 2 %}
-                L'utilisateur n'existe pas dans la base de données
+                Ce compte n'existe pas dans la base de données
                 {% elseif erreur == 3 %}
                 Ce compte a été désactivé
+                {% elseif erreur == 4 %}
+                Aucune permission n'est associée à ce compte
                 {% endif %}
                 </p>
 
