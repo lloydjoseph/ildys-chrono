@@ -92,7 +92,7 @@ class ConnexionController extends AbstractController
 
             // If no user is found, throw Exeption
             if($userInActiveDirectory == false) {
-                throw $this->createNotFoundException("Échec de l'authentification au serveur Active Directory");
+                return $this->redirectToRoute('connexion', ['e' => 1]);
             }
 
             // Check if user exists in database
@@ -105,7 +105,7 @@ class ConnexionController extends AbstractController
 
             // If no user exists in the database, throw Exeption
             if($userNotInDatabase) {
-                throw $this->createNotFoundException("L'utilisateur n'existe pas dans la base de données");
+                return $this->redirectToRoute('connexion', ['e' => 2]);
             }
 
             // Set variable to true or false, depending if user's account is active
@@ -113,7 +113,7 @@ class ConnexionController extends AbstractController
 
             // If the user's account is disabled, throw Exeption
             if(!$userIsActive) {
-                throw $this->createNotFoundException("Ce compte a été désactivé");
+                return $this->redirectToRoute('connexion', ['e' => 3]);
             }
 
             $userId = $retrievedUserFromDatabase->getIIdUser();

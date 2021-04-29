@@ -8,7 +8,9 @@
 
         <div class="d-flex align-items-center white br-025">
 
-            <img src="{{ asset('/build/images/logo-ildys.png') }}" alt="Logo Fondation Ildys" class="logo-ildys no-drag">
+            <div style="width: 24rem;" class="pt-4 pb-4 pl-2 pr-2">
+                <img src="{{ asset('/build/images/logo-ildys.png') }}" alt="Logo Fondation Ildys" class="logo-ildys no-drag">
+            </div>
 
             <div class="connexion-inner pt-4 pb-4 pl-2 pr-2">
                 <div>
@@ -16,7 +18,19 @@
                     <p>Entrez vos informations de connexion afin d'accéder à l'outil Ildys Chrono</p>
                 </div>
 
-                {{ error }}
+                {% set erreur = app.request.get('e') %}
+                {% if erreur is not empty %}
+                <p class="error">
+                <b>Erreur :</b>
+                {% endif %}
+                {% if erreur == 1 %}
+                Identifiant ou Mot de passe incorrect(s)
+                {% elseif erreur == 2 %}
+                L'utilisateur n'existe pas dans la base de données
+                {% elseif erreur == 3 %}
+                Ce compte a été désactivé
+                {% endif %}
+                </p>
 
                 {{ form_start(form) }}
 

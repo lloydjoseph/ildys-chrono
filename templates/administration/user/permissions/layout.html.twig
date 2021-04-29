@@ -36,6 +36,11 @@
                 <div>{{ form_widget(form.iIdUser) }}</div>
                 {{ form_end(form) }}
 
+                {{ form_start(formAdmin) }}
+                <div class="category mt-2 mb-1">Administrateur</div>
+                <div>{{ form_widget(formAdmin.bAdmin) }}{{ form_label(formAdmin.bAdmin) }}</div>
+                {{ form_end(formAdmin) }}
+
             </section>
 
         </section>

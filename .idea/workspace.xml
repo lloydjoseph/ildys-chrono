@@ -20,9 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Form/AdministrationUserPermissionsAdminType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/courrier/modify/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/modify/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/information/modify/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/information/modify/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserPermissionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserPermissionsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ConnexionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ConnexionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AdministrationUserPermissionsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AdministrationUserPermissionsType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/administration/user/permissions/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administration/user/permissions/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/connexion/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/connexion/layout.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +284,8 @@
       <workItem from="1619508411214" duration="2283000" />
       <workItem from="1619516990980" duration="101000" />
       <workItem from="1619525852243" duration="5701000" />
-      <workItem from="1619595559539" duration="10210000" />
+      <workItem from="1619595559539" duration="12023000" />
+      <workItem from="1619682466724" duration="11183000" />
     </task>
     <task id="LOCAL-00001" summary="add webpack">
       <created>1603273422746</created>
@@ -407,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619618024546</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="modify link correction">
+      <created>1619618170697</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1619618170697</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,6 +478,7 @@
     <MESSAGE value="libelle is wider" />
     <MESSAGE value="show table rows newest first" />
     <MESSAGE value="new delete form layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="new delete form layout" />
+    <MESSAGE value="modify link correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify link correction" />
   </component>
 </project>
