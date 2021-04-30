@@ -16,6 +16,8 @@
 
                 {% include "administration/user/navbar-user.html.twig" %}
 
+                {% if userIsActive %}
+
                 <h4 class="mt-2">Désactiver le compte</h4>
 
                 {% include "info.html.twig" %}
@@ -23,11 +25,32 @@
                 <p>En cliquant sur le bouton ci-dessous, vous désactivez
                     le compte de <b>{{ userFirstLastName }} </b>. <br>L'utilisateur ne pourra plus accéder à l'application.
                     <br><br>
-                    Les données de l'utisateur restent inchangées.</p>
+                    Les données de l'utilisateur restent inchangées.</p>
 
                 {{ form_start(form) }}
-                    {{ form_row(form.Desactiver, {'label': 'Désactiver'}) }}
+                <div style="display: none">{{ form_row(form.Reactiver, {'label': 'Réactiver'}) }}</div>
+                <div>{{ form_row(form.Desactiver, {'label': 'Désactiver'}) }}</div>
+                {{ form_row(form.bActif) }}
                 {{ form_end(form) }}
+
+                {% else %}
+
+                <h4 class="mt-2">Réactiver le compte</h4>
+
+                {% include "info.html.twig" %}
+
+                <p>En cliquant sur le bouton ci-dessous, vous réactivez
+                    le compte de <b>{{ userFirstLastName }} </b>. <br>L'utilisateur pourra de nouveau accéder à l'application.
+                    <br><br>
+                    Les données de l'utilisateur restent inchangées.</p>
+
+                {{ form_start(form) }}
+                <div>{{ form_row(form.Reactiver, {'label': 'Réactiver'}) }}</div>
+                <div style="display: none">{{ form_row(form.Desactiver, {'label': 'Désactiver'}) }}</div>
+                {{ form_row(form.bActif) }}
+                {{ form_end(form) }}
+
+                {% endif %}
 
             </section>
 

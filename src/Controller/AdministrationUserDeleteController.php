@@ -34,6 +34,8 @@ class AdministrationUserDeleteController extends AbstractController
             ->getRepository(Utilisateur::class)
             ->find($id);
 
+        $userIsActive = $user->getBActif();
+
         // Create the form from the user info
         $form = $this->createForm(AdministrationUserDeleteType::class, $user);
 
@@ -45,8 +47,14 @@ class AdministrationUserDeleteController extends AbstractController
         // Check is form is submitted and valid
         if ($form->isSubmitted() && $form->isValid()) {
 
-            // Set b_actif to 0
-            $user->setBActif(0);
+            // Set b_actif to correct value
+            if($userIsActive) {
+                // If user is active, set to inactive
+                $user->setBActif(0);
+            } else {
+                // If user is inactive, set to active
+                $user->setBActif(1);
+            }
 
             // Instantiate Doctrine Manager
             $entityManager = $this->getDoctrine()->getManager();
@@ -67,7 +75,8 @@ class AdministrationUserDeleteController extends AbstractController
             // Render the controller
             return $this->render('administration/user/delete/layout.html.twig', [
                 'form' => $form->createView(),
-                'userFirstLastName' => $userFirstLastName
+                'userFirstLastName' => $userFirstLastName,
+                'userIsActive' => $userIsActive
             ]);
         } else {
             return $this->redirectToRoute('connexion');
