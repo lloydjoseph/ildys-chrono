@@ -55,7 +55,7 @@ class InformationDeleteController extends AbstractController
             $log = new LogAction();
             $log->setDDateTransaction(new DateTime());
             $log->setIIdUser($this->session->get('iIdUser'));
-            $log->setIIdRef($noteInformation->getIIdCourrier());
+            $log->setIIdRef($noteInformation->getIIdNote());
             $log->setITypeRef(2);
             $log->setVAction('S');
 

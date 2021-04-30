@@ -4,8 +4,8 @@ namespace App\Controller;
 
 use App\Entity\LogAction;
 use App\Entity\NoteService;
-use App\Form\NoteInformationCreateType;
 use App\Form\NoteServiceCreateType;
+use DateTime;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -34,7 +34,7 @@ class ServiceCreateController extends AbstractController
 
         $form->get('iNumero')->setData($noteServiceNumber);
 
-        $form->get('dDateCreation')->setData(new \DateTime());
+        $form->get('dDateCreation')->setData(new DateTime());
 
         $form->get('iIdUser')->setData($this->session->get('iIdUser'));
 
@@ -56,9 +56,9 @@ class ServiceCreateController extends AbstractController
 
             // Log action
             $log = new LogAction();
-            $log->setDDateTransaction(new \DateTime());
+            $log->setDDateTransaction(new DateTime());
             $log->setIIdUser($this->session->get('iIdUser'));
-            $log->setIIdRef($noteService->getIIdCourrier());
+            $log->setIIdRef($noteService->getIIdNote());
             $log->setITypeRef(3);
             $log->setVAction('A');
 

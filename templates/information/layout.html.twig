@@ -20,18 +20,17 @@
 
                         <div class="d-inline-block">
                             <label for="day" class="inp-label">Jour</label>
-                            <input type="text" name="day" id="day" class="inp-text" size="5" value="{{ app.request.get('day') }}">
-
+                            <input type="text" maxlength="2" name="day" id="day" class="inp-text" size="5" value="{{ app.request.get('day') }}">
                         </div>
 
                         <div class="d-inline-block">
                             <label for="month" class="inp-label">Mois</label>
-                            <input type="text" name="month" id="month" class="inp-text" size="5" value="{{ app.request.get('month') }}">
+                            <input type="text" maxlength="2" name="month" id="month" class="inp-text" size="5" value="{{ app.request.get('month') }}">
                         </div>
 
                         <div class="d-inline-block">
                             <label for="year" class="inp-label">Année</label>
-                            <input type="text" name="year" id="year" class="inp-text" size="5" value="{{ app.request.get('year') }}">
+                            <input type="text" maxlength="4" name="year" id="year" class="inp-text" size="5" value="{{ app.request.get('year') }}">
                         </div>
 
                         <div class="d-inline-block">
@@ -52,7 +51,6 @@
                         <button class="btn-blue ml-2 mr-2">Filtrer</button>
 
                         <a href="{{ path('information') }}" class="link-black">Réinitialiser</a>
-
 
                     </form>
 

@@ -24,19 +24,19 @@ class CourrierRepository extends ServiceEntityRepository
 
         $sql = '';
 
-        if(isset($_GET['day']) && !empty($_GET['day'])) $sql .= ' AND DAY(c.d_date_creation) LIKE \'%' . $_GET['day'] . '%\'';
-        if(isset($_GET['month']) && !empty($_GET['month'])) $sql .= ' AND MONTH(c.d_date_creation) LIKE \'%' . $_GET['month'] . '%\'';
-        if(isset($_GET['year']) && !empty($_GET['year'])) $sql .= ' AND YEAR(c.d_date_creation) LIKE \'%' . $_GET['year'] . '%\'';
-        if(isset($_GET['number']) && !empty($_GET['number'])) $sql .= ' AND c.i_numero LIKE \'%' . $_GET['number'] . '%\'';
-        if(isset($_GET['subject']) && !empty($_GET['subject'])) $sql .= ' AND c.v_libelle LIKE \'%' . $_GET['subject'] . '%\'';
-        if(isset($_GET['recipient']) && !empty($_GET['recipient'])) $sql .= ' AND c.v_destinataire LIKE \'%' . $_GET['recipient'] . '%\'';
+        if(isset($_GET['day']) && !empty($_GET['day'])) $sql .= " AND DATE_FORMAT(c.d_date_creation,'%d') LIKE '%" . $_GET['day'] . "%'";
+        if(isset($_GET['month']) && !empty($_GET['month'])) $sql .= " AND DATE_FORMAT(c.d_date_creation,'%m') LIKE '%" . $_GET['month'] . "%'";
+        if(isset($_GET['year']) && !empty($_GET['year'])) $sql .= " AND DATE_FORMAT(c.d_date_creation,'%Y') LIKE '%" . $_GET['year'] . "%'";
+        if(isset($_GET['number']) && !empty($_GET['number'])) $sql .= " AND c.i_numero LIKE '%" . $_GET['number'] . "%'";
+        if(isset($_GET['subject']) && !empty($_GET['subject'])) $sql .= " AND c.v_libelle LIKE '%" . $_GET['subject'] . "%'";
+        if(isset($_GET['recipient']) && !empty($_GET['recipient'])) $sql .= " AND c.v_destinataire LIKE '%" . $_GET['recipient'] . "%'";
 
         $query = $entityManager->createQuery(
-            'SELECT c
+            "SELECT c
             FROM App\Entity\Courrier c
             WHERE 1 = 1
-            ' . $sql . ' 
-            ORDER BY c.d_date_creation DESC'
+            " . $sql . "
+            ORDER BY c.d_date_creation DESC"
         );
 
         // returns an array of Courrier objects

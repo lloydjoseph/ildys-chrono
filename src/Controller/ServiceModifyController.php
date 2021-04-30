@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\LogAction;
 use App\Entity\NoteService;
 use App\Form\NoteServiceModifyType;
+use DateTime;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -55,9 +56,9 @@ class ServiceModifyController extends AbstractController
 
             // Log action
             $log = new LogAction();
-            $log->setDDateTransaction(new \DateTime());
+            $log->setDDateTransaction(new DateTime());
             $log->setIIdUser($this->session->get('iIdUser'));
-            $log->setIIdRef($noteService->getIIdCourrier());
+            $log->setIIdRef($noteService->getIIdNote());
             $log->setITypeRef(3);
             $log->setVAction('M');
 

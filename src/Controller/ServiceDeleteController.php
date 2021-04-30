@@ -55,7 +55,7 @@ class ServiceDeleteController extends AbstractController
             $log = new LogAction();
             $log->setDDateTransaction(new DateTime());
             $log->setIIdUser($this->session->get('iIdUser'));
-            $log->setIIdRef($noteService->getIIdCourrier());
+            $log->setIIdRef($noteService->getIIdNote());
             $log->setITypeRef(3);
             $log->setVAction('S');
 

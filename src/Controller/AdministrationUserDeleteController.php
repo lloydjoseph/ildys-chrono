@@ -71,6 +71,11 @@ class AdministrationUserDeleteController extends AbstractController
             ]);
         }
 
+        // Redirect if editing own profile
+        if($_GET['id'] == $this->session->get('iIdUser')) {
+            return $this->redirectToRoute('administration');
+        }
+
         if($this->session->get('loggedIn') && $this->session->get('isAdmin')) {
             // Render the controller
             return $this->render('administration/user/delete/layout.html.twig', [

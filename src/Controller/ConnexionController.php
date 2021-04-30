@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\LogAction;
 use App\Entity\Permission;
 use App\Entity\Utilisateur;
+use DateTime;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -133,6 +135,7 @@ class ConnexionController extends AbstractController
                 "username" => $username
             ]);
 
+            // Set session variables
             $this->session->set('bAjoutCourrier', $permission->getBAjoutCourrier());
             $this->session->set('bModifCourrier', $permission->getBModifCourrier());
             $this->session->set('bSupprCourrier', $permission->getBSupprCourrier());
@@ -149,7 +152,26 @@ class ConnexionController extends AbstractController
             $this->session->set('loggedIn', true);
             $this->session->set('isAdmin', $retrievedUserFromDatabase->getBAdmin());
 
-            return $this->redirectToRoute('courrier', []);
+            $this->session->set('visitedCourrier', false);
+            $this->session->set('visitedNoteInfo', false);
+            $this->session->set('visitedNoteServ', false);
+
+            // Log action
+            $log = new LogAction();
+            $log->setDDateTransaction(new DateTime());
+            $log->setIIdUser($this->session->get('iIdUser'));
+            $log->setVAction('C');
+
+            // Instantiate Doctrine Manager
+            $entityManager = $this->getDoctrine()->getManager();
+
+            // Persist log
+            $entityManager->persist($log);
+
+            // Flush data (clear or reload various internal caches)
+            $entityManager->flush();
+
+            return $this->redirectToRoute('courrier', ['year' => date("Y")]);
         }
 
         return $this->render('connexion/layout.html.twig', [

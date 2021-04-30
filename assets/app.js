@@ -4,13 +4,6 @@ import './styles/app.css';
 import './styles/global.css';
 
 /*-----------------------------------------------------------------*/
-/* Autosize */
-
-const autosize = require('./autosize.min.js');
-
-autosize(document.querySelectorAll('textarea'));
-
-/*-----------------------------------------------------------------*/
 /* Loaded message */
 
 console.log('Script app.js loaded successfully !');
@@ -20,61 +13,6 @@ console.log('Script app.js loaded successfully !');
 
 if (/*@cc_on!@*/!!document.documentMode) alert('L\'utilisation du navigateur Google Chrome est recommandé pour l\'utilisation de cet outil.')
 
-/*-----------------------------------------------------------------*/
-/* Replace checkboxes */
-
-let checkboxes = Array.prototype.slice.call(document.getElementsByClassName('checkbox'));
-
-checkboxes.forEach(element => {
-    element.style.display = 'none';
-
-    let custCheckbox = document.createElement('img');
-
-    let attr = document.createAttribute('src');
-    attr.value = '/build/images/circle-24px.svg';
-
-    let attr2 = document.createAttribute('class');
-    attr2.value = 'cust-checkbox';
-
-    custCheckbox.setAttributeNode(attr);
-    custCheckbox.setAttributeNode(attr2);
-
-    element && element.addEventListener('change', () => {
-        if(element.checked) {
-            custCheckbox.src = '/build/images/check_circle-24px.svg';
-        } else {
-            custCheckbox.src = '/build/images/circle-24px.svg';
-        }
-    });
-
-    element.parentElement.insertBefore(custCheckbox, element.nextSibling);
-});
-
-let checkboxContainers = Array.prototype.slice.call(document.getElementsByClassName('checkbox-container'));
-
-checkboxContainers.forEach(element => {
-    element && element.addEventListener('keyup', (event) => {
-        if(event.keyCode === 13) {
-            console.log(element.firstChild.nextSibling.click());
-        }
-    });
-})
-
-/*-----------------------------------------------------------------*/
-/* See password button */
-
-let passwordVisible = document.getElementById('password-visible');
-let passwordField = document.getElementById('password');
-
-if(document.getElementById('password-visible')) {
-    passwordVisible && passwordVisible.addEventListener('change', () => {
-        if(passwordField.type === 'password') {
-            passwordField.type = 'text';
-        } else {
-            passwordField.type = 'password';
-        }
-    })
-}
 
 /*-----------------------------------------------------------------*/
 /* Display loading page when page is left */
@@ -85,6 +23,24 @@ window.onbeforeunload = () => {
     document.querySelector('#loading').style.display = 'flex';
     backgroundBlur();
 };
+
+/*-----------------------------------------------------------------*/
+/* Focus on next date input after it has been filled */
+let day = document.querySelector('#day');
+let month = document.querySelector('#month');
+let year = document.querySelector('#year');
+
+day.addEventListener('keyup', () => {
+    if(day.value.length === 2) {
+        month.focus();
+    }
+})
+
+month.addEventListener('keyup', () => {
+    if(month.value.length === 2) {
+        year.focus();
+    }
+})
 
 /*-----------------------------------------------------------------*/
 /* Add 'user-active' class to admin user menu item */
