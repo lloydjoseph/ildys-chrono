@@ -10,8 +10,6 @@
 
         <section class="main">
 
-{#            {% include "navbar.html.twig" %}#}
-
             <nav class="navbar d-flex align-items-center justify-content-between">
 
                 <section class="w-100">
@@ -50,7 +48,7 @@
 
                         <button class="btn-blue ml-2 mr-2">Filtrer</button>
 
-                        <a href="{{ path('information') }}" class="link-black">Réinitialiser</a>
+                        <a href="{{ path('information') }}?year={{ "now"|date("Y") }}" class="link-black">Réinitialiser</a>
 
                     </form>
 

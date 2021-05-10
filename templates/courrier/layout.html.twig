@@ -16,39 +16,39 @@
 
                     <form action="" method="get">
 
-                    <div class="d-inline-block">
-                        <label for="day" class="inp-label">Jour</label>
-                        <input type="text" maxlength="2" name="day" id="day" class="inp-text" size="5" value="{{ app.request.get('day') }}">
-                    </div>
+                        <div class="d-inline-block">
+                            <label for="day" class="inp-label">Jour</label>
+                            <input type="text" maxlength="2" name="day" id="day" class="inp-text" size="5" value="{{ app.request.get('day') }}">
+                        </div>
 
-                    <div class="d-inline-block">
-                        <label for="month" class="inp-label">Mois</label>
-                        <input type="text" maxlength="2" name="month" id="month" class="inp-text" size="5" value="{{ app.request.get('month') }}">
-                    </div>
+                        <div class="d-inline-block">
+                            <label for="month" class="inp-label">Mois</label>
+                            <input type="text" maxlength="2" name="month" id="month" class="inp-text" size="5" value="{{ app.request.get('month') }}">
+                        </div>
 
-                    <div class="d-inline-block">
-                        <label for="year" class="inp-label">Année</label>
-                        <input type="text" maxlength="4" name="year" id="year" class="inp-text" size="5" value="{{ app.request.get('year') }}">
-                    </div>
+                        <div class="d-inline-block">
+                            <label for="year" class="inp-label">Année</label>
+                            <input type="text" maxlength="4" name="year" id="year" class="inp-text" size="5" value="{{ app.request.get('year') }}">
+                        </div>
 
-                    <div class="d-inline-block">
-                        <label for="number" class="inp-label">Numéro</label>
-                        <input type="text" name="number" id="number" class="inp-text" size="5" value="{{ app.request.get('number') }}">
-                    </div>
+                        <div class="d-inline-block">
+                            <label for="number" class="inp-label">Numéro</label>
+                            <input type="text" name="number" id="number" class="inp-text" size="5" value="{{ app.request.get('number') }}">
+                        </div>
 
-                    <div class="d-inline-block">
-                        <label for="subject" class="inp-label">Libellé</label>
-                        <input type="text" name="subject" id="subject" class="inp-text" size="30" value="{{ app.request.get('subject') }}">
-                    </div>
+                        <div class="d-inline-block">
+                            <label for="subject" class="inp-label">Libellé</label>
+                            <input type="text" name="subject" id="subject" class="inp-text" size="30" value="{{ app.request.get('subject') }}">
+                        </div>
 
-                    <div class="d-inline-block">
-                        <label for="recipient" class="inp-label">Destinataire</label>
-                        <input type="text" name="recipient" id="recipient" class="inp-text" size="30" value="{{ app.request.get('recipient') }}">
-                    </div>
+                        <div class="d-inline-block">
+                            <label for="recipient" class="inp-label">Destinataire</label>
+                            <input type="text" name="recipient" id="recipient" class="inp-text" size="30" value="{{ app.request.get('recipient') }}">
+                        </div>
 
-                    <button class="btn-blue ml-2 mr-2">Filtrer</button>
+                        <button class="btn-blue ml-2 mr-2">Filtrer</button>
 
-                    <a href="{{ path('courrier') }}" class="link-black">Réinitialiser</a>
+                        <a href="{{ path('courrier') }}?year={{ "now"|date("Y") }}" class="link-black">Réinitialiser</a>
 
                     </form>
 

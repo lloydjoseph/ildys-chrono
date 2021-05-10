@@ -19,21 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="log logout">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210505140225.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phpunit.xml.dist.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventListener/LogoutListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ildys-chrono.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ildys-chrono.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="add logout tags in services.yaml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courrier/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/information/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/information/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/layout.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +56,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/public/build/app.css" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/templates/connexion/layout.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Entity/Courrier.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
@@ -340,6 +331,7 @@
       <workItem from="1620291002667" duration="9075000" />
       <workItem from="1620373619199" duration="2947000" />
       <workItem from="1620636239935" duration="211000" />
+      <workItem from="1620657998062" duration="1261000" />
     </task>
     <task id="LOCAL-00001" summary="add webpack">
       <created>1603273422746</created>
@@ -495,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619770847576</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add logout tags in services.yaml">
+      <created>1620645836273</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1620645836273</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,6 +558,7 @@
     <MESSAGE value="reactivate a deactivated account" />
     <MESSAGE value="filter update" />
     <MESSAGE value="log logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="log logout" />
+    <MESSAGE value="add logout tags in services.yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="add logout tags in services.yaml" />
   </component>
 </project>
