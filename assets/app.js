@@ -25,24 +25,6 @@ window.onbeforeunload = () => {
 };
 
 /*-----------------------------------------------------------------*/
-/* Focus on next date input after it has been filled */
-let day = document.querySelector('#day');
-let month = document.querySelector('#month');
-let year = document.querySelector('#year');
-
-day.addEventListener('keyup', () => {
-    if(day.value.length === 2) {
-        month.focus();
-    }
-})
-
-month.addEventListener('keyup', () => {
-    if(month.value.length === 2) {
-        year.focus();
-    }
-})
-
-/*-----------------------------------------------------------------*/
 /* Add 'user-active' class to admin user menu item */
 
 let userMenuItems = document.querySelectorAll('.user-menu-item');
@@ -51,17 +33,6 @@ userMenuItems.forEach((element) => {
     if(location.pathname === element.pathname) {
         element.classList.add('user-active');
     }
-})
-
-/*-----------------------------------------------------------------*/
-/* Show page to add info */
-
-let btnAdd = document.querySelector('#btn-add');
-let add = document.querySelector('#add');
-
-btnAdd && btnAdd.addEventListener('click', () => {
-    add.style.display = 'flex';
-    backgroundBlur();
 })
 
 /*-----------------------------------------------------------------*/
@@ -107,4 +78,22 @@ let info = document.querySelector('#info');
 
 closeInfo && closeInfo.addEventListener('click', () => {
     info.style.display = 'none';
+})
+
+/*-----------------------------------------------------------------*/
+/* Focus on next date input after it has been filled */
+let day = document.querySelector('#day');
+let month = document.querySelector('#month');
+let year = document.querySelector('#year');
+
+day.addEventListener('keyup', () => {
+    if(day.value.length === 2) {
+        month.focus();
+    }
+})
+
+month.addEventListener('keyup', () => {
+    if(month.value.length === 2) {
+        year.focus();
+    }
 })
