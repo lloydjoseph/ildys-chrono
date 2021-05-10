@@ -27,16 +27,8 @@ services:
         resource: '../src/Controller/'
         tags: ['controller.service_arguments']
 
-#    Symfony\Component\Ldap\Ldap:
-#        arguments: [ '@Symfony\Component\Ldap\Adapter\ExtLdap\Adapter' ]
-#    Symfony\Component\Ldap\Adapter\ExtLdap\Adapter:
-#        arguments:
-#            - host: thevenec.ildys.int
-#              port: 389
-#              encryption: tls
-#              options:
-#                  protocol_version: 3
-#                  referrals: false
-
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    App\EventListener\LogoutListener:
+        tags:
+            - { name: kernel.event_listener, event: Symfony\Component\Security\Http\Event\LogoutEvent, dispatcher: security.event_dispatcher.main }
