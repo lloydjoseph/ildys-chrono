@@ -42,7 +42,7 @@ class AdministrationUserCreateController extends AbstractController
             // Flush data (clear or reload various internal caches)
             $entityManager->flush();
 
-            return $this->redirectToRoute('administration user create', [
+            return $this->redirectToRoute('administration', [
                 'result' => 200
             ]);
         }
