@@ -26,7 +26,7 @@ class UserRepository extends ServiceEntityRepository
 
         $sql = '';
 
-        if(isset($_GET['user']) && !empty($_GET['user'])) $sql .= ' AND c.v_prenom_user LIKE \'%' . $_GET['user'] . '%\' OR c.v_nom_user LIKE \'%' . $_GET['user'] . '%\'';
+        if(isset($_GET['user']) && !empty($_GET['user'])) $sql .= ' AND u.v_prenom_user LIKE \'%' . $_GET['user'] . '%\' OR u.v_nom_user LIKE \'%' . $_GET['user'] . '%\'';
 
         $query = $entityManager->createQuery(
             'SELECT u
