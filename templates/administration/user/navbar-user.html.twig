@@ -8,7 +8,7 @@
     </div>
     {% if app.session.get('iIdUser') != app.request.get('id') %}
     <div>
-        <a href="{{ path('administration user delete') ~ idParam }}" class="user-menu-item">Désactivation</a>
+        <a href="{{ path('administration user delete') ~ idParam }}" class="user-menu-item">Désactivation / Réactivation</a>
     </div>
     {% endif %}
 </div>
