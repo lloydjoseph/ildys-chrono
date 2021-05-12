@@ -28,6 +28,8 @@ class AdministrationUserCreateController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
+            $user->setBActif(1);
+
             // Get the data from the form
             $user = $form->getData();
 
