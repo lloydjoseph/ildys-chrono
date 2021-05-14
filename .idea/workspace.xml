@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="add year in filter reset">
+    <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="fix user search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/add.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,7 +329,13 @@
       <workItem from="1620291002667" duration="9075000" />
       <workItem from="1620373619199" duration="2947000" />
       <workItem from="1620636239935" duration="211000" />
-      <workItem from="1620657998062" duration="2753000" />
+      <workItem from="1620657998062" duration="4082000" />
+      <workItem from="1620716667431" duration="1535000" />
+      <workItem from="1620801282986" duration="3366000" />
+      <workItem from="1620828049594" duration="1475000" />
+      <workItem from="1620973243020" duration="594000" />
+      <workItem from="1621003138560" duration="2000" />
+      <workItem from="1621004421296" duration="21000" />
     </task>
     <task id="LOCAL-00001" summary="add webpack">
       <created>1603273422746</created>
@@ -500,7 +505,42 @@
       <option name="project" value="LOCAL" />
       <updated>1620659302850</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="current tab indication admin panel">
+      <created>1620661829079</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1620661829079</updated>
+    </task>
+    <task id="LOCAL-00026" summary="change user deactivation tab text">
+      <created>1620810442538</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1620810442538</updated>
+    </task>
+    <task id="LOCAL-00027" summary="add active by default when user is created">
+      <created>1620810492472</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1620810492472</updated>
+    </task>
+    <task id="LOCAL-00028" summary="redirect to admin page after user create">
+      <created>1620811906418</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1620811906418</updated>
+    </task>
+    <task id="LOCAL-00029" summary="fix user search">
+      <created>1620829006989</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1620829006989</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,6 +606,11 @@
     <MESSAGE value="log logout" />
     <MESSAGE value="add logout tags in services.yaml" />
     <MESSAGE value="add year in filter reset" />
-    <option name="LAST_COMMIT_MESSAGE" value="add year in filter reset" />
+    <MESSAGE value="current tab indication admin panel" />
+    <MESSAGE value="change user deactivation tab text" />
+    <MESSAGE value="add active by default when user is created" />
+    <MESSAGE value="redirect to admin page after user create" />
+    <MESSAGE value="fix user search" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix user search" />
   </component>
 </project>

@@ -253,7 +253,7 @@
 }
 
 .table-delete {
-    width: 28rem;
+    max-width: 28rem;
     border-collapse: collapse;
 }
 
