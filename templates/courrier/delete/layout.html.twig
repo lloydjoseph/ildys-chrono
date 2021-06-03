@@ -25,9 +25,8 @@
 
                 <div class="d-flex align-items-center">
                     {{ form(form) }}
-                    <a href="{{ path('courrier') }}" class="link-black ml-2">Annuler</a>
+                    <a href="{{ path('courrier') }}?year={{ "now"|date("Y") }}" class="link-black ml-2">Annuler</a>
                 </div>
-
             </section>
 
         </section>

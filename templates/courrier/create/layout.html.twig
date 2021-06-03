@@ -19,9 +19,11 @@
                     {{ form_row(form.iNumero, {'label': 'Numéro'}) }}
                     {{ form_row(form.vLibelle, {'label': 'Libellé'}) }}
                     {{ form_row(form.vDestinataire, {'label': 'Destinataire'}) }}
-{#                    {{ form_row(form.dDateCreation, {'label': 'Date de création'}) }}#}
                     {{ form_row(form.iIdUser, {'label': 'Id User'}) }}
-                    {{ form_row(form.Creer, {'label': 'Créer '}) }}
+                    <div class="d-flex align-items-center">
+                        {{ form_row(form.Creer, {'label': 'Créer '}) }}
+                        <a href="{{ path('courrier') }}?year={{ "now"|date("Y") }}" class="link-black ml-2">Annuler</a>
+                    </div>
                 </div>
                 {{ form_end(form) }}
 

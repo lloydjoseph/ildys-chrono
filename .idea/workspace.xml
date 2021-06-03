@@ -19,9 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="fix user search">
+    <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="table delete responsive">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courrier/create/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/create/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courrier/delete/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/delete/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courrier/modify/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/modify/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/information/create/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/information/create/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/information/delete/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/information/delete/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/information/modify/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/information/modify/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service/create/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/create/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service/delete/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/delete/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service/modify/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/modify/layout.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +222,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -335,7 +343,16 @@
       <workItem from="1620828049594" duration="1475000" />
       <workItem from="1620973243020" duration="594000" />
       <workItem from="1621003138560" duration="2000" />
-      <workItem from="1621004421296" duration="21000" />
+      <workItem from="1621004421296" duration="678000" />
+      <workItem from="1621323148855" duration="595000" />
+      <workItem from="1621418317012" duration="596000" />
+      <workItem from="1621528121598" duration="1149000" />
+      <workItem from="1622113706759" duration="337000" />
+      <workItem from="1622200445616" duration="1190000" />
+      <workItem from="1622551442630" duration="404000" />
+      <workItem from="1622620086157" duration="2671000" />
+      <workItem from="1622651632350" duration="10000" />
+      <workItem from="1622709146488" duration="1597000" />
     </task>
     <task id="LOCAL-00001" summary="add webpack">
       <created>1603273422746</created>
@@ -540,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620829006989</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="table delete responsive">
+      <created>1621004500086</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1621004500086</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,6 +635,7 @@
     <MESSAGE value="add active by default when user is created" />
     <MESSAGE value="redirect to admin page after user create" />
     <MESSAGE value="fix user search" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix user search" />
+    <MESSAGE value="table delete responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="table delete responsive" />
   </component>
 </project>

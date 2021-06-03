@@ -22,7 +22,7 @@
                     {{ form_row(form.iIdUser, {'label': 'Id User'}) }}
                     <div class="d-flex align-items-center">
                         {{ form_row(form.Modifier, {'label': 'Modifier '}) }}
-                        <a href="{{ path('information') }}" class="link-black ml-2">Annuler</a>
+                        <a href="{{ path('information') }}?year={{ "now"|date("Y") }}" class="link-black ml-2">Annuler</a>
                     </div>
                 </div>
                 {{ form_end(form) }}
