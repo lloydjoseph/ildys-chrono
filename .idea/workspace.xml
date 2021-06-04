@@ -19,17 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="table delete responsive">
+    <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="update cancel links">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/courrier/create/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/create/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/courrier/delete/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/delete/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/courrier/modify/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courrier/modify/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/information/create/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/information/create/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/information/delete/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/information/delete/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/information/modify/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/information/modify/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service/create/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/create/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service/delete/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/delete/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service/modify/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/modify/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sidebar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,7 +345,9 @@
       <workItem from="1622551442630" duration="404000" />
       <workItem from="1622620086157" duration="2671000" />
       <workItem from="1622651632350" duration="10000" />
-      <workItem from="1622709146488" duration="1597000" />
+      <workItem from="1622709146488" duration="1826000" />
+      <workItem from="1622732249493" duration="2819000" />
+      <workItem from="1622799067378" duration="6538000" />
     </task>
     <task id="LOCAL-00001" summary="add webpack">
       <created>1603273422746</created>
@@ -564,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621004500086</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="update cancel links">
+      <created>1622731999204</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1622731999205</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,7 +613,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add info message" />
     <MESSAGE value="add webpack" />
     <MESSAGE value="synchronize tables across pages" />
     <MESSAGE value="add user page" />
@@ -636,6 +637,7 @@
     <MESSAGE value="redirect to admin page after user create" />
     <MESSAGE value="fix user search" />
     <MESSAGE value="table delete responsive" />
-    <option name="LAST_COMMIT_MESSAGE" value="table delete responsive" />
+    <MESSAGE value="update cancel links" />
+    <option name="LAST_COMMIT_MESSAGE" value="update cancel links" />
   </component>
 </project>

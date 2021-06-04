@@ -355,6 +355,10 @@
     transition: background-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
+.menu-item.courrier .menu-icon, .menu-item.information .menu-icon, .menu-item.service .menu-icon {
+    fill: #fff;
+}
+
 .menu-item:hover, .menu-item:focus {
     color: var(--black);
     background-color: var(--mediumgrey);
@@ -365,6 +369,24 @@
     margin-right: 1rem;
     width: 1.5rem;
     height: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.menu-item.courrier svg {
+    background: #E9A839;
+}
+
+.menu-item.information svg {
+    background: #39B783;
+}
+
+.menu-item.service svg {
+    background: #D5368A;
+}
+
+.menu-item.administration svg, .menu-item.logout svg {
+    background: #efefef;
 }
 
 .menu-title {
