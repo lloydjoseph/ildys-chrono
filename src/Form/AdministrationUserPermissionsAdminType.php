@@ -16,6 +16,7 @@ class AdministrationUserPermissionsAdminType extends AbstractType
         $builder
             ->add('bAdmin', CheckboxType::class, [
                 'label' => 'L\'utilisateur est administrateur',
+                'required' => false
             ])
             ->add('Sauvegarder', SubmitType::class, [
                 'attr' => ['class' => 'btn-blue mt-2'],
