@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="colored links in sidebar menu">
+    <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="filter update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AdministrationUserPermissionsAdminType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AdministrationUserPermissionsAdminType.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +54,10 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/public/build/app.css" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/templates/connexion/layout.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Entity/Courrier.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/public/build/app.css" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Entity/Courrier.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration">
@@ -214,7 +214,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -316,40 +316,6 @@
       <workItem from="1619595559539" duration="12023000" />
       <workItem from="1619682466724" duration="20449000" />
       <workItem from="1619768989644" duration="20443000" />
-      <workItem from="1619977818390" duration="870000" />
-      <workItem from="1619978736942" duration="871000" />
-      <workItem from="1619979672125" duration="240000" />
-      <workItem from="1619979924279" duration="389000" />
-      <workItem from="1620025476194" duration="6578000" />
-      <workItem from="1620125165427" duration="595000" />
-      <workItem from="1620145593534" duration="9000" />
-      <workItem from="1620145890008" duration="47000" />
-      <workItem from="1620221146575" duration="2380000" />
-      <workItem from="1620234927276" duration="9000" />
-      <workItem from="1620291002667" duration="9075000" />
-      <workItem from="1620373619199" duration="2947000" />
-      <workItem from="1620636239935" duration="211000" />
-      <workItem from="1620657998062" duration="4082000" />
-      <workItem from="1620716667431" duration="1535000" />
-      <workItem from="1620801282986" duration="3366000" />
-      <workItem from="1620828049594" duration="1475000" />
-      <workItem from="1620973243020" duration="594000" />
-      <workItem from="1621003138560" duration="2000" />
-      <workItem from="1621004421296" duration="678000" />
-      <workItem from="1621323148855" duration="595000" />
-      <workItem from="1621418317012" duration="596000" />
-      <workItem from="1621528121598" duration="1149000" />
-      <workItem from="1622113706759" duration="337000" />
-      <workItem from="1622200445616" duration="1190000" />
-      <workItem from="1622551442630" duration="404000" />
-      <workItem from="1622620086157" duration="2671000" />
-      <workItem from="1622651632350" duration="10000" />
-      <workItem from="1622709146488" duration="1826000" />
-      <workItem from="1622732249493" duration="2819000" />
-      <workItem from="1622799067378" duration="8008000" />
-      <workItem from="1622886419372" duration="5000" />
-      <workItem from="1624280618292" duration="1001000" />
-      <workItem from="1624518288533" duration="2110000" />
     </task>
     <task id="LOCAL-00001" summary="add webpack">
       <created>1603273422746</created>
@@ -505,77 +471,7 @@
       <option name="project" value="LOCAL" />
       <updated>1619770847576</updated>
     </task>
-    <task id="LOCAL-00023" summary="add logout tags in services.yaml">
-      <created>1620645836273</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1620645836273</updated>
-    </task>
-    <task id="LOCAL-00024" summary="add year in filter reset">
-      <created>1620659302850</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1620659302850</updated>
-    </task>
-    <task id="LOCAL-00025" summary="current tab indication admin panel">
-      <created>1620661829079</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1620661829079</updated>
-    </task>
-    <task id="LOCAL-00026" summary="change user deactivation tab text">
-      <created>1620810442538</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1620810442538</updated>
-    </task>
-    <task id="LOCAL-00027" summary="add active by default when user is created">
-      <created>1620810492472</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1620810492472</updated>
-    </task>
-    <task id="LOCAL-00028" summary="redirect to admin page after user create">
-      <created>1620811906418</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1620811906418</updated>
-    </task>
-    <task id="LOCAL-00029" summary="fix user search">
-      <created>1620829006989</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1620829006989</updated>
-    </task>
-    <task id="LOCAL-00030" summary="table delete responsive">
-      <created>1621004500086</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1621004500086</updated>
-    </task>
-    <task id="LOCAL-00031" summary="update cancel links">
-      <created>1622731999204</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1622731999205</updated>
-    </task>
-    <task id="LOCAL-00032" summary="colored links in sidebar menu">
-      <created>1622816799031</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1622816799031</updated>
-    </task>
-    <option name="localTasksCounter" value="33" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -622,6 +518,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add info message" />
+    <MESSAGE value="add webpack" />
     <MESSAGE value="synchronize tables across pages" />
     <MESSAGE value="add user page" />
     <MESSAGE value="add table design" />
@@ -636,17 +534,6 @@
     <MESSAGE value="error message for lack of permissions" />
     <MESSAGE value="reactivate a deactivated account" />
     <MESSAGE value="filter update" />
-    <MESSAGE value="log logout" />
-    <MESSAGE value="add logout tags in services.yaml" />
-    <MESSAGE value="add year in filter reset" />
-    <MESSAGE value="current tab indication admin panel" />
-    <MESSAGE value="change user deactivation tab text" />
-    <MESSAGE value="add active by default when user is created" />
-    <MESSAGE value="redirect to admin page after user create" />
-    <MESSAGE value="fix user search" />
-    <MESSAGE value="table delete responsive" />
-    <MESSAGE value="update cancel links" />
-    <MESSAGE value="colored links in sidebar menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="colored links in sidebar menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="filter update" />
   </component>
 </project>
