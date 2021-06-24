@@ -45,7 +45,7 @@ class AdministrationUserCreateController extends AbstractController
             // Flush data (clear or reload various internal caches)
             $entityManager->flush();
 
-            // Set permissions
+            // Set permissions and get persisted ID
             $permissions->setIIdUser($user->getIIdUser());
             $permissions->setBAjoutCourrier(0);
             $permissions->setBModifCourrier(0);
