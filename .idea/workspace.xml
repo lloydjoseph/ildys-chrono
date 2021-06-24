@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="update cancel links">
+    <list default="true" id="341fcaec-00f7-4331-abbe-833efa054dcf" name="Default Changelist" comment="colored links in sidebar menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sidebar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdministrationUserCreateController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +214,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -347,7 +346,10 @@
       <workItem from="1622651632350" duration="10000" />
       <workItem from="1622709146488" duration="1826000" />
       <workItem from="1622732249493" duration="2819000" />
-      <workItem from="1622799067378" duration="6538000" />
+      <workItem from="1622799067378" duration="8008000" />
+      <workItem from="1622886419372" duration="5000" />
+      <workItem from="1624280618292" duration="1001000" />
+      <workItem from="1624518288533" duration="2110000" />
     </task>
     <task id="LOCAL-00001" summary="add webpack">
       <created>1603273422746</created>
@@ -566,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622731999205</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="colored links in sidebar menu">
+      <created>1622816799031</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1622816799031</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +622,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add webpack" />
     <MESSAGE value="synchronize tables across pages" />
     <MESSAGE value="add user page" />
     <MESSAGE value="add table design" />
@@ -638,6 +646,7 @@
     <MESSAGE value="fix user search" />
     <MESSAGE value="table delete responsive" />
     <MESSAGE value="update cancel links" />
-    <option name="LAST_COMMIT_MESSAGE" value="update cancel links" />
+    <MESSAGE value="colored links in sidebar menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="colored links in sidebar menu" />
   </component>
 </project>
