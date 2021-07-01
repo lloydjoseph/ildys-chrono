@@ -11,7 +11,7 @@ console.log('Script app.js loaded successfully !');
 /*-----------------------------------------------------------------*/
 /* Internet Explorer warning message for incompatibility */
 
-if (/*@cc_on!@*/!!document.documentMode) alert('L\'utilisation du navigateur Google Chrome est recommandé pour l\'utilisation de cet outil.')
+if (/*@cc_on!@*/!!document.documentMode && window.location.pathname === "/connexion") alert('L\'utilisation du navigateur Internet Explorer est fortement déconseillé pour l\'utilisation de cet outil.\r\n Vous pouvez utiliser Microsoft Edge, Google Chrome ou encore Mozilla Firefox à la place.')
 
 
 /*-----------------------------------------------------------------*/
