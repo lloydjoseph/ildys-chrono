@@ -18,7 +18,9 @@
                 <div>
                     {{ form_row(form.iNumero, {'label': 'Numéro'}) }}
                     {{ form_row(form.vLibelle, {'label': 'Libellé'}) }}
+                    <div class="d-none error mb-2"><b>Attention : </b>Le champ "Libellé" a atteint la limite de caractères autorisée (210).</div>
                     {{ form_row(form.vService, {'label': 'Service'}) }}
+                    <div class="d-none error mb-2"><b>Attention : </b>Le champ "Service" a atteint la limite de caractères autorisée (110).</div>
                     {{ form_row(form.iIdUser, {'label': 'Id User'}) }}
                     <div class="d-flex align-items-center">
                         {{ form_row(form.Creer, {'label': 'Créer '}) }}
@@ -32,5 +34,15 @@
         </section>
 
     </main>
+
+    <script defer>
+        function checkErrorInput(element, maxLength) {
+            if(element.value.length === maxLength) {
+                element.parentElement.nextElementSibling.style.display = "block"
+            } else {
+                element.parentElement.nextElementSibling.style.display = "none"
+            }
+        }
+    </script>
 
 {% endblock %}

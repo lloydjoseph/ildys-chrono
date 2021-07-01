@@ -19,12 +19,18 @@ class NoteServiceCreateType extends AbstractType
             ->add('iNumero', HiddenType::class)
             ->add('vLibelle', TextType::class, [
                 'attr' => [
-                    'class' => 'inp-text w-100 mb-1'
+                    'class' => 'inp-text w-100 mb-1',
+                    'placeholder' => 'Limite de 210 caractères',
+                    'maxlength' => 210,
+                    'onkeyup' => 'checkErrorInput(this, 210)'
                 ]
             ])
             ->add('vService', TextType::class, [
                 'attr' => [
-                    'class' => 'inp-text w-100 mb-1'
+                    'class' => 'inp-text w-100 mb-1',
+                    'placeholder' => 'Limite de 110 caractères',
+                    'maxlength' => 110,
+                    'onkeyup' => 'checkErrorInput(this, 110)'
                 ]
             ])
             ->add('dDateCreation', DateTimeType::class, [
